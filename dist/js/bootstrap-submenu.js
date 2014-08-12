@@ -52,6 +52,4 @@ if (typeof jQuery === 'undefined') {
 			}
 		});
 	};
-
-	$('.dropdown-submenu > a').submenupicker();
 }(jQuery));
