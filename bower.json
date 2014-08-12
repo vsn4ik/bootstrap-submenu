@@ -1,6 +1,6 @@
 {
 	"name": "bootstrap-submenu",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"authors": [
 		"vsn4ik"
 	],
@@ -12,11 +12,12 @@
 		"dist/js/bootstrap-submenu.js"
 	],
 	"ignore": [
-		".gitignore",
-		"_config.yml",
-		"bower.json",
 		"docs",
-		"README.md"
+		".gitignore",
+		"Gruntfile.js",
+		"README.md",
+		"_config.yml",
+		"package.json"
 	],
 	"keywords": [
 		"bootstrap",

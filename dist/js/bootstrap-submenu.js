@@ -1,5 +1,5 @@
 /**
- * Bootstrap-submenu v1.0.0 (http://vsn4ik.github.io/bootstrap-submenu)
+ * Bootstrap-submenu v1.0.1 (http://vsn4ik.github.io/bootstrap-submenu)
  * Copyright 2014 vsn4ik
  * Licensed under MIT (https://github.com/vsn4ik/bootstrap-submenu/blob/master/LICENSE)
  */
@@ -7,7 +7,7 @@
 'use strict';
 
 if (typeof jQuery === 'undefined') {
-	throw new Error('Bootstrap-checkbox requires jQuery');
+	throw new Error('Bootstrap-submenu requires jQuery');
 }
 
 (function($) {
