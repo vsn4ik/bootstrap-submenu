@@ -7,14 +7,6 @@
 .dropdown-submenu {
 	position: relative;
 
-	> .dropdown-menu {
-		top: 0;
-		left: 100%;
-		margin-top: -6px;
-		margin-left: -1px;
-		border-top-left-radius: 0;
-	}
-
 	> a:before {
 		display: block;
 		float: right;
@@ -29,38 +21,41 @@
 		border-top-color: transparent;
 		border-bottom-color: transparent;
 	}
+
+	> .dropdown-menu {
+		top: 0;
+		left: 100%;
+		margin-top: -6px;
+		margin-left: -1px;
+		border-top-left-radius: 0;
+	}
 }
 
 .make-nested-list(@n, @i: 0) when (@i < @n) {
-	> .dropdown-menu {
-		> li {
-			> a {
-				padding-left: 35px + (10 * @i);
-			}
-
-			.make-nested-list(@n, (@i + 1));
+	> .dropdown-menu > li {
+		> a {
+			padding-left: 35px + (10 * @i);
 		}
+
+		.make-nested-list(@n, @i + 1);
 	}
 }
 
 .navbar-nav {
 	@media (max-width: @grid-float-breakpoint-max) {
-		.dropdown-submenu {
-			> a:before {
+		.dropdown-submenu > a {
+			padding-left: 40px;
+
+			&:before {
 				margin-top: (@line-height-computed / 2) - (@caret-width-base / 2);
 				border-color: inherit;
-				border-style: solid;
 				border-width: @caret-width-base @caret-width-base 0;
 				border-left-color: transparent;
 				border-right-color: transparent;
 			}
-
-			> a {
-				padding-left: 40px;
-			}
 		}
 
-		> .open > .dropdown-menu > .dropdown-submenu {
+		> .dropdown > .dropdown-menu > .dropdown-submenu {
 			.make-nested-list(5);
 		}
 	}
