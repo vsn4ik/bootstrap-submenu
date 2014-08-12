@@ -1,22 +1,19 @@
-module.exports = function (grunt) {
+module.exports = function(grunt) {
 	'use strict';
 
 	// Force use of Unix newlines
 	grunt.util.linefeed = '\n';
 
 	grunt.initConfig({
-
 		clean: {
 			dist: ['dist']
 		},
-
 		copy: {
 			js: {
 				src: 'js/*',
 				dest: 'dist/'
 			}
 		},
-
 		less: {
 			compileCore: {
 				files: {
@@ -35,7 +32,9 @@ module.exports = function (grunt) {
 	});
 
 	// These plugins provide necessary tasks.
-	require('load-grunt-tasks')(grunt, { scope: 'devDependencies' });
+	require('load-grunt-tasks')(grunt, {
+		scope: 'devDependencies'
+	});
 
 	grunt.registerTask('dist', ['clean', 'copy', 'less']);
 };
