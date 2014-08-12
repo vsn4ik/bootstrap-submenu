@@ -17,8 +17,8 @@ title: Bootstrap-submenu
 
 	<link rel="stylesheet" href="dist/css/bootstrap-submenu.min.css">
 
-	<!-- jQuery (necessary for Bootstrap-submenu (JavaScript) plugin) -->
 	<script src="https://code.jquery.com/jquery.min.js" defer></script>
+	<script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js" defer></script>
 	<script src="dist/js/bootstrap-submenu.js" defer></script>
 </head>
 <body>
@@ -36,3 +36,180 @@ $('.dropdown-submenu > a').submenupicker();
 <h3 id="examples">Examples</h3>
 
 In process. Coming september 2014.
+
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button data-target=".bs-example-js-navbar-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+
+			<a class="navbar-brand">Project Name</a>
+		</div>
+
+		<div class="collapse navbar-collapse bs-example-js-navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li class="dropdown">
+					<a data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+
+					<ul class="dropdown-menu">
+						<li class="dropdown-submenu">
+							<a tabindex="-1" data-toggle="dropdown">Action</a>
+
+							<ul class="dropdown-menu">
+								<li><a tabindex="-1">Sub Action</a></li>
+								<li class="dropdown-submenu">
+									<a tabindex="-1" data-toggle="dropdown">Another sub action</a>
+
+									<ul class="dropdown-menu">
+										<li><a tabindex="-1">Sub Action</a></li>
+										<li><a tabindex="-1">Another sub action</a></li>
+										<li><a tabindex="-1">Something else here</a></li>
+									</ul>
+								</li>
+								<li><a tabindex="-1">Something else here</a></li>
+							</ul>
+						</li>
+
+						<li class="dropdown-submenu">
+							<a tabindex="-1" data-toggle="dropdown">Another action</a>
+
+							<ul class="dropdown-menu">
+								<li><a href="#" tabindex="-1">Sub Action</a></li>
+								<li><a href="#" tabindex="-1">Another sub action</a></li>
+								<li><a href="#" tabindex="-1">Something else here</a></li>
+							</ul>
+						</li>
+						<li><a tabindex="-1">Something else here</a></li>
+						<li class="divider"></li>
+						<li><a tabindex="-1">Separated link</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a data-toggle="dropdown">Dropdown 2 <b class="caret"></b></a>
+
+					<ul class="dropdown-menu">
+						<li class="dropdown-submenu">
+							<a tabindex="-1" data-toggle="dropdown">Action</a>
+
+							<ul class="dropdown-menu">
+								<li><a tabindex="-1">Sub Action</a></li>
+								<li class="dropdown-submenu">
+									<a tabindex="-1" data-toggle="dropdown">Another sub action</a>
+
+									<ul class="dropdown-menu">
+										<li><a tabindex="-1">Sub Action</a></li>
+										<li><a tabindex="-1">Another sub action</a></li>
+										<li><a tabindex="-1">Something else here</a></li>
+									</ul>
+								</li>
+								<li><a tabindex="-1">Something else here</a></li>
+							</ul>
+						</li>
+						<li class="dropdown-submenu">
+							<a tabindex="-1" data-toggle="dropdown">Another action</a>
+
+							<ul class="dropdown-menu">
+								<li><a tabindex="-1">Sub Action</a></li>
+								<li><a tabindex="-1">Another sub action</a></li>
+								<li><a tabindex="-1">Something else here</a></li>
+							</ul>
+						</li>
+						<li><a tabindex="-1">Something else here</a></li>
+						<li class="divider"></li>
+						<li><a tabindex="-1">Separated link</a></li>
+					</ul>
+				</li>
+			</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+					<a data-toggle="dropdown" class="dropdown-toggle" role="button" id="drop3">Dropdown 3 <b class="caret"></b></a>
+
+					<ul aria-labelledby="drop3" role="menu" class="dropdown-menu">
+						<li role="presentation"><a href="http://twitter.com/fat" tabindex="-1" role="menuitem">Action</a></li>
+						<li role="presentation"><a href="http://twitter.com/fat" tabindex="-1" role="menuitem">Another action</a></li>
+						<li role="presentation"><a href="http://twitter.com/fat" tabindex="-1" role="menuitem">Something else here</a></li>
+						<li class="divider" role="presentation"></li>
+						<li role="presentation"><a href="http://twitter.com/fat" tabindex="-1" role="menuitem">Separated link</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- /.nav-collapse -->
+	</div>
+	<!-- /.container-fluid -->
+</nav>
+
+<div class="bs-example">
+	<ul class="nav nav-pills">
+		<li class="active"><a href="#">Regular link</a></li>
+		<li class="dropdown"> <a href="#" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+			<ul class="dropdown-menu">
+				<li class="dropdown-submenu"><a href="#" tabindex="-1" data-toggle="dropdown">Action</a>
+					<ul class="dropdown-menu">
+						<li><a href="#" tabindex="-1">Sub Action</a></li>
+						<li class="dropdown-submenu"><a href="#" tabindex="-1" data-toggle="dropdown">Another sub action</a>
+							<ul class="dropdown-menu">
+								<li><a href="#" tabindex="-1">Sub Action</a></li>
+								<li><a href="#" tabindex="-1">Another sub action</a></li>
+								<li><a href="#" tabindex="-1">Something else here</a></li>
+							</ul>
+						</li>
+						<li><a href="#" tabindex="-1">Something else here</a></li>
+					</ul>
+				</li>
+				<li class="dropdown-submenu"><a href="#" tabindex="-1" data-toggle="dropdown">Another action</a>
+					<ul class="dropdown-menu">
+						<li><a href="#" tabindex="-1">Sub Action</a></li>
+						<li><a href="#" tabindex="-1">Another sub action</a></li>
+						<li><a href="#" tabindex="-1">Something else here</a></li>
+					</ul>
+				</li>
+				<li><a href="#" tabindex="-1">Something else here</a></li>
+				<li class="divider"></li>
+				<li><a href="#" tabindex="-1">Separated link</a></li>
+			</ul>
+		</li>
+		<li class="dropdown"> <a href="#" data-toggle="dropdown">Dropdown 2 <b class="caret"></b></a>
+			<ul class="dropdown-menu">
+				<li class="dropdown-submenu"><a href="#" tabindex="-1" data-toggle="dropdown">Action</a>
+					<ul class="dropdown-menu">
+						<li><a href="#" tabindex="-1">Sub Action</a></li>
+						<li class="dropdown-submenu"><a href="#" tabindex="-1" data-toggle="dropdown">Another sub action</a>
+							<ul class="dropdown-menu">
+								<li><a href="#" tabindex="-1">Sub Action</a></li>
+								<li><a href="#" tabindex="-1">Another sub action</a></li>
+								<li><a href="#" tabindex="-1">Something else here</a></li>
+							</ul>
+						</li>
+						<li><a href="#" tabindex="-1">Something else here</a></li>
+					</ul>
+				</li>
+				<li class="dropdown-submenu"><a href="#" tabindex="-1" data-toggle="dropdown">Another action</a>
+					<ul class="dropdown-menu">
+						<li><a href="#" tabindex="-1">Sub Action</a></li>
+						<li><a href="#" tabindex="-1">Another sub action</a></li>
+						<li><a href="#" tabindex="-1">Something else here</a></li>
+					</ul>
+				</li>
+				<li><a href="#" tabindex="-1">Something else here</a></li>
+				<li class="divider"></li>
+				<li><a href="#" tabindex="-1">Separated link</a></li>
+			</ul>
+		</li>
+		<li class="dropdown"> <a href="#" data-toggle="dropdown">Dropdown 3 <b class="caret"></b></a>
+			<ul class="dropdown-menu">
+				<li><a href="#" tabindex="-1">Action</a></li>
+				<li><a href="#" tabindex="-1">Another action</a></li>
+				<li><a href="#" tabindex="-1">Something else here</a></li>
+				<li class="divider"></li>
+				<li><a href="#" tabindex="-1">Separated link</a></li>
+			</ul>
+		</li>
+	</ul>
+	<!-- /pills -->
+</div>

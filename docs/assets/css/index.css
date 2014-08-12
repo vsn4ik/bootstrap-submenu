@@ -10,3 +10,7 @@ pre {
 	-moz-tab-size: 2;
 	tab-size: 2;
 }
+
+a {
+	cursor: pointer;
+}
