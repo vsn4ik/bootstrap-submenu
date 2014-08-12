@@ -1,0 +1,12 @@
+body {
+	padding-top: 20px;
+}
+
+footer {
+	padding-bottom: 10px;
+}
+
+pre {
+	-moz-tab-size: 2;
+	tab-size: 2;
+}

@@ -1,0 +1,30 @@
+{
+	"name": "bootstrap-submenu",
+	"version": "1.0.0",
+	"authors": [
+		"vsn4ik"
+	],
+	"homepage": "http://vsn4ik.github.io/bootstrap-submenu",
+	"description": "Bootstrap Sub-Menus",
+	"main": [
+		"less/bootstrap-submenu.less",
+		"dist/css/bootstrap-submenu.css",
+		"dist/js/bootstrap-submenu.js"
+	],
+	"ignore": [
+		".gitignore",
+		"_config.yml",
+		"bower.json",
+		"docs",
+		"README.md"
+	],
+	"keywords": [
+		"bootstrap",
+		"submenu"
+	],
+	"license": "MIT",
+	"dependencies": {
+		"bootstrap": ">= 3.0.0",
+		"jquery": ">= 1.9.0"
+	}
+}

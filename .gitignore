@@ -1,0 +1,5 @@
+# Ignore docs files
+_gh_pages
+
+# Folders to ignore
+node_modules

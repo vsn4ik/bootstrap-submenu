@@ -1,0 +1,7 @@
+# Server
+source: docs
+destination: _gh_pages
+
+# Custom vars
+repo: https://github.com/vsn4ik/bootstrap-submenu
+description: Bootstrap Sub-Menus.
