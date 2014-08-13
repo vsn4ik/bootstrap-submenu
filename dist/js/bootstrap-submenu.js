@@ -1,5 +1,5 @@
 /*!
- * Bootstrap-submenu v1.0.1 (http://vsn4ik.github.io/bootstrap-submenu)
+ * Bootstrap-submenu v1.0.2 (http://vsn4ik.github.io/bootstrap-submenu)
  * Copyright 2014 vsn4ik
  * Licensed under MIT (https://github.com/vsn4ik/bootstrap-submenu/blob/master/LICENSE)
  */
@@ -25,10 +25,6 @@ if (typeof jQuery === 'undefined') {
 		},
 		toggle: function(event) {
 			event.stopPropagation();
-
-			if (this.$element.hasClass('disabled')) {
-				return;
-			}
 
 			var isActive = this.$menu.hasClass('open');
 
