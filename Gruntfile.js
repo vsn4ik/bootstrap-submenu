@@ -14,29 +14,29 @@ module.exports = function(grunt) {
 		clean: {
 			dist: ['dist', 'docs/dist']
 		},
-		uglify: {
-			options: {
-				banner: '<%= banner %>'
-			},
-			minify: {
-				src: 'js/bootstrap-submenu.js',
-				dest: 'dist/js/bootstrap-submenu.min.js'
-			}
-		},
 		less: {
 			options: {
 				banner: '<%= banner %>'
 			},
 			compile: {
-				src: 'less/bootstrap-submenu.less',
-				dest: 'dist/css/bootstrap-submenu.css'
+				src: 'less/<%= pkg.name %>.less',
+				dest: 'dist/css/<%= pkg.name %>.css'
 			},
 			minify: {
 				options: {
 					cleancss: true
 				},
-				src: 'less/bootstrap-submenu.less',
-				dest: 'dist/css/bootstrap-submenu.min.css'
+				src: 'less/<%= pkg.name %>.less',
+				dest: 'dist/css/<%= pkg.name %>.min.css'
+			}
+		},
+		uglify: {
+			options: {
+				banner: '<%= banner %>'
+			},
+			minify: {
+				src: 'js/<%= pkg.name %>.js',
+				dest: 'dist/js/<%= pkg.name %>.min.js'
 			}
 		},
 		copy: {
@@ -58,5 +58,5 @@ module.exports = function(grunt) {
 		scope: 'devDependencies'
 	});
 
-	grunt.registerTask('default', ['clean', 'uglify', 'less', 'copy']);
+	grunt.registerTask('default', ['clean', 'less', 'uglify', 'copy']);
 };
