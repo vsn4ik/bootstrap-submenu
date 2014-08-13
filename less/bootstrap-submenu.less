@@ -11,7 +11,7 @@
 		float: right;
 		content: "";
 		margin-top: @line-height-computed / 2 - @caret-width-base;
-		margin-right: -@caret-width-base * 2;
+		margin-right: -@caret-width-base * 2 - 2;
 		border-width: @caret-width-base 0 @caret-width-base @caret-width-base;
 		border-style: solid;
 		border-top-color: transparent;
@@ -43,7 +43,7 @@
 @media (max-width: @grid-float-breakpoint-max) {
 	.navbar-nav {
 		.dropdown-submenu > a:after {
-			margin-top: (@line-height-computed / 2) - (@caret-width-base / 2);
+			margin-top: @line-height-computed / 2 - @caret-width-base / 2;
 			border-width: @caret-width-base @caret-width-base 0;
 			border-top-color: inherit;
 			border-left-color: transparent;

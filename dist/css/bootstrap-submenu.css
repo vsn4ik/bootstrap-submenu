@@ -1,5 +1,5 @@
 /*!
- * Bootstrap-submenu v1.0.1 (http://vsn4ik.github.io/bootstrap-submenu)
+ * Bootstrap-submenu v1.0.2 (http://vsn4ik.github.io/bootstrap-submenu)
  * Copyright 2014 vsn4ik
  * Licensed under MIT (https://github.com/vsn4ik/bootstrap-submenu/blob/master/LICENSE)
  */
@@ -10,7 +10,7 @@
   float: right;
   content: "";
   margin-top: 6px;
-  margin-right: -8px;
+  margin-right: -10px;
   border-width: 4px 0 4px 4px;
   border-style: solid;
   border-top-color: transparent;
