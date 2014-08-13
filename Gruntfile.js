@@ -6,13 +6,7 @@ module.exports = function(grunt) {
 
 	grunt.initConfig({
 		clean: {
-			dist: ['dist']
-		},
-		copy: {
-			js: {
-				src: 'js/*',
-				dest: 'dist/'
-			}
+			dist: ['dist', 'docs/dist']
 		},
 		less: {
 			compileCore: {
@@ -28,6 +22,18 @@ module.exports = function(grunt) {
 					'dist/css/bootstrap-submenu.min.css': 'dist/css/bootstrap-submenu.css'
 				}
 			}
+		},
+		copy: {
+			js: {
+				src: 'js/*',
+				dest: 'dist/'
+			},
+			docs: {
+				expand: true,
+				cwd: './dist',
+				src: '*/*',
+				dest: 'docs/dist'
+			}
 		}
 	});
 
@@ -36,5 +42,5 @@ module.exports = function(grunt) {
 		scope: 'devDependencies'
 	});
 
-	grunt.registerTask('dist', ['clean', 'copy', 'less']);
+	grunt.registerTask('dist', ['clean', 'less', 'copy']);
 };
