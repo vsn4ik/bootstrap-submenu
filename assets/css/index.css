@@ -14,3 +14,7 @@ pre {
 a {
 	cursor: pointer;
 }
+
+.m-b {
+	margin-bottom: 15px;
+}
