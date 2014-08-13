@@ -8,8 +8,14 @@ module.exports = function(grunt) {
 		clean: {
 			dist: ['dist', 'docs/dist']
 		},
+		uglify: {
+			minify: {
+				src: 'js/bootstrap-submenu.js',
+				dest: 'dist/js/bootstrap-submenu.min.js'
+			}
+		},
 		less: {
-			compileCore: {
+			compile: {
 				files: {
 					'dist/css/bootstrap-submenu.css': 'less/bootstrap-submenu.less'
 				}
@@ -42,5 +48,5 @@ module.exports = function(grunt) {
 		scope: 'devDependencies'
 	});
 
-	grunt.registerTask('dist', ['clean', 'less', 'copy']);
+	grunt.registerTask('dist', ['clean', 'uglify', 'less', 'copy']);
 };

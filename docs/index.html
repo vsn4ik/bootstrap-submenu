@@ -15,7 +15,7 @@ title: Bootstrap-submenu
 
 	<script src="//code.jquery.com/jquery-2.1.1.min.js" defer></script>
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js" defer></script>
-	<script src="dist/js/bootstrap-submenu.js" defer></script>
+	<script src="dist/js/bootstrap-submenu.min.js" defer></script>
 </head>
 <body>
   ...
@@ -26,6 +26,10 @@ title: Bootstrap-submenu
 <p>Enable Bootstrap-submenu via JavaScript:</p>
 {% highlight js %}
 $('.dropdown-submenu > a').submenupicker();
+{% endhighlight %}
+<p>Or (if you do not using links)</p>
+{% highlight js %}
+$('.dropdown-submenu > :first-child').submenupicker();
 {% endhighlight %}
 
 <hr>
