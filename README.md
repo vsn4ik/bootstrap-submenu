@@ -1,6 +1,7 @@
 # [Bootstrap-submenu](http://vsn4ik.github.io/bootstrap-submenu)
 
 [![Bower version](https://badge.fury.io/bo/bootstrap-submenu.svg)](http://badge.fury.io/bo/bootstrap-submenu)
+[![Build Status](https://travis-ci.org/vsn4ik/bootstrap-submenu.svg)](https://travis-ci.org/vsn4ik/bootstrap-submenu)
 [![devDependency Status](https://david-dm.org/vsn4ik/bootstrap-submenu/dev-status.svg)](https://david-dm.org/vsn4ik/bootstrap-submenu#info=devDependencies)
 
 ## Getting Started
