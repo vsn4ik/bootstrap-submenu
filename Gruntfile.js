@@ -35,22 +35,20 @@ module.exports = function(grunt) {
 			},
 			docs: {
 				expand: true,
-				cwd: './dist',
+				cwd: 'dist',
 				src: '*/*',
 				dest: 'docs/dist'
 			}
 		},
 		usebanner: {
-			css: {
-				options: {
-					banner: '/*!\n' +
-						' * Bootstrap-submenu v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
-						' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
-						' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n' +
-						' */\n'
-				},
-				src: ['dist/*/*', 'docs/dist/*/*']
-			}
+			options: {
+				banner: '/*!\n' +
+					' * Bootstrap-submenu v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
+					' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
+					' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n' +
+					' */\n'
+			},
+			dist: ['dist/*/*', 'docs/dist/*/*']
 		}
 	});
 
