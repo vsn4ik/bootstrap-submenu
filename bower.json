@@ -1,6 +1,6 @@
 {
 	"name": "bootstrap-submenu",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"authors": [
 		"vsn4ik"
 	],
@@ -12,9 +12,11 @@
 		"dist/js/bootstrap-submenu.js"
 	],
 	"ignore": [
+		"bootstrap",
 		"docs",
 		".gitignore",
 		".gitmodules",
+		".travis.yml",
 		"Gruntfile.js",
 		"README.md",
 		"_config.yml",
