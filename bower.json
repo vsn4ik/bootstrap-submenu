@@ -1,6 +1,6 @@
 {
 	"name": "bootstrap-submenu",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"authors": [
 		"vsn4ik"
 	],
@@ -14,6 +14,7 @@
 	"ignore": [
 		"docs",
 		".gitignore",
+		".gitmodules",
 		"Gruntfile.js",
 		"README.md",
 		"_config.yml",
@@ -21,6 +22,7 @@
 	],
 	"keywords": [
 		"bootstrap",
+		"dropdown",
 		"submenu"
 	],
 	"license": "MIT",
