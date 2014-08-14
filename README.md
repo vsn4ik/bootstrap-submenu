@@ -12,7 +12,7 @@ Three quick start options are available:
 * Install with [Bower](http://bower.io): `bower install bootstrap-submenu`.
 
 ## Examples
-For some working examples of bootstrap-submenu, visit our [examples page](http://vsn4ik.github.io/bootstrap-submenu/#examples).
+For some working examples, visit our [examples section](http://vsn4ik.github.io/bootstrap-submenu/#examples).
 
 ## Min Requirements
 * Bootstrap 3.0.0
