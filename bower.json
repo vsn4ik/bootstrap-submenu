@@ -1,6 +1,6 @@
 {
 	"name": "bootstrap-submenu",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"authors": [
 		"vsn4ik"
 	],
@@ -16,6 +16,7 @@
 		"docs",
 		".gitignore",
 		".gitmodules",
+		".npmignore",
 		".travis.yml",
 		"Gruntfile.js",
 		"README.md",
