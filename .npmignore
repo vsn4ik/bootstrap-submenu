@@ -9,5 +9,4 @@ docs
 .travis.yml
 bower.json
 Gruntfile.js
-README.md
 _config.yml
