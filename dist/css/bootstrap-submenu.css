@@ -1,8 +1,9 @@
 /*!
- * Bootstrap-submenu v1.0.2 (http://vsn4ik.github.io/bootstrap-submenu)
+ * Bootstrap-submenu v1.0.6 (http://vsn4ik.github.io/bootstrap-submenu)
  * Copyright 2014 vsn4ik
  * Licensed under MIT (https://github.com/vsn4ik/bootstrap-submenu/blob/master/LICENSE)
  */
+
 .dropdown-submenu {
   position: relative;
 }
@@ -21,7 +22,6 @@
   top: 0;
   left: 100%;
   margin-top: -6px;
-  margin-left: -1px;
   border-top-left-radius: 0;
 }
 @media (max-width: 767px) {
