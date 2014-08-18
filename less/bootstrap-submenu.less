@@ -29,13 +29,13 @@
 	}
 }
 
-.make-nested-list(@n, @i: 0) when (@i < @n) {
+.make-nested-list(@i, @n) when (@i < @n) {
 	> .dropdown-menu > li {
 		> a {
 			padding-left: 35px + (10 * @i);
 		}
 
-		.make-nested-list(@n, @i + 1);
+		.make-nested-list(@i + 1, @n);
 	}
 }
 
@@ -50,7 +50,7 @@
 		}
 
 		> .dropdown > .dropdown-menu > .dropdown-submenu {
-			.make-nested-list(4);
+			.make-nested-list(0, 4);
 		}
 	}
 }

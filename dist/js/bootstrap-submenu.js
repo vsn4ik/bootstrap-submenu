@@ -11,7 +11,7 @@ if (typeof jQuery === 'undefined') {
 }
 
 (function($) {
-	function Submenupicker(element, options) {
+	function Submenupicker(element) {
 		this.$element = $(element);
 		this.$menu = this.$element.parent();
 		this.$submenus = this.$menu.parent().find('.dropdown-submenu');
@@ -36,13 +36,13 @@ if (typeof jQuery === 'undefined') {
 		}
 	};
 
-	$.fn.submenupicker = function(options) {
+	$.fn.submenupicker = function() {
 		return this.each(function() {
 			var $this = $(this);
 			var data = $this.data('submenupicker');
 
 			if (!data) {
-				new Submenupicker(this, options);
+				new Submenupicker(this);
 
 				$this.data('submenupicker', true);
 			}
