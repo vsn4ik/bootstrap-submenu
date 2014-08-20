@@ -23,7 +23,7 @@ if (typeof jQuery === 'undefined') {
 		init: function() {
 			this.$element.on('click.bs.dropdown', this.toggle.bind(this));
 		},
-		toggle: function(event) {
+		toggle: function() {
 			event.stopPropagation();
 
 			var isActive = this.$menu.hasClass('open');
