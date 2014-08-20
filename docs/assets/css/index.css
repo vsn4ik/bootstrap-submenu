@@ -19,6 +19,7 @@ a {
 	margin-bottom: 15px;
 }
 
+.glyphicon + span,
 .nav .caret {
 	margin-left: 4px;
 }
