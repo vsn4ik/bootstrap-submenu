@@ -1,5 +1,5 @@
 /*!
- * Bootstrap-submenu v1.0.6 (http://vsn4ik.github.io/bootstrap-submenu)
+ * Bootstrap-submenu v1.0.7 (http://vsn4ik.github.io/bootstrap-submenu)
  * Copyright 2014 vsn4ik
  * Licensed under MIT (https://github.com/vsn4ik/bootstrap-submenu/blob/master/LICENSE)
  */
@@ -39,12 +39,12 @@ if (typeof jQuery === 'undefined') {
 	$.fn.submenupicker = function() {
 		return this.each(function() {
 			var $this = $(this);
-			var data = $this.data('submenupicker');
+			var data = $this.data('bs.submenu');
 
 			if (!data) {
 				new Submenupicker(this);
 
-				$this.data('submenupicker', true);
+				$this.data('bs.submenu', true);
 			}
 		});
 	};

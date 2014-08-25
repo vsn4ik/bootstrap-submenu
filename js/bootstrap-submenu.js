@@ -33,12 +33,12 @@ if (typeof jQuery === 'undefined') {
 	$.fn.submenupicker = function() {
 		return this.each(function() {
 			var $this = $(this);
-			var data = $this.data('submenupicker');
+			var data = $this.data('bs.submenu');
 
 			if (!data) {
 				new Submenupicker(this);
 
-				$this.data('submenupicker', true);
+				$this.data('bs.submenu', true);
 			}
 		});
 	};
