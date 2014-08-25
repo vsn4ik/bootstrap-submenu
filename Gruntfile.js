@@ -22,22 +22,20 @@ module.exports = function(grunt) {
 				dest: 'dist/css/<%= pkg.name %>.min.css'
 			}
 		},
-		uglify: {
-			minify: {
-				src: 'js/<%= pkg.name %>.js',
-				dest: 'dist/js/<%= pkg.name %>.min.js'
-			}
-		},
 		copy: {
 			js: {
 				src: 'js/*',
 				dest: 'dist/'
 			},
 			docs: {
-				expand: true,
-				cwd: 'dist',
-				src: '*/*',
-				dest: 'docs/dist'
+				src: 'dist/**/*',
+				dest: 'docs/'
+			}
+		},
+		uglify: {
+			minify: {
+				src: 'js/<%= pkg.name %>.js',
+				dest: 'dist/js/<%= pkg.name %>.min.js'
 			}
 		},
 		usebanner: {
@@ -48,7 +46,7 @@ module.exports = function(grunt) {
 					' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n' +
 					' */\n'
 			},
-			dist: ['dist/*/*', 'docs/dist/*/*']
+			dist: 'dist/*/*'
 		}
 	});
 
@@ -57,5 +55,5 @@ module.exports = function(grunt) {
 		scope: 'devDependencies'
 	});
 
-	grunt.registerTask('default', ['clean', 'less', 'uglify', 'copy', 'usebanner']);
+	grunt.registerTask('default', ['clean', 'less', 'copy:js', 'uglify', 'usebanner', 'copy:docs']);
 };
