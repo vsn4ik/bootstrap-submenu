@@ -3,6 +3,7 @@
 [![Bower version](https://badge.fury.io/bo/bootstrap-submenu.svg)](http://badge.fury.io/bo/bootstrap-submenu)
 [![NPM version](https://badge.fury.io/js/bootstrap-submenu.svg)](http://badge.fury.io/js/bootstrap-submenu)
 [![Build Status](https://travis-ci.org/vsn4ik/bootstrap-submenu.svg)](https://travis-ci.org/vsn4ik/bootstrap-submenu)
+[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
 [![devDependency Status](https://david-dm.org/vsn4ik/bootstrap-submenu/dev-status.svg)](https://david-dm.org/vsn4ik/bootstrap-submenu#info=devDependencies)
 
 ## Getting Started

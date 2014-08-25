@@ -28,13 +28,13 @@ module.exports = function(grunt) {
 				dest: 'dist/'
 			},
 			docs: {
-				src: 'dist/**/*',
+				src: 'dist/*/*',
 				dest: 'docs/'
 			}
 		},
 		uglify: {
 			minify: {
-				src: 'js/<%= pkg.name %>.js',
+				src: 'dist/js/<%= pkg.name %>.js',
 				dest: 'dist/js/<%= pkg.name %>.min.js'
 			}
 		},
