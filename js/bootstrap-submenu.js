@@ -16,6 +16,7 @@ if (typeof jQuery === 'undefined') {
 	Submenupicker.prototype = {
 		init: function() {
 			this.$element.on('click.bs.dropdown', this.toggle.bind(this));
+			this.$menu.keydown(this.keydown.bind(this));
 		},
 		toggle: function() {
 			event.stopPropagation();
@@ -26,6 +27,18 @@ if (typeof jQuery === 'undefined') {
 
 			if (!isActive) {
 				this.$menu.addClass('open');
+			}
+		},
+		keydown: function() {
+			// 13: Return, 32: Spacebar
+
+			// Off vertical scrolling
+			if (event.keyCode == 32) {
+				event.preventDefault();
+			}
+
+			if (/^(13|32)$/.test(event.keyCode)) {
+				this.toggle();
 			}
 		}
 	};
