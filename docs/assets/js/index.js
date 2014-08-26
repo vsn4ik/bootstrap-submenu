@@ -1,7 +1,7 @@
 'use strict';
 
 $(function() {
-	// Google Chrome fix
+	// Dropdown fix
 	$('.dropdown > a[tabindex]').keydown(function(event) {
 		// 13: Return
 
