@@ -15,12 +15,15 @@ if (typeof jQuery === 'undefined') {
 
 	Submenupicker.prototype = {
 		init: function() {
-			this.$element.on('click.bs.dropdown', this.toggle.bind(this));
+			this.$element.on('click.bs.dropdown', this.click.bind(this));
 			this.$menu.keydown(this.keydown.bind(this));
 		},
-		toggle: function(event) {
+		click: function(event) {
 			event.stopPropagation();
 
+			this.toggle();
+		},
+		toggle: function() {
 			var isActive = this.$menu.hasClass('open');
 
 			this.$submenus.removeClass('open');
