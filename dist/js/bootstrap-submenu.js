@@ -1,5 +1,5 @@
 /*!
- * Bootstrap-submenu v1.1.2 (http://vsn4ik.github.io/bootstrap-submenu)
+ * Bootstrap-submenu v1.1.3 (http://vsn4ik.github.io/bootstrap-submenu)
  * Copyright 2014 vsn4ik
  * Licensed under MIT (https://github.com/vsn4ik/bootstrap-submenu/blob/master/LICENSE)
  */
@@ -22,7 +22,7 @@ if (typeof jQuery === 'undefined') {
 	Submenupicker.prototype = {
 		init: function() {
 			this.$element.on('click.bs.dropdown', this.click.bind(this));
-			this.$menu.keydown(this.keydown.bind(this));
+			this.$element.keydown(this.keydown.bind(this));
 		},
 		click: function(event) {
 			event.stopPropagation();

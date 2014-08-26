@@ -16,7 +16,7 @@ if (typeof jQuery === 'undefined') {
 	Submenupicker.prototype = {
 		init: function() {
 			this.$element.on('click.bs.dropdown', this.click.bind(this));
-			this.$menu.keydown(this.keydown.bind(this));
+			this.$element.keydown(this.keydown.bind(this));
 		},
 		click: function(event) {
 			event.stopPropagation();
