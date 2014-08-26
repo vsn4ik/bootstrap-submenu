@@ -1,5 +1,5 @@
 /*!
- * Bootstrap-submenu v1.1.2 (http://vsn4ik.github.io/bootstrap-submenu)
+ * Bootstrap-submenu v1.1.3 (http://vsn4ik.github.io/bootstrap-submenu)
  * Copyright 2014 vsn4ik
  * Licensed under MIT (https://github.com/vsn4ik/bootstrap-submenu/blob/master/LICENSE)
  */
@@ -40,7 +40,6 @@ if (typeof jQuery === 'undefined') {
 		},
 		keydown: function(event) {
 			// 13: Return, 32: Spacebar
-			console.log(event.keyCode);
 
 			// Off vertical scrolling
 			if (event.keyCode == 32) {
@@ -48,9 +47,6 @@ if (typeof jQuery === 'undefined') {
 			}
 
 			if (/^(13|32)$/.test(event.keyCode)) {
-				//event.preventDefault();
-				console.log(this.$element);
-
 				this.toggle();
 			}
 		}
