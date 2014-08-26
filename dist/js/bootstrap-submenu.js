@@ -22,7 +22,7 @@ if (typeof jQuery === 'undefined') {
 	Submenupicker.prototype = {
 		init: function() {
 			this.$element.on('click.bs.dropdown', this.click.bind(this));
-			this.$menu.keydown(this.keydown.bind(this));
+			this.$element.keydown(this.keydown.bind(this));
 		},
 		click: function(event) {
 			event.stopPropagation();
@@ -40,6 +40,7 @@ if (typeof jQuery === 'undefined') {
 		},
 		keydown: function(event) {
 			// 13: Return, 32: Spacebar
+			console.log(event.keyCode);
 
 			// Off vertical scrolling
 			if (event.keyCode == 32) {
@@ -47,6 +48,9 @@ if (typeof jQuery === 'undefined') {
 			}
 
 			if (/^(13|32)$/.test(event.keyCode)) {
+				//event.preventDefault();
+				console.log(this.$element);
+
 				this.toggle();
 			}
 		}
