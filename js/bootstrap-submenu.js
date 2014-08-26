@@ -8,7 +8,7 @@ if (typeof jQuery === 'undefined') {
 	function Submenupicker(element) {
 		this.$element = $(element);
 		this.$menu = this.$element.parent();
-		this.$submenus = this.$menu.parent().find('.dropdown-submenu');
+		this.$submenus = this.$menu.parent().find('.dropdown-submenu').not(this.$menu);
 
 		this.init();
 	}
@@ -24,20 +24,20 @@ if (typeof jQuery === 'undefined') {
 			this.toggle();
 		},
 		toggle: function() {
-			var isActive = this.$menu.hasClass('open');
-
+			this.$menu.toggleClass('open');
 			this.$submenus.removeClass('open');
-
-			if (!isActive) {
-				this.$menu.addClass('open');
-			}
 		},
 		keydown: function(event) {
 			// 13: Return, 32: Spacebar
+			// 38: Arrow left, 40: Arrow right
 
 			// Off vertical scrolling
-			if (event.keyCode == 32) {
+			if (/^(32|38|40)$/.test(event.keyCode)) {
 				event.preventDefault();
+			}
+
+			if (/^(38|40)$/.test(event.keyCode)) {
+				event.stopPropagation();
 			}
 
 			if (/^(13|32)$/.test(event.keyCode)) {

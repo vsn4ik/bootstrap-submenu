@@ -1,6 +1,14 @@
 'use strict';
 
 $(function() {
+	$('.dropdown > a').keydown(function() {
+		// 13: Return
+
+		if (event.keyCode == 13) {
+			$(this).dropdown('toggle');
+		}
+	});
+
 	$('.dropdown-submenu > a').submenupicker();
 
 	$('#scroll_top').click(function() {
