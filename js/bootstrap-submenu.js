@@ -48,13 +48,12 @@ if (typeof jQuery === 'undefined') {
 
 	$.fn.submenupicker = function() {
 		return this.each(function() {
-			var $this = $(this);
-			var data = $this.data('bs.submenu');
+			var data = $.data(this, 'bs.submenu');
 
 			if (!data) {
 				new Submenupicker(this);
 
-				$this.data('bs.submenu', true);
+				$.data(this, 'bs.submenu', true);
 			}
 		});
 	};
