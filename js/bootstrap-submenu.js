@@ -18,7 +18,7 @@ if (typeof jQuery === 'undefined') {
 			this.$element.on('click.bs.dropdown', this.toggle.bind(this));
 			this.$menu.keydown(this.keydown.bind(this));
 		},
-		toggle: function() {
+		toggle: function(event) {
 			event.stopPropagation();
 
 			var isActive = this.$menu.hasClass('open');
@@ -29,7 +29,7 @@ if (typeof jQuery === 'undefined') {
 				this.$menu.addClass('open');
 			}
 		},
-		keydown: function() {
+		keydown: function(event) {
 			// 13: Return, 32: Spacebar
 
 			// Off vertical scrolling

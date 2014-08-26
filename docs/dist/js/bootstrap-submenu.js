@@ -1,5 +1,5 @@
 /*!
- * Bootstrap-submenu v1.1.0 (http://vsn4ik.github.io/bootstrap-submenu)
+ * Bootstrap-submenu v1.1.1 (http://vsn4ik.github.io/bootstrap-submenu)
  * Copyright 2014 vsn4ik
  * Licensed under MIT (https://github.com/vsn4ik/bootstrap-submenu/blob/master/LICENSE)
  */
@@ -24,7 +24,7 @@ if (typeof jQuery === 'undefined') {
 			this.$element.on('click.bs.dropdown', this.toggle.bind(this));
 			this.$menu.keydown(this.keydown.bind(this));
 		},
-		toggle: function() {
+		toggle: function(event) {
 			event.stopPropagation();
 
 			var isActive = this.$menu.hasClass('open');
@@ -35,7 +35,7 @@ if (typeof jQuery === 'undefined') {
 				this.$menu.addClass('open');
 			}
 		},
-		keydown: function() {
+		keydown: function(event) {
 			// 13: Return, 32: Spacebar
 
 			// Off vertical scrolling
