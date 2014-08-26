@@ -1,7 +1,8 @@
 'use strict';
 
 $(function() {
-	$('.dropdown > a').keydown(function() {
+	// Google Chrome fix
+	$('.dropdown > a[tabindex]').keydown(function(event) {
 		// 13: Return
 
 		if (event.keyCode == 13) {
