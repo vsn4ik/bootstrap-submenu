@@ -6,9 +6,13 @@ if (typeof jQuery === 'undefined') {
 
 (function($) {
 	function Submenupicker(element) {
+		var desc = ':not(.disabled, .divider, .dropdown-header):first';
+
 		this.$element = $(element);
 		this.$menu = this.$element.parent();
 		this.$submenus = this.$menu.parent().find('.dropdown-submenu').not(this.$menu);
+		this.$prev = this.$menu.prevAll(desc).children('a');
+		this.$next = this.$menu.nextAll(desc).children('a');
 
 		this.init();
 	}
@@ -29,19 +33,25 @@ if (typeof jQuery === 'undefined') {
 		},
 		keydown: function(event) {
 			// 13: Return, 32: Spacebar
-			// 38: Arrow left, 40: Arrow right
+			// 38: Arrow up, 40: Arrow down
 
 			// Off vertical scrolling
 			if (/^(32|38|40)$/.test(event.keyCode)) {
 				event.preventDefault();
 			}
 
-			if (/^(38|40)$/.test(event.keyCode)) {
-				event.stopPropagation();
-			}
-
 			if (/^(13|32)$/.test(event.keyCode)) {
 				this.toggle();
+			}
+			else if (/^(38|40)$/.test(event.keyCode)) {
+				event.stopPropagation();
+
+				if (event.keyCode == 38) {
+					this.$prev.focus();
+				}
+				else if (event.keyCode == 40) {
+					this.$next.focus();
+				}
 			}
 		}
 	};
