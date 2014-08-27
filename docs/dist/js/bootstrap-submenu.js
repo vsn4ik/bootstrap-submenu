@@ -37,7 +37,7 @@ if (typeof jQuery === 'undefined') {
 		},
 		toggle: function() {
 			if (this.$menu.hasClass('open')) {
-				this.hide();
+				this.close();
 			}
 			else {
 				this.$menu.addClass('open');
@@ -45,10 +45,14 @@ if (typeof jQuery === 'undefined') {
 			}
 		},
 		hide: function(event) {
-			this.$menu.removeClass('open');
+			// Stop event bubbling
+			event.stopPropagation();
 
-			// Don't use $.trigger() (infinite loop)
-			this.$children.triggerHandler('hide.bs.submenu');
+			this.close();
+		},
+		close: function() {
+			this.$menu.removeClass('open');
+			this.$children.trigger('hide.bs.submenu');
 		},
 		keydown: function(event) {
 			// 13: Return, 32: Spacebar
