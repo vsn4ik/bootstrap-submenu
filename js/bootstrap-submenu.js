@@ -10,7 +10,8 @@ if (typeof jQuery === 'undefined') {
 
 		this.$element = $(element);
 		this.$menu = this.$element.parent();
-		this.$submenus = this.$menu.parent().find('.dropdown-submenu').not(this.$menu);
+		this.$menus = this.$menu.siblings('.dropdown-submenu');
+		this.$children = this.$menu.find('> .dropdown-menu > .dropdown-submenu');
 		this.$prev = this.$menu.prevAll(desc).children('a');
 		this.$next = this.$menu.nextAll(desc).children('a');
 
@@ -21,6 +22,7 @@ if (typeof jQuery === 'undefined') {
 		init: function() {
 			this.$element.on('click.bs.dropdown', this.click.bind(this));
 			this.$element.keydown(this.keydown.bind(this));
+			this.$menu.on('hide.bs.submenu', this.hide.bind(this));
 		},
 		click: function(event) {
 			event.stopPropagation();
@@ -28,8 +30,19 @@ if (typeof jQuery === 'undefined') {
 			this.toggle();
 		},
 		toggle: function() {
-			this.$menu.toggleClass('open');
-			this.$submenus.removeClass('open');
+			if (this.$menu.hasClass('open')) {
+				this.hide();
+			}
+			else {
+				this.$menu.addClass('open');
+				this.$menus.trigger('hide.bs.submenu');
+			}
+		},
+		hide: function(event) {
+			this.$menu.removeClass('open');
+
+			// Don't use $.trigger() (infinite loop)
+			this.$children.triggerHandler('hide.bs.submenu');
 		},
 		keydown: function(event) {
 			// 13: Return, 32: Spacebar
