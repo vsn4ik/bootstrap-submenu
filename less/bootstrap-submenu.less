@@ -13,12 +13,12 @@
 		margin-top: @line-height-computed / 2 - @caret-width-base;
 		margin-right: -@caret-width-base * 2 - 2;
 		border-width: @caret-width-base 0 @caret-width-base @caret-width-base;
-		border-style: solid;
+
+		// dashed: fix caret size for Mozilla Firefox
+		border-style: solid solid solid dashed;
+
 		border-top-color: transparent;
 		border-bottom-color: transparent;
-
-		// Fix caret size for Mozilla Firefox
-		border-left-style: dashed;
 	}
 
 	> .dropdown-menu {
