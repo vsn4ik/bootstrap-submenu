@@ -11,6 +11,12 @@ module.exports = function(grunt) {
 		},
 		less: {
 			core: {
+				options: {
+					sourceMap: true,
+					outputSourceFiles: true,
+					sourceMapURL: '<%= pkg.name %>.css.map',
+					sourceMapFilename: 'dist/css/<%= pkg.name %>.css.map'
+				},
 				src: 'less/<%= pkg.name %>.less',
 				dest: 'dist/css/<%= pkg.name %>.css'
 			}
@@ -52,11 +58,11 @@ module.exports = function(grunt) {
 			options: {
 				banner: '/*!\n' +
 					' * Bootstrap-submenu v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
-					' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
+					' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author.name %> (<%= pkg.author.url %>)\n' +
 					' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n' +
 					' */\n'
 			},
-			dist: 'dist/*/*'
+			dist: 'dist/*/*.{css,js}'
 		}
 	});
 
