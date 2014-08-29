@@ -1,11 +1,19 @@
 {
 	"name": "bootstrap-submenu",
 	"version": "1.1.5",
-	"authors": [
-		"vsn4ik"
+	"description": "Bootstrap Sub-Menus",
+	"keywords": [
+		"bootstrap",
+		"dropdown",
+		"submenu"
 	],
 	"homepage": "http://vsn4ik.github.io/bootstrap-submenu",
-	"description": "Bootstrap Sub-Menus",
+	"authors": [
+		{
+			"name": "Vasily A.",
+			"homepage": "https://github.com/vsn4ik"
+		}
+	],
 	"main": [
 		"less/bootstrap-submenu.less",
 		"dist/css/bootstrap-submenu.css",
@@ -22,11 +30,6 @@
 		"README.md",
 		"_config.yml",
 		"package.json"
-	],
-	"keywords": [
-		"bootstrap",
-		"dropdown",
-		"submenu"
 	],
 	"license": "MIT",
 	"dependencies": {

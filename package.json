@@ -8,9 +8,9 @@
 		"submenu"
 	],
 	"homepage": "http://vsn4ik.github.io/bootstrap-submenu",
-	"author": "vsn4ik",
-	"scripts": {
-		"test": "grunt"
+	"author": {
+		"name": "Vasily A.",
+		"url": "https://github.com/vsn4ik"
 	},
 	"repository": {
 		"type": "git",
@@ -23,9 +23,13 @@
 		"type": "MIT",
 		"url": "https://github.com/vsn4ik/bootstrap-submenu/blob/master/LICENSE"
 	},
+	"scripts": {
+		"test": "grunt"
+	},
 	"devDependencies": {
 		"grunt": "~0.4.5",
 		"grunt-banner": "~0.2.3",
+		"grunt-cli": "~0.1.13",
 		"grunt-contrib-clean": "~0.6.0",
 		"grunt-contrib-copy": "~0.5.0",
 		"grunt-contrib-cssmin": "~0.10.0",

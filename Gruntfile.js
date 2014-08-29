@@ -10,7 +10,7 @@ module.exports = function(grunt) {
 			dist: ['dist', 'docs/dist']
 		},
 		less: {
-			compile: {
+			core: {
 				src: 'less/<%= pkg.name %>.less',
 				dest: 'dist/css/<%= pkg.name %>.css'
 			}

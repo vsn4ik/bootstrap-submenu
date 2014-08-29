@@ -1,0 +1,17 @@
+{
+	"name": "vsn4ik/bootstrap-submenu",
+	"description": "Bootstrap Sub-Menus",
+	"keywords": [
+		"bootstrap",
+		"dropdown",
+		"submenu"
+	],
+	"homepage": "http://vsn4ik.github.io/bootstrap-submenu",
+	"authors": [
+		{
+			"name": "Vasily A.",
+			"homepage": "https://github.com/vsn4ik"
+		}
+	],
+	"license": "MIT"
+}
