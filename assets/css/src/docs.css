@@ -26,3 +26,7 @@ a {
 .input-group-btn {
 	width: auto;
 }
+
+.input-group-addon {
+	background-color: white;
+}
