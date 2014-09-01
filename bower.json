@@ -20,10 +20,8 @@
 		"dist/js/bootstrap-submenu.js"
 	],
 	"ignore": [
-		"bootstrap",
 		"docs",
 		".gitignore",
-		".gitmodules",
 		".npmignore",
 		".travis.yml",
 		"Gruntfile.js",

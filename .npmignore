@@ -2,10 +2,8 @@
 _gh_pages
 
 # Folders to ignore
-bootstrap
 docs
 
-.gitmodules
 .travis.yml
 bower.json
 Gruntfile.js
