@@ -14,7 +14,15 @@ a {
 	margin-bottom: 15px;
 }
 
-.glyphicon + span,
+.glyphicon + *,
+.octicon + *,
+* + .gluphicon,
+* + .octicon,
 .nav .caret {
 	margin-left: 4px;
+}
+
+.input-group-addon,
+.input-group-btn {
+	width: auto;
 }

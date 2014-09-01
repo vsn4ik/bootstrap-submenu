@@ -38,8 +38,8 @@ module.exports = function(grunt) {
 			},
 			docs: {
 				src: [
-					'docs/assets/css/src/docs.css',
-					'docs/assets/css/src/pygments-manni.css'
+					'docs/assets/css/src/pygments-manni.css',
+					'docs/assets/css/src/docs.css'
 				],
 				dest: 'docs/assets/css/docs.min.css'
 			}

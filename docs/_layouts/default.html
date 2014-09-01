@@ -8,8 +8,26 @@
 		<div class="jumbotron">
 			<h1>Bootstrap-submenu</h1>
 			<p class="lead">{{ site.description }}</p>
-			<a class="btn btn-primary btn-lg m-b" href="{{ site.repo }}/zipball/master">Download</a>
-			<a class="btn btn-default btn-lg m-b" href="{{ site.repo }}">View Project on GitHub</a>
+
+			<div class="input-group m-b">
+				<span class="input-group-addon">
+					<span class="octicon octicon-cloud-download"></span>
+					<span>Download</span>
+				</span>
+
+				<span class="input-group-btn">
+					<a class="btn btn-primary" href="{{ site.repo }}/zipball/master" title="Download as a zip file">
+						<span>zip</span>
+					</a>
+
+					<a class="btn btn-primary" href="{{ site.repo }}/tarball/master" title="Download as a tar.gz file">tar.gz</a>
+				</span>
+			</div>
+
+			<a id="gh-view-link" class="btn btn-default" href="{{ site.repo }}">
+				<span class="octicon octicon-mark-github"></span>
+				<span>View on GitHub</span>
+			</a>
 		</div>
 
 		{{ content }}
