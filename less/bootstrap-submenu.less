@@ -1,4 +1,5 @@
 @import "../node_modules/bootstrap/less/variables.less";
+@import "mixins.less";
 
 //
 // Sub-Menus
@@ -10,29 +11,14 @@
 	margin-right: -@caret-width-base * 2 - 2;
 }
 
-.make-nested-list(@offset, @i, @n) when (@i < @n) {
-	> .dropdown-menu > li {
-		&.dropdown-header,
-		> a {
-			padding-left: @offset + (10 * @i);
-		}
-
-		.make-nested-list(@offset, @i + 1, @n);
-	}
-}
-
 @media (min-width: @grid-float-breakpoint) {
 	.dropdown-submenu {
 		position: relative;
 
 		> a:after {
 			margin-top: @line-height-computed / 2 - @caret-width-base;
-			border-top: @caret-width-base solid transparent;
 
-			// dashed: fix caret size for Mozilla Firefox
-			border-left: @caret-width-base dashed;
-
-			border-bottom: @caret-width-base solid transparent;
+			.make-caret(left, top, bottom);
 		}
 
 		> .dropdown-menu {
@@ -49,12 +35,7 @@
 		> a:after {
 			margin-top: @line-height-computed / 2 - @caret-width-base / 2;
 
-			// dashed: fix caret size for Mozilla Firefox
-			border-top: @caret-width-base dashed;
-
-			border-left: @caret-width-base solid transparent;
-			border-right: @caret-width-base solid transparent;
-			border-bottom-width: 0;
+			.make-caret(top, left, right);
 		}
 
 		.dropdown-menu {
