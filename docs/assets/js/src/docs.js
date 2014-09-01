@@ -10,6 +10,11 @@ $(function() {
 		}
 	});
 
+	// Предотвращаем закрытие при клике на неактивный элемент списка
+	$('.dropdown-menu > .disabled, .dropdown-header').on('click.bs.dropdown.data-api', function(event) {
+		event.stopPropagation();
+	});
+
 	$('.dropdown-submenu > a').submenupicker();
 
 	$('#scroll_top').click(function() {
