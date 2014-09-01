@@ -1,6 +1,6 @@
 {
 	"name": "bootstrap-submenu",
-	"version": "1.1.7",
+	"version": "1.1.8",
 	"description": "Bootstrap Sub-Menus",
 	"keywords": [
 		"bootstrap",
@@ -27,11 +27,8 @@
 		"Gruntfile.js",
 		"README.md",
 		"_config.yml",
+		"composer.json",
 		"package.json"
 	],
-	"license": "MIT",
-	"dependencies": {
-		"bootstrap": ">= 3.0.0",
-		"jquery": ">= 1.9.0"
-	}
+	"license": "MIT"
 }

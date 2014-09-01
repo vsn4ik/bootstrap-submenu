@@ -4,7 +4,9 @@ _gh_pages
 # Folders to ignore
 docs
 
+.npmignore
 .travis.yml
-bower.json
 Gruntfile.js
+bower.json
 _config.yml
+composer.json
