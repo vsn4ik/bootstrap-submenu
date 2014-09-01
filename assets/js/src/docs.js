@@ -1,16 +1,16 @@
 'use strict';
 
 $(function() {
-	// Dropdown fix
-	$('.dropdown > a[tabindex]').keydown(function(event) {
-		// 13: Return
+	$.ajax({
+		url: 'https://api.github.com/repos/vsn4ik/bootstrap-submenu',
+		success: function(data) {
+			var $group = $('<div class="input-group"><span class="input-group-btn"></span></div>');
 
-		if (event.keyCode == 13) {
-			$(this).dropdown('toggle');
+			$group.append('<span class="input-group-addon"><span>' + data.stargazers_count + '</span><span class="octicon octicon-star"></span></span>');
+
+			$('#gh-view-link').wrap($group);
 		}
 	});
-
-	$('.dropdown-submenu > a').submenupicker();
 
 	$('#scroll_top').click(function() {
 		// 'html' for Mozilla Firefox, 'body' for other browsers
@@ -20,4 +20,20 @@ $(function() {
 
 		this.blur();
 	});
+
+	// Dropdown fix
+	$('.dropdown > a[tabindex]').keydown(function(event) {
+		// 13: Return
+
+		if (event.keyCode == 13) {
+			$(this).dropdown('toggle');
+		}
+	});
+
+	// Предотвращаем закрытие при клике на неактивный элемент списка
+	$('.dropdown-menu > .disabled, .dropdown-header').on('click.bs.dropdown.data-api', function(event) {
+		event.stopPropagation();
+	});
+
+	$('.dropdown-submenu > a').submenupicker();
 });
