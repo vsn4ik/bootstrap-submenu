@@ -33,7 +33,7 @@
 @media (max-width: @grid-float-breakpoint-max) {
 	.dropdown-submenu {
 		> a:after {
-			margin-top: @line-height-computed / 2 - @caret-width-base / 2;
+			margin-top: (@line-height-computed - @caret-width-base) / 2;
 
 			.make-caret(top, left, right);
 		}

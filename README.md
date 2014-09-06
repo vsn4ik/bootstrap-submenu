@@ -11,7 +11,7 @@
 
 Four quick start options are available:
 
-- [Download](https://github.com/vsn4ik/bootstrap-submenu/zipball/master "Download Bootstrap-submenu").
+- [Download ZIP](https://github.com/vsn4ik/bootstrap-submenu/archive/master.zip "Download Bootstrap-submenu").
 - Clone the repo: `git clone https://github.com/vsn4ik/bootstrap-submenu.git`.
 - Install with [Bower](http://bower.io): `bower install bootstrap-submenu`.
 - Install with [npm](https://www.npmjs.org): `npm install bootstrap-submenu`.
@@ -30,7 +30,7 @@ For some working examples, visit our [examples](http://vsn4ik.github.io/bootstra
 
 ## Creators
 
-**vsn4ik**
+**Vasily A.**
 
 - <https://github.com/vsn4ik>
 
