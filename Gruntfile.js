@@ -51,7 +51,10 @@ module.exports = function(grunt) {
 			},
 			core: {
 				options: {
-					jquery: true
+					jquery: true,
+					globals: {
+						console: true
+					}
 				},
 				src: 'js/*'
 			},

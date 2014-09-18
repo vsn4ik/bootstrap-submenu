@@ -55,7 +55,7 @@ if (typeof jQuery === 'undefined') {
 			this.$children.trigger('hide.bs.submenu');
 		},
 		keydown: function(event) {
-			// 13: Return, 32: Spacebar
+			// 13: Return, 27: Esc, 32: Spacebar
 			// 38: Arrow up, 40: Arrow down
 
 			// Off vertical scrolling
@@ -66,10 +66,13 @@ if (typeof jQuery === 'undefined') {
 			if (/^(13|32)$/.test(event.keyCode)) {
 				this.toggle();
 			}
-			else if (/^(38|40)$/.test(event.keyCode)) {
+			else if (/^(27|38|40)$/.test(event.keyCode)) {
 				event.stopPropagation();
 
-				if (event.keyCode == 38) {
+				if (event.keyCode == 27) {
+					this.close();
+				}
+				else if (event.keyCode == 38) {
 					this.$prev.focus();
 				}
 				else if (event.keyCode == 40) {
