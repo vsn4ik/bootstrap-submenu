@@ -1,5 +1,5 @@
 /*!
- * Bootstrap-submenu v1.1.8 (http://vsn4ik.github.io/bootstrap-submenu)
+ * Bootstrap-submenu v1.1.9 (http://vsn4ik.github.io/bootstrap-submenu)
  * Copyright 2014 Vasily A. (https://github.com/vsn4ik)
  * Licensed under MIT (https://github.com/vsn4ik/bootstrap-submenu/blob/master/LICENSE)
  */
@@ -12,14 +12,20 @@ if (typeof jQuery === 'undefined') {
 
 (function($) {
 	function Submenupicker(element) {
-		var desc = ':not(.disabled, .divider, .dropdown-header):first';
+		var fake = ':not(.disabled, .divider, .dropdown-header)';
+		var desc = fake + ':first';
 
 		this.$element = $(element);
 		this.$menu = this.$element.parent();
+		this.$dropdown = this.$menu.parent().parent();
 		this.$menus = this.$menu.siblings('.dropdown-submenu');
-		this.$children = this.$menu.find('> .dropdown-menu > .dropdown-submenu');
 		this.$prev = this.$menu.prevAll(desc).children('a');
 		this.$next = this.$menu.nextAll(desc).children('a');
+
+		var $children = this.$menu.find('> .dropdown-menu > ' + fake);
+
+		this.$children = $children.filter('.dropdown-submenu');
+		this.$items = $children.not('.dropdown-submenu');
 
 		this.init();
 	}
@@ -29,6 +35,8 @@ if (typeof jQuery === 'undefined') {
 			this.$element.on('click.bs.dropdown', this.click.bind(this));
 			this.$element.keydown(this.keydown.bind(this));
 			this.$menu.on('hide.bs.submenu', this.hide.bind(this));
+			this.$next.keydown(this.next_keydown.bind(this));
+			this.$items.keydown(this.item_keydown.bind(this));
 		},
 		click: function(event) {
 			event.stopPropagation();
@@ -55,7 +63,7 @@ if (typeof jQuery === 'undefined') {
 			this.$children.trigger('hide.bs.submenu');
 		},
 		keydown: function(event) {
-			// 13: Return, 32: Spacebar
+			// 13: Return, 27: Esc, 32: Spacebar
 			// 38: Arrow up, 40: Arrow down
 
 			// Off vertical scrolling
@@ -66,16 +74,51 @@ if (typeof jQuery === 'undefined') {
 			if (/^(13|32)$/.test(event.keyCode)) {
 				this.toggle();
 			}
-			else if (/^(38|40)$/.test(event.keyCode)) {
+			else if (/^(27|38|40)$/.test(event.keyCode)) {
 				event.stopPropagation();
 
-				if (event.keyCode == 38) {
+				if (event.keyCode == 27) {
+					if (this.$menu.hasClass('open')) {
+						this.close();
+					}
+					else {
+						this.$menus.trigger('hide.bs.submenu');
+						this.$dropdown.removeClass('open').children('a').focus();
+					}
+				}
+				else if (event.keyCode == 38) {
 					this.$prev.focus();
 				}
 				else if (event.keyCode == 40) {
 					this.$next.focus();
 				}
 			}
+		},
+		next_keydown: function(event) {
+			// 38: Arrow up
+
+			if (event.keyCode != 38) {
+				return;
+			}
+
+			// Off vertical scrolling
+			event.preventDefault();
+
+			event.stopPropagation();
+
+			this.$element.focus();
+		},
+		item_keydown: function(event) {
+			// 27: Esc
+
+			if (event.keyCode != 27) {
+				return;
+			}
+
+			event.stopPropagation();
+
+			this.close();
+			this.$element.focus();
 		}
 	};
 
