@@ -6,14 +6,20 @@ if (typeof jQuery === 'undefined') {
 
 (function($) {
 	function Submenupicker(element) {
-		var desc = ':not(.disabled, .divider, .dropdown-header):first';
+		var fake = ':not(.disabled, .divider, .dropdown-header)';
+		var desc = fake + ':first';
 
 		this.$element = $(element);
 		this.$menu = this.$element.parent();
+		this.$dropdown = this.$menu.parent().parent();
 		this.$menus = this.$menu.siblings('.dropdown-submenu');
-		this.$children = this.$menu.find('> .dropdown-menu > .dropdown-submenu');
 		this.$prev = this.$menu.prevAll(desc).children('a');
 		this.$next = this.$menu.nextAll(desc).children('a');
+
+		var $children = this.$menu.find('> .dropdown-menu > ' + fake);
+
+		this.$children = $children.filter('.dropdown-submenu');
+		this.$items = $children.not('.dropdown-submenu');
 
 		this.init();
 	}
@@ -23,6 +29,8 @@ if (typeof jQuery === 'undefined') {
 			this.$element.on('click.bs.dropdown', this.click.bind(this));
 			this.$element.keydown(this.keydown.bind(this));
 			this.$menu.on('hide.bs.submenu', this.hide.bind(this));
+			this.$next.keydown(this.next_keydown.bind(this));
+			this.$items.keydown(this.item_keydown.bind(this));
 		},
 		click: function(event) {
 			event.stopPropagation();
@@ -64,7 +72,13 @@ if (typeof jQuery === 'undefined') {
 				event.stopPropagation();
 
 				if (event.keyCode == 27) {
-					this.close();
+					if (this.$menu.hasClass('open')) {
+						this.close();
+					}
+					else {
+						this.$menus.trigger('hide.bs.submenu');
+						this.$dropdown.removeClass('open').children('a').focus();
+					}
 				}
 				else if (event.keyCode == 38) {
 					this.$prev.focus();
@@ -73,6 +87,32 @@ if (typeof jQuery === 'undefined') {
 					this.$next.focus();
 				}
 			}
+		},
+		next_keydown: function(event) {
+			// 38: Arrow up
+
+			if (event.keyCode != 38) {
+				return;
+			}
+
+			// Off vertical scrolling
+			event.preventDefault();
+
+			event.stopPropagation();
+
+			this.$element.focus();
+		},
+		item_keydown: function(event) {
+			// 27: Esc
+
+			if (event.keyCode != 27) {
+				return;
+			}
+
+			event.stopPropagation();
+
+			this.close();
+			this.$element.focus();
 		}
 	};
 
