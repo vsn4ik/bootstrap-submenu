@@ -63,8 +63,9 @@ module.exports = function(grunt) {
 		},
 		uglify: {
 			core: {
-				src: 'dist/js/<%= pkg.name %>.js',
-				dest: 'dist/js/<%= pkg.name %>.min.js'
+				expand: true,
+				src: 'dist/js/*.js',
+				ext: '.min.js'
 			},
 			docs: {
 				src: 'docs/assets/js/src/docs.js',
@@ -73,11 +74,13 @@ module.exports = function(grunt) {
 		},
 		usebanner: {
 			options: {
-				banner: '/*!\n' +
-					' * Bootstrap-submenu v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
-					' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author.name %> (<%= pkg.author.url %>)\n' +
-					' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n' +
-					' */\n'
+				banner: [
+					'/*!',
+					' * Bootstrap-submenu v<%= pkg.version %> (<%= pkg.homepage %>)',
+					' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author.name %> (<%= pkg.author.url %>)',
+					' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)',
+					' */'
+				].join('\n').concat('\n')
 			},
 			dist: 'dist/*/*.{css,js}'
 		},
@@ -97,5 +100,14 @@ module.exports = function(grunt) {
 		scope: 'devDependencies'
 	});
 
-	grunt.registerTask('default', ['clean', 'less', 'copy', 'cssmin', 'jshint', 'uglify', 'usebanner', 'symlink']);
+	grunt.registerTask('default', [
+		'clean',
+		'less',
+		'copy',
+		'cssmin',
+		'jshint',
+		'uglify',
+		'usebanner',
+		'symlink'
+	]);
 };
