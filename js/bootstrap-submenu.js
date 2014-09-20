@@ -6,20 +6,19 @@ if (typeof jQuery === 'undefined') {
 
 (function($) {
 	function Submenupicker(element) {
-		var fake = ':not(.disabled, .divider, .dropdown-header)';
-		var desc = fake + ':first';
+		var desc = ':not(.disabled, .divider, .dropdown-header)';
 
 		this.$element = $(element);
+		this.$dropdown = this.$element.closest('.dropdown');
 		this.$menu = this.$element.parent();
-		this.$dropdown = this.$menu.parent().parent();
+		this.$drop = this.$menu.parent().parent();
 		this.$menus = this.$menu.siblings('.dropdown-submenu');
-		this.$prev = this.$menu.prevAll(desc).children('a');
-		this.$next = this.$menu.nextAll(desc).children('a');
 
-		var $children = this.$menu.find('> .dropdown-menu > ' + fake);
+		var $children = this.$menu.find('> .dropdown-menu > ' + desc);
 
-		this.$children = $children.filter('.dropdown-submenu');
+		this.$submenus = $children.filter('.dropdown-submenu');
 		this.$items = $children.not('.dropdown-submenu');
+		this.$next = this.$menu.nextAll(desc + ':first').children('a');
 
 		this.init();
 	}
@@ -29,8 +28,10 @@ if (typeof jQuery === 'undefined') {
 			this.$element.on('click.bs.dropdown', this.click.bind(this));
 			this.$element.keydown(this.keydown.bind(this));
 			this.$menu.on('hide.bs.submenu', this.hide.bind(this));
-			this.$next.keydown(this.next_keydown.bind(this));
 			this.$items.keydown(this.item_keydown.bind(this));
+
+			// Bootstrap fix
+			this.$next.keydown(this.next_keydown.bind(this));
 		},
 		click: function(event) {
 			event.stopPropagation();
@@ -54,7 +55,7 @@ if (typeof jQuery === 'undefined') {
 		},
 		close: function() {
 			this.$menu.removeClass('open');
-			this.$children.trigger('hide.bs.submenu');
+			this.$submenus.trigger('hide.bs.submenu');
 		},
 		keydown: function(event) {
 			// 13: Return, 27: Esc, 32: Spacebar
@@ -77,16 +78,39 @@ if (typeof jQuery === 'undefined') {
 					}
 					else {
 						this.$menus.trigger('hide.bs.submenu');
-						this.$dropdown.removeClass('open').children('a').focus();
+						this.$drop.removeClass('open').children('a').focus();
 					}
 				}
-				else if (event.keyCode == 38) {
-					this.$prev.focus();
-				}
-				else if (event.keyCode == 40) {
-					this.$next.focus();
+				else {
+					var $items = this.$dropdown.find('li:not(.disabled):visible > a');
+
+					var index = $items.index(this.$element);
+
+					if (event.keyCode == 38 && index !== 0) {
+						index--;
+					}
+					else if (event.keyCode == 40 && index !== $items.length - 1) {
+						index++;
+					}
+					else {
+						return;
+					}
+
+					$items.eq(index).focus();
 				}
 			}
+		},
+		item_keydown: function(event) {
+			// 27: Esc
+
+			if (event.keyCode != 27) {
+				return;
+			}
+
+			event.stopPropagation();
+
+			this.close();
+			this.$element.focus();
 		},
 		next_keydown: function(event) {
 			// 38: Arrow up
@@ -100,19 +124,12 @@ if (typeof jQuery === 'undefined') {
 
 			event.stopPropagation();
 
-			this.$element.focus();
-		},
-		item_keydown: function(event) {
-			// 27: Esc
+			// Use this.$drop instead this.$dropdown (optimally)
+			var $items = this.$drop.find('li:not(.disabled):visible > a');
 
-			if (event.keyCode != 27) {
-				return;
-			}
+			var index = $items.index(event.target);
 
-			event.stopPropagation();
-
-			this.close();
-			this.$element.focus();
+			$items.eq(index - 1).focus();
 		}
 	};
 
