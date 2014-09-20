@@ -5,9 +5,9 @@ if (typeof jQuery === 'undefined') {
 }
 
 (function($) {
-	function Submenupicker(element) {
-		var desc = ':not(.disabled, .divider, .dropdown-header)';
+	var desc = ':not(.disabled, .divider, .dropdown-header)';
 
+	function Submenupicker(element) {
 		this.$element = $(element);
 		this.$dropdown = this.$element.closest('.dropdown');
 		this.$menu = this.$element.parent();
@@ -18,7 +18,6 @@ if (typeof jQuery === 'undefined') {
 
 		this.$submenus = $children.filter('.dropdown-submenu');
 		this.$items = $children.not('.dropdown-submenu');
-		this.$next = this.$menu.nextAll(desc + ':first').children('a');
 
 		this.init();
 	}
@@ -31,7 +30,7 @@ if (typeof jQuery === 'undefined') {
 			this.$items.keydown(this.item_keydown.bind(this));
 
 			// Bootstrap fix
-			this.$next.keydown(this.next_keydown.bind(this));
+			this.$menu.nextAll(desc + ':first').not('.dropdown-submenu').children('a').keydown(this.next_keydown.bind(this));
 		},
 		click: function(event) {
 			event.stopPropagation();
