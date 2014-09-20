@@ -124,8 +124,6 @@ if (typeof jQuery === 'undefined') {
 				return;
 			}
 
-			console.log('keydown');
-
 			// Off vertical scrolling
 			event.preventDefault();
 
