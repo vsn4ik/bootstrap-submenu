@@ -9,12 +9,13 @@
 
 ## Quick start
 
-Four quick start options are available:
+Five quick start options are available:
 
 - [Download ZIP](https://github.com/vsn4ik/bootstrap-submenu/archive/master.zip "Download Bootstrap-submenu").
 - Clone the repo: `git clone https://github.com/vsn4ik/bootstrap-submenu.git`.
 - Install with [Bower](http://bower.io): `bower install bootstrap-submenu`.
 - Install with [npm](https://www.npmjs.org): `npm install bootstrap-submenu`.
+- Install with [Composer](https://getcomposer.org): `composer require vsn4ik/bootstrap-submenu "dev-master"`.
 
 
 ## Examples
