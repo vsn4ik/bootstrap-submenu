@@ -53,13 +53,19 @@ module.exports = function(grunt) {
 						console: true
 					}
 				},
-				src: 'js/*'
+				src: 'js/'
 			},
 			grunt: {
 				options: {
 					node: true
 				},
 				src: 'Gruntfile.js'
+			},
+			docs: {
+				options: {
+					jquery: true
+				},
+				src: 'docs/assets/js/src/'
 			}
 		},
 		uglify: {
