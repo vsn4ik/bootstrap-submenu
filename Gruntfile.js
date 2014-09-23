@@ -93,6 +93,17 @@ module.exports = function(grunt) {
 				src: 'dist',
 				dest: 'docs/dist'
 			}
+		},
+		compress: {
+			dist: {
+				options: {
+					archive: '<%= compress.dist.dest %>.zip'
+				},
+				expand: true,
+				cwd: 'dist',
+				src: '**',
+				dest: '<%= pkg.name %>-<%= pkg.version %>-dist'
+			}
 		}
 	});
 
@@ -109,6 +120,7 @@ module.exports = function(grunt) {
 		'jshint',
 		'uglify',
 		'usebanner',
-		'symlink'
+		'symlink',
+		'compress'
 	]);
 };
