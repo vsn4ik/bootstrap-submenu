@@ -22,7 +22,6 @@
 	"ignore": [
 		"docs",
 		".gitignore",
-		".npmignore",
 		".travis.yml",
 		"Gruntfile.js",
 		"README.md",
