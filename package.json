@@ -23,6 +23,12 @@
 		"type": "MIT",
 		"url": "https://github.com/vsn4ik/bootstrap-submenu/blob/master/LICENSE"
 	},
+	"files": [
+		"dist",
+		"js",
+		"less",
+		"LICENSE"
+	],
 	"scripts": {
 		"test": "grunt"
 	},
