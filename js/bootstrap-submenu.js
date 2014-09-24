@@ -83,7 +83,7 @@ if (typeof jQuery === 'undefined') {
 				else {
 					var $items = this.$dropdown.find('li:not(.disabled):visible > a');
 
-					var index = $items.index(this.$element);
+					var index = $items.index(event.target);
 
 					if (event.keyCode == 38 && index !== 0) {
 						index--;
