@@ -43,15 +43,16 @@ module.exports = function(grunt) {
 		},
 		jshint: {
 			options: {
-				strict: true,
-				globalstrict: true
+				curly: true,
+				globalstrict: true,
+				latedef: true,
+				noempty: true,
+				strict: true
 			},
 			core: {
 				options: {
-					jquery: true,
-					globals: {
-						console: true
-					}
+					devel: true,
+					jquery: true
 				},
 				src: 'js/'
 			},
