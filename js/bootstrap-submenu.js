@@ -2,11 +2,15 @@
 
 (function(factory) {
 	if (typeof define == 'function' && define.amd) {
-		// AMD. Register as an anonymous module depending on jQuery
+		// AMD. Register as an anonymous module
 		define(['jquery'], factory);
 	}
+	else if (typeof exports == 'object') {
+		// Node/CommonJS
+		module.exports = factory(require('jquery'));
+	}
 	else {
-		// No AMD. Register plugin with global jQuery object
+		// Browser globals
 		factory(jQuery);
 	}
 })(function($) {
@@ -137,15 +141,21 @@
 		}
 	};
 
-	$.fn.submenupicker = function() {
-		return this.each(function() {
+	// For AMD/Node/CommonJS used elements (optional)
+	// http://learn.jquery.com/jquery-ui/environments/amd/
+	$.fn.submenupicker = function(elements) {
+		var $elements = this instanceof $ ? this : $(elements);
+
+		return $elements.each(function() {
 			var data = $.data(this, 'bs.submenu');
 
 			if (!data) {
-				new Submenupicker(this);
+				data = new Submenupicker(this);
 
-				$.data(this, 'bs.submenu', true);
+				$.data(this, 'bs.submenu', data);
 			}
 		});
 	};
+
+	return $.fn.submenupicker;
 });
