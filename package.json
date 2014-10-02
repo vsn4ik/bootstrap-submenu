@@ -29,6 +29,7 @@
 		"less",
 		"LICENSE"
 	],
+	"main": "dist/js/bootstrap-submenu.js",
 	"scripts": {
 		"test": "grunt"
 	},
