@@ -1,16 +1,25 @@
 /*!
- * Bootstrap-submenu v1.2.0 (http://vsn4ik.github.io/bootstrap-submenu)
+ * Bootstrap-submenu v1.2.5 (http://vsn4ik.github.io/bootstrap-submenu)
  * Copyright 2014 Vasily A. (https://github.com/vsn4ik)
  * Licensed under MIT (https://github.com/vsn4ik/bootstrap-submenu/blob/master/LICENSE)
  */
 
 'use strict';
 
-if (typeof jQuery === 'undefined') {
-	throw new Error('Bootstrap-submenu requires jQuery');
-}
-
-(function($) {
+(function(factory) {
+	if (typeof define == 'function' && define.amd) {
+		// AMD. Register as an anonymous module
+		define(['jquery'], factory);
+	}
+	else if (typeof exports == 'object') {
+		// Node/CommonJS
+		module.exports = factory(require('jquery'));
+	}
+	else {
+		// Browser globals
+		factory(jQuery);
+	}
+})(function($) {
 	var desc = ':not(.disabled, .divider, .dropdown-header)';
 
 	function Submenupicker(element) {
@@ -89,7 +98,7 @@ if (typeof jQuery === 'undefined') {
 				else {
 					var $items = this.$dropdown.find('li:not(.disabled):visible > a');
 
-					var index = $items.index(this.$element);
+					var index = $items.index(event.target);
 
 					if (event.keyCode == 38 && index !== 0) {
 						index--;
@@ -138,15 +147,21 @@ if (typeof jQuery === 'undefined') {
 		}
 	};
 
-	$.fn.submenupicker = function() {
-		return this.each(function() {
+	// For AMD/Node/CommonJS used elements (optional)
+	// http://learn.jquery.com/jquery-ui/environments/amd/
+	$.fn.submenupicker = function(elements) {
+		var $elements = this instanceof $ ? this : $(elements);
+
+		return $elements.each(function() {
 			var data = $.data(this, 'bs.submenu');
 
 			if (!data) {
-				new Submenupicker(this);
+				data = new Submenupicker(this);
 
-				$.data(this, 'bs.submenu', true);
+				$.data(this, 'bs.submenu', data);
 			}
 		});
 	};
-}(jQuery));
+
+	return $.fn.submenupicker;
+});
