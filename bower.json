@@ -14,6 +14,11 @@
 			"homepage": "https://github.com/vsn4ik"
 		}
 	],
+	"moduleType": [
+		"amd",
+		"globals",
+		"node"
+	],
 	"main": [
 		"less/bootstrap-submenu.less",
 		"dist/css/bootstrap-submenu.css",
