@@ -13,10 +13,14 @@ $(function() {
 	});
 
 	$('#scroll_top').click(function() {
+		this.disabled = true;
+
 		// 'html' for Mozilla Firefox, 'body' for other browsers
 		$('body, html').animate({
 			scrollTop: 0
-		}, 800);
+		}, 800, (function() {
+			this.disabled = false;
+		}).bind(this));
 
 		this.blur();
 	});
