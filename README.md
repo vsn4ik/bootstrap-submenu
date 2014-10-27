@@ -17,6 +17,19 @@ Five quick start options are available:
 - Install with [npm](https://www.npmjs.org): `npm install bootstrap-submenu`.
 - Install with [Composer](https://getcomposer.org): `composer require vsn4ik/bootstrap-submenu "dev-master"`.
 
+### What's included
+
+```
+bootstrap-submenu/
+├── css/
+│   ├── bootstrap-submenu.css
+│   ├── bootstrap-submenu.css.map
+│   └── bootstrap-submenu.min.css
+└── js/
+    ├── bootstrap-submenu.js
+    └── bootstrap-submenu.min.js
+```
+
 
 ## Examples
 
