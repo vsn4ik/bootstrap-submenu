@@ -18,7 +18,7 @@
 
 	function Submenupicker(element) {
 		this.$element = $(element);
-		this.$dropdown = this.$element.closest('.dropdown');
+		this.$main = this.$element.closest('.dropdown, .dropup');
 		this.$menu = this.$element.parent();
 		this.$drop = this.$menu.parent().parent();
 		this.$menus = this.$menu.siblings('.dropdown-submenu');
@@ -90,7 +90,7 @@
 					}
 				}
 				else {
-					var $items = this.$dropdown.find('li:not(.disabled):visible > a');
+					var $items = this.$main.find('li:not(.disabled):visible > a');
 
 					var index = $items.index(event.target);
 
@@ -132,7 +132,7 @@
 
 			event.stopPropagation();
 
-			// Use this.$drop instead this.$dropdown (optimally)
+			// Use this.$drop instead this.$main (optimally)
 			var $items = this.$drop.find('li:not(.disabled):visible > a');
 
 			var index = $items.index(event.target);

@@ -21,11 +21,22 @@
 			.make-caret(left, top, bottom);
 		}
 
-		> .dropdown-menu {
+		.dropdown-menu {
 			top: 0;
 			left: 100%;
 			margin-top: -6px;
 			border-top-left-radius: 0;
+
+			.dropup &,
+			.navbar-fixed-bottom .dropdown & {
+				top: auto;
+				bottom: 0;
+				border-top-left-radius: @border-radius-base;
+				border-bottom-left-radius: 0;
+
+				margin-top: 0px;
+				margin-bottom: -6px;
+			}
 		}
 	}
 }
