@@ -39,74 +39,35 @@ $('.dropdown-submenu > a').submenupicker();
 		<span class="caret"></span>
 	</button>
 
-	<!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
-	<ul class="dropdown-menu" role="menu">
-		<li><a tabindex="0">Action</a></li>
-		<li class="dropdown-submenu">
-			<a tabindex="0" data-toggle="dropdown">Another action</a>
-
-			<ul class="dropdown-menu">
-				<li class="dropdown-header">Dropdown header</li>
-				<li><a tabindex="0">Sub action</a></li>
-				<li><a tabindex="0">Another sub action</a></li>
-				<li><a tabindex="0">Something else here</a></li>
-			</ul>
-		</li>
-		<li><a tabindex="0">Something else here</a></li>
-		<li class="divider"></li>
-		<li><a tabindex="0">Separated link</a></li>
-	</ul>
+	{% include dropdown-menu.html %}
 </div>
 
-{% highlight html %}
-<div class="dropdown">
-  <button class="btn btn-default" type="button" data-toggle="dropdown">
-    Dropdown
-    <span class="caret"></span>
-  </button>
+<div class="btn-group dropdown">
+	<button class="btn btn-default" type="button">Dropdown</button>
+	<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+		<span class="caret"></span>
+	</button>
 
-  <ul class="dropdown-menu" role="menu">
-    <li><a tabindex="0">Action</a></li>
-    <li class="dropdown-submenu">
-      <a tabindex="0" data-toggle="dropdown">Another action</a>
-
-      <ul class="dropdown-menu">
-        <li class="dropdown-header">Dropdown header</li>
-        <li><a tabindex="0">Sub action</a></li>
-        <li><a tabindex="0">Another sub action</a></li>
-        <li><a tabindex="0">Something else here</a></li>
-      </ul>
-    </li>
-    <li><a tabindex="0">Something else here</a></li>
-    <li class="divider"></li>
-    <li><a tabindex="0">Separated link</a></li>
-  </ul>
+	{% include dropdown-menu.html %}
 </div>
-{% endhighlight %}
 
 <h3>Dropup</h3>
-<div class="btn-group dropup">
-	<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+<div class="dropdown dropup m-b">
+	<button class="btn btn-default" type="button" data-toggle="dropdown">
 		Dropup
 		<span class="caret"></span>
 	</button>
 
-	<ul class="dropdown-menu" role="menu">
-		<li><a tabindex="0">Action</a></li>
-		<li class="dropdown-submenu">
-			<a tabindex="0" data-toggle="dropdown">Another action</a>
+	{% include dropdown-menu.html %}
+</div>
 
-			<ul class="dropdown-menu">
-				<li class="dropdown-header">Dropdown header</li>
-				<li><a tabindex="0">Sub action</a></li>
-				<li><a tabindex="0">Another sub action</a></li>
-				<li><a tabindex="0">Something else here</a></li>
-			</ul>
-		</li>
-		<li><a tabindex="0">Something else here</a></li>
-		<li class="divider"></li>
-		<li><a tabindex="0">Separated link</a></li>
-	</ul>
+<div class="btn-group dropup">
+	<button class="btn btn-default" type="button">Dropup</button>
+	<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+		<span class="caret"></span>
+	</button>
+
+	{% include dropdown-menu.html %}
 </div>
 
 <h3>Navbar</h3>
