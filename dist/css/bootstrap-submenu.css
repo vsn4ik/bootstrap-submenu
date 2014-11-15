@@ -1,5 +1,5 @@
 /*!
- * Bootstrap-submenu v1.2.5 (http://vsn4ik.github.io/bootstrap-submenu)
+ * Bootstrap-submenu v1.2.6 (http://vsn4ik.github.io/bootstrap-submenu)
  * Copyright 2014 Vasily A. (https://github.com/vsn4ik)
  * Licensed under MIT (https://github.com/vsn4ik/bootstrap-submenu/blob/master/LICENSE)
  */
@@ -19,11 +19,20 @@
     border-top: 4px solid transparent;
     border-bottom: 4px solid transparent;
   }
-  .dropdown-submenu > .dropdown-menu {
+  .dropdown-submenu .dropdown-menu {
     top: 0;
     left: 100%;
     margin-top: -6px;
     border-top-left-radius: 0;
+  }
+  .dropup .dropdown-submenu .dropdown-menu,
+  .navbar-fixed-bottom .dropdown .dropdown-submenu .dropdown-menu {
+    top: auto;
+    bottom: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 0;
+    margin-top: 0px;
+    margin-bottom: -6px;
   }
 }
 @media (max-width: 767px) {

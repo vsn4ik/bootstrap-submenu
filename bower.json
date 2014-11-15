@@ -1,10 +1,11 @@
 {
 	"name": "bootstrap-submenu",
-	"version": "1.2.5",
+	"version": "1.2.6",
 	"description": "Bootstrap Sub-Menus",
 	"keywords": [
 		"bootstrap",
 		"dropdown",
+		"jquery-plugin",
 		"submenu"
 	],
 	"homepage": "http://vsn4ik.github.io/bootstrap-submenu",
