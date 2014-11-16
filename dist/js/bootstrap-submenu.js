@@ -45,7 +45,7 @@
 			this.$items.keydown(this.item_keydown.bind(this));
 
 			// Bootstrap fix
-			this.$menu.nextAll(desc + ':first').not('.dropdown-submenu').children('a').keydown(this.next_keydown.bind(this));
+			this.$menu.nextAll(desc + ':first:not(.dropdown-submenu)').children('a').keydown(this.next_keydown.bind(this));
 		},
 		click: function(event) {
 			event.stopPropagation();
