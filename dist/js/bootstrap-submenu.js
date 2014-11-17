@@ -24,7 +24,7 @@
 
 	function Submenupicker(element) {
 		this.$element = $(element);
-		this.$main = this.$element.closest('.dropdown, .dropup');
+		this.$main = this.$element.closest('.dropdown, .btn-group');
 		this.$menu = this.$element.parent();
 		this.$drop = this.$menu.parent().parent();
 		this.$menus = this.$menu.siblings('.dropdown-submenu');
@@ -45,7 +45,7 @@
 			this.$items.keydown(this.item_keydown.bind(this));
 
 			// Bootstrap fix
-			this.$menu.nextAll(desc + ':first').not('.dropdown-submenu').children('a').keydown(this.next_keydown.bind(this));
+			this.$menu.nextAll(desc + ':first:not(.dropdown-submenu)').children('a').keydown(this.next_keydown.bind(this));
 		},
 		click: function(event) {
 			event.stopPropagation();
