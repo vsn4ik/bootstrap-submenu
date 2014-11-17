@@ -5,8 +5,8 @@
  */
 
 .dropdown-submenu > a:after {
-  float: right;
   content: "";
+  float: right;
   margin-right: -10px;
 }
 @media (min-width: 768px) {
@@ -26,13 +26,13 @@
     border-top-left-radius: 0;
   }
   .dropup .dropdown-submenu .dropdown-menu,
-  .navbar-fixed-bottom .dropdown .dropdown-submenu .dropdown-menu {
+  .navbar-fixed-bottom .dropdown-submenu .dropdown-menu {
     top: auto;
     bottom: 0;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 0;
     margin-top: 0px;
     margin-bottom: -6px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 0;
   }
 }
 @media (max-width: 767px) {

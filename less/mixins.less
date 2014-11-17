@@ -1,9 +1,13 @@
-.make-caret(@begin, @left, @right) {
-	// dashed: fix caret size for Mozilla Firefox
-	border-@{begin}: @caret-width-base dashed;
+.make-caret(@margin-top, @begin, @left, @right) {
+	> a:after {
+		margin-top: @margin-top;
 
-	border-@{left}: @caret-width-base solid transparent;
-	border-@{right}: @caret-width-base solid transparent;
+		// dashed: fix caret size for Mozilla Firefox
+		border-@{begin}: @caret-width-base dashed;
+
+		border-@{left}: @caret-width-base solid transparent;
+		border-@{right}: @caret-width-base solid transparent;
+	}
 }
 
 .make-nested-list(@offset, @i, @n) when (@i < @n) {

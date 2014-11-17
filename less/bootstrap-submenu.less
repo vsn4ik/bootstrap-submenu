@@ -6,8 +6,8 @@
 // --------------------------------------------------
 
 .dropdown-submenu > a:after {
-	float: right;
 	content: "";
+	float: right;
 	margin-right: -@caret-width-base * 2 - 2;
 }
 
@@ -15,11 +15,7 @@
 	.dropdown-submenu {
 		position: relative;
 
-		> a:after {
-			margin-top: @line-height-computed / 2 - @caret-width-base;
-
-			.make-caret(left, top, bottom);
-		}
+		.make-caret(@line-height-computed / 2 - @caret-width-base, left, top, bottom);
 
 		.dropdown-menu {
 			top: 0;
@@ -28,14 +24,13 @@
 			border-top-left-radius: 0;
 
 			.dropup &,
-			.navbar-fixed-bottom .dropdown & {
+			.navbar-fixed-bottom & {
 				top: auto;
 				bottom: 0;
-				border-top-left-radius: @border-radius-base;
-				border-bottom-left-radius: 0;
-
 				margin-top: 0px;
 				margin-bottom: -6px;
+				border-top-left-radius: @border-radius-base;
+				border-bottom-left-radius: 0;
 			}
 		}
 	}
@@ -43,11 +38,7 @@
 
 @media (max-width: @grid-float-breakpoint-max) {
 	.dropdown-submenu {
-		> a:after {
-			margin-top: (@line-height-computed - @caret-width-base) / 2;
-
-			.make-caret(top, left, right);
-		}
+		.make-caret((@line-height-computed - @caret-width-base) / 2, top, left, right);
 
 		.dropdown-menu {
 			position: static;
