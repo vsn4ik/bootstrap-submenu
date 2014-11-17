@@ -24,7 +24,7 @@
 
 	function Submenupicker(element) {
 		this.$element = $(element);
-		this.$main = this.$element.closest('.dropdown, .dropup');
+		this.$main = this.$element.closest('.dropdown, .btn-group');
 		this.$menu = this.$element.parent();
 		this.$drop = this.$menu.parent().parent();
 		this.$menus = this.$menu.siblings('.dropdown-submenu');

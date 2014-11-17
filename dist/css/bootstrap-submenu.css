@@ -49,19 +49,27 @@
     box-shadow: none;
   }
   .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li.dropdown-header,
-  .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > a {
+  .btn-group > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li.dropdown-header,
+  .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > a,
+  .btn-group > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > a {
     padding-left: 30px;
   }
   .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,
-  .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > a {
+  .btn-group > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,
+  .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > a,
+  .btn-group > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > a {
     padding-left: 40px;
   }
   .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,
-  .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > a {
+  .btn-group > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,
+  .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > a,
+  .btn-group > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > a {
     padding-left: 50px;
   }
   .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,
-  .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > a {
+  .btn-group > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,
+  .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > a,
+  .btn-group > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > a {
     padding-left: 60px;
   }
   .navbar-nav > .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li.dropdown-header,
