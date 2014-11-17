@@ -1,17 +1,17 @@
 body {
-	padding-top: 20px;
+  padding-top: 20px;
 }
 
 footer {
-	padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 a {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .m-b {
-	margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .glyphicon + *,
@@ -19,14 +19,14 @@ a {
 * + .gluphicon,
 * + .octicon,
 .nav .caret {
-	margin-left: 4px;
+  margin-left: 4px;
 }
 
 .input-group-addon,
 .input-group-btn {
-	width: auto;
+  width: auto;
 }
 
 .input-group-addon {
-	background-color: white;
+  background-color: white;
 }
