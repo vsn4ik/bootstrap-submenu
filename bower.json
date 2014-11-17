@@ -1,39 +1,39 @@
 {
-	"name": "bootstrap-submenu",
-	"version": "1.2.7",
-	"description": "Bootstrap Sub-Menus",
-	"keywords": [
-		"bootstrap",
-		"dropdown",
-		"jquery-plugin",
-		"submenu"
-	],
-	"homepage": "http://vsn4ik.github.io/bootstrap-submenu",
-	"authors": [
-		{
-			"name": "Vasily A.",
-			"homepage": "https://github.com/vsn4ik"
-		}
-	],
-	"moduleType": [
-		"amd",
-		"globals",
-		"node"
-	],
-	"main": [
-		"less/bootstrap-submenu.less",
-		"dist/css/bootstrap-submenu.css",
-		"dist/js/bootstrap-submenu.js"
-	],
-	"ignore": [
-		"docs",
-		".gitignore",
-		".travis.yml",
-		"Gruntfile.js",
-		"README.md",
-		"_config.yml",
-		"composer.json",
-		"package.json"
-	],
-	"license": "MIT"
+  "name": "bootstrap-submenu",
+  "version": "1.2.7",
+  "description": "Bootstrap Sub-Menus",
+  "keywords": [
+    "bootstrap",
+    "dropdown",
+    "jquery-plugin",
+    "submenu"
+  ],
+  "homepage": "http://vsn4ik.github.io/bootstrap-submenu",
+  "authors": [
+    {
+      "name": "Vasily A.",
+      "homepage": "https://github.com/vsn4ik"
+    }
+  ],
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "main": [
+    "less/bootstrap-submenu.less",
+    "dist/css/bootstrap-submenu.css",
+    "dist/js/bootstrap-submenu.js"
+  ],
+  "ignore": [
+    "docs",
+    ".gitignore",
+    ".travis.yml",
+    "Gruntfile.js",
+    "README.md",
+    "_config.yml",
+    "composer.json",
+    "package.json"
+  ],
+  "license": "MIT"
 }

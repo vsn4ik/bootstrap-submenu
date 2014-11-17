@@ -1,43 +1,43 @@
 'use strict';
 
 $(function() {
-	$.ajax({
-		url: 'https://api.github.com/repos/vsn4ik/bootstrap-submenu',
-		success: function(data) {
-			var $group = $('<div class="input-group"><span class="input-group-btn"></span></div>');
+  $.ajax({
+    url: 'https://api.github.com/repos/vsn4ik/bootstrap-submenu',
+    success: function(data) {
+      var $group = $('<div class="input-group"><span class="input-group-btn"></span></div>');
 
-			$group.append('<span class="input-group-addon"><span>' + data.stargazers_count + '</span><span class="octicon octicon-star"></span></span>');
+      $group.append('<span class="input-group-addon"><span>' + data.stargazers_count + '</span><span class="octicon octicon-star"></span></span>');
 
-			$('#gh-view-link').wrap($group);
-		}
-	});
+      $('#gh-view-link').wrap($group);
+    }
+  });
 
-	$('#scroll_top').click(function() {
-		this.disabled = true;
+  $('#scroll_top').click(function() {
+    this.disabled = true;
 
-		// 'html' for Mozilla Firefox, 'body' for other browsers
-		$('body, html').animate({
-			scrollTop: 0
-		}, 800, (function() {
-			this.disabled = false;
-		}).bind(this));
+    // 'html' for Mozilla Firefox, 'body' for other browsers
+    $('body, html').animate({
+      scrollTop: 0
+    }, 800, (function() {
+      this.disabled = false;
+    }).bind(this));
 
-		this.blur();
-	});
+    this.blur();
+  });
 
-	// Dropdown fix
-	$('.dropdown > a[tabindex]').keydown(function(event) {
-		// 13: Return
+  // Dropdown fix
+  $('.dropdown > a[tabindex]').keydown(function(event) {
+    // 13: Return
 
-		if (event.keyCode == 13) {
-			$(this).dropdown('toggle');
-		}
-	});
+    if (event.keyCode == 13) {
+      $(this).dropdown('toggle');
+    }
+  });
 
-	// Предотвращаем закрытие при клике на неактивный элемент списка
-	$('.dropdown-menu > .disabled, .dropdown-header').on('click.bs.dropdown.data-api', function(event) {
-		event.stopPropagation();
-	});
+  // Предотвращаем закрытие при клике на неактивный элемент списка
+  $('.dropdown-menu > .disabled, .dropdown-header').on('click.bs.dropdown.data-api', function(event) {
+    event.stopPropagation();
+  });
 
-	$('.dropdown-submenu > a').submenupicker();
+  $('.dropdown-submenu > a').submenupicker();
 });
