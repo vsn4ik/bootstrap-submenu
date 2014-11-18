@@ -1,3 +1,10 @@
+/*!
+ * Bootstrap-submenu's Gruntfile
+ * http://vsn4ik.github.io/bootstrap-submenu
+ * Copyright 2014 Vasily A. (https://github.com/vsn4ik)
+ * Licensed under MIT (https://github.com/vsn4ik/bootstrap-submenu/blob/master/LICENSE)
+ */
+
 'use strict';
 
 module.exports = function(grunt) {
