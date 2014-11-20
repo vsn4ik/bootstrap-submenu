@@ -35,5 +35,8 @@
     "composer.json",
     "package.json"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "jquery": ">= 1.9.1"
+  }
 }

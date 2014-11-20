@@ -50,5 +50,18 @@
   },
   "engines": {
     "node": "~0.10.1"
+  },
+  "spm": {
+    "main": "dist/js/bootstrap-submenu.js",
+    "ignore": [
+      "docs",
+      ".gitignore",
+      ".travis.yml",
+      "Gruntfile.js",
+      "README.md",
+      "_config.yml",
+      "bower.json",
+      "composer.json"
+    ]
   }
 }
