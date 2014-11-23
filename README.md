@@ -3,7 +3,7 @@
 [![Bower version](https://badge.fury.io/bo/bootstrap-submenu.svg)](http://badge.fury.io/bo/bootstrap-submenu)
 [![npm version](https://badge.fury.io/js/bootstrap-submenu.svg)](http://badge.fury.io/js/bootstrap-submenu)
 [![Build Status](https://travis-ci.org/vsn4ik/bootstrap-submenu.svg)](https://travis-ci.org/vsn4ik/bootstrap-submenu)
-[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)][license]
 [![devDependency Status](https://david-dm.org/vsn4ik/bootstrap-submenu/dev-status.svg)](https://david-dm.org/vsn4ik/bootstrap-submenu#info=devDependencies)
 
 
@@ -54,4 +54,6 @@ For some working examples, visit our [examples](http://vsn4ik.github.io/bootstra
 
 Copyright Vasily A., 2014.
 
-Licensed under [the MIT License](LICENSE).
+Licensed under [the MIT License][license].
+
+[license]: https://github.com/vsn4ik/bootstrap-submenu/blob/master/LICENSE
