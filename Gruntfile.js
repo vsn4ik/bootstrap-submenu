@@ -120,6 +120,14 @@ module.exports = function(grunt) {
         dest: 'docs/dist'
       }
     },
+    jekyll: {
+      github: {
+        options: {
+          config: '_config.yml',
+          raw: 'github: true'
+        }
+      }
+    },
     compress: {
       dist: {
         options: {
@@ -147,6 +155,7 @@ module.exports = function(grunt) {
     'uglify',
     'usebanner',
     'symlink',
+    'jekyll',
     'compress'
   ]);
 };
