@@ -16,6 +16,7 @@ module.exports = function(grunt) {
     clean: {
       dist: ['dist', '*-dist.zip'],
       docs: [
+        '<%= copy.octicons.dest %>',
         '<%= cssmin.docs.dest %>',
         '<%= uglify.docs.dest %>'
       ]
@@ -36,6 +37,12 @@ module.exports = function(grunt) {
       js: {
         src: 'js/*',
         dest: 'dist/'
+      },
+      octicons: {
+        expand: true,
+        cwd: 'node_modules/octicons/octicons',
+        src: 'octicons.{css,eot,svg,ttf,woff}',
+        dest: 'docs/assets/css/octicons'
       }
     },
     cssmin: {
