@@ -3,6 +3,7 @@ node_js:
   - "0.10"
   - "0.11"
 before_install:
+  - gem install --no-document jekyll
   - npm install --global grunt-cli
 notifications:
   email: false
