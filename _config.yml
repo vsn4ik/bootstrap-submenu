@@ -6,5 +6,5 @@ destination: _gh_pages
 repo: https://github.com/vsn4ik/bootstrap-submenu
 description: Bootstrap Sub-Menus.
 
-jquery_path: http://code.jquery.com/jquery-2.1.1
+jquery_path: http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery
 bootstrap_path: http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1
