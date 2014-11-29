@@ -59,6 +59,16 @@ module.exports = function(grunt) {
         dest: 'docs/assets/css/docs.min.css'
       }
     },
+    htmlmin: {
+      docs: {
+        options: {
+          collapseWhitespace: true,
+          removeComments: true
+        },
+        expand: true,
+        src: '_gh_pages/*.html'
+      }
+    },
     jshint: {
       options: {
         curly: true,
@@ -156,6 +166,7 @@ module.exports = function(grunt) {
     'usebanner',
     'symlink',
     'jekyll',
+    'htmlmin',
     'compress'
   ]);
 };
