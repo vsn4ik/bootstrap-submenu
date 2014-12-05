@@ -143,7 +143,7 @@
 
   // For AMD/Node/CommonJS used elements (optional)
   // http://learn.jquery.com/jquery-ui/environments/amd/
-  $.fn.submenupicker = function(elements) {
+  return ($.fn.submenupicker = function(elements) {
     var $elements = this instanceof $ ? this : $(elements);
 
     return $elements.each(function() {
@@ -155,7 +155,5 @@
         $.data(this, 'bs.submenu', data);
       }
     });
-  };
-
-  return $.fn.submenupicker;
+  });
 });
