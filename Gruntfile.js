@@ -164,7 +164,10 @@ module.exports = function(grunt) {
     'jshint',
     'uglify',
     'usebanner',
-    'symlink',
+    'symlink'
+  ]);
+
+  grunt.registerTask('prep-release', [
     'jekyll',
     'htmlmin',
     'compress'
