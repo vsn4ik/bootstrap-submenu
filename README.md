@@ -1,10 +1,10 @@
 # [Bootstrap-submenu](http://vsn4ik.github.io/bootstrap-submenu)
 
-[![Bower version](https://badge.fury.io/bo/bootstrap-submenu.svg)](http://badge.fury.io/bo/bootstrap-submenu)
-[![npm version](https://badge.fury.io/js/bootstrap-submenu.svg)](http://badge.fury.io/js/bootstrap-submenu)
+[![Bower version](https://img.shields.io/bower/v/bootstrap-submenu.svg?style=flat)](https://github.com/vsn4ik/bootstrap-submenu)
+[![npm version](https://img.shields.io/npm/v/bootstrap-submenu.svg?style=flat)](https://www.npmjs.com/package/bootstrap-submenu)
 [![Build Status](https://travis-ci.org/vsn4ik/bootstrap-submenu.svg)](https://travis-ci.org/vsn4ik/bootstrap-submenu)
-[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)][license]
-[![devDependency Status](https://david-dm.org/vsn4ik/bootstrap-submenu/dev-status.svg)](https://david-dm.org/vsn4ik/bootstrap-submenu#info=devDependencies)
+[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)][license]
+[![devDependency Status](https://david-dm.org/vsn4ik/bootstrap-submenu/dev-status.svg?style=flat)](https://david-dm.org/vsn4ik/bootstrap-submenu#info=devDependencies)
 
 
 ## Quick start
