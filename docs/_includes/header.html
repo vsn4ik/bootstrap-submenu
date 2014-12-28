@@ -12,12 +12,12 @@
 <title>{{ page.title }}</title>
 
 {% if site.github %}
-<link rel="stylesheet" href="{{ site.bootstrap_path }}/css/bootstrap.min.css">
-<link rel="stylesheet" href="{{ site.bootstrap_path }}/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="{{ site.path.bootstrap }}/css/bootstrap.min.css">
+<link rel="stylesheet" href="{{ site.path.bootstrap }}/css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="./dist/css/bootstrap-submenu.min.css">
 {% else %}
-<link rel="stylesheet" href="{{ site.bootstrap_path }}/css/bootstrap.css">
-<link rel="stylesheet" href="{{ site.bootstrap_path }}/css/bootstrap-theme.css">
+<link rel="stylesheet" href="{{ site.path.bootstrap }}/css/bootstrap.css">
+<link rel="stylesheet" href="{{ site.path.bootstrap }}/css/bootstrap-theme.css">
 <link rel="stylesheet" href="./dist/css/bootstrap-submenu.css">
 {% endif %}
 
@@ -30,14 +30,14 @@
 <link rel="stylesheet" href="./assets/css/src/docs.css">
 {% endif %}
 
-<script src="{{ site.jquery_path }}.min.js" defer></script>
+<script src="{{ site.path.jquery }}.min.js" defer></script>
 
 {% if site.github %}
-<script src="{{ site.bootstrap_path }}/js/bootstrap.min.js" defer></script>
+<script src="{{ site.path.bootstrap }}/js/bootstrap.min.js" defer></script>
 <script src="./dist/js/bootstrap-submenu.min.js" defer></script>
 <script src="./assets/js/docs.min.js" defer></script>
 {% else %}
-<script src="{{ site.bootstrap_path }}/js/bootstrap.js" defer></script>
+<script src="{{ site.path.bootstrap }}/js/bootstrap.js" defer></script>
 <script src="./dist/js/bootstrap-submenu.js" defer></script>
 <script src="./assets/js/src/docs.js" defer></script>
 {% endif %}
