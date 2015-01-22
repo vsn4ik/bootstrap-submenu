@@ -1,6 +1,6 @@
 /*!
  * Bootstrap-submenu v1.2.10 (http://vsn4ik.github.io/bootstrap-submenu)
- * Copyright 2014 Vasily A. (https://github.com/vsn4ik)
+ * Copyright 2015 Vasily A. (https://github.com/vsn4ik)
  * Licensed under MIT (https://github.com/vsn4ik/bootstrap-submenu/blob/master/LICENSE)
  */
 
@@ -24,7 +24,7 @@
 
   function Submenupicker(element) {
     this.$element = $(element);
-    this.$main = this.$element.closest('.dropdown, .btn-group');
+    this.$main = this.$element.closest('.dropdown, .dropup, .btn-group');
     this.$menu = this.$element.parent();
     this.$drop = this.$menu.parent().parent();
     this.$menus = this.$menu.siblings('.dropdown-submenu');
