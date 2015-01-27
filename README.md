@@ -11,7 +11,7 @@
 
 Six quick start options are available:
 
-- [Download the latest release](https://github.com/vsn4ik/bootstrap-submenu/releases/download/v1.2.10/bootstrap-submenu-1.2.10-dist.zip "Download Bootstrap-submenu").
+- [Download the latest release](https://github.com/vsn4ik/bootstrap-submenu/releases/download/v1.2.11/bootstrap-submenu-1.2.11-dist.zip "Download Bootstrap-submenu").
 - Clone the repo: `git clone https://github.com/vsn4ik/bootstrap-submenu.git`.
 - Install with [Bower](http://bower.io): `bower install bootstrap-submenu`.
 - Install with [npm](https://www.npmjs.com): `npm install bootstrap-submenu`.
@@ -52,7 +52,7 @@ For some working examples, visit our [examples](http://vsn4ik.github.io/bootstra
 
 ## Copyright and license
 
-Copyright Vasily A., 2014.
+Copyright Vasily A., 2015.
 
 Licensed under [the MIT License][license].
 

@@ -33,6 +33,7 @@ $('.dropdown-submenu > a').submenupicker();
 <h2 id="examples">Examples</h2>
 
 <h3>Dropdown</h3>
+<h4>With button</h4>
 <div class="dropdown m-b">
   <button class="btn btn-default" type="button" data-toggle="dropdown">
     Dropdown
@@ -42,6 +43,7 @@ $('.dropdown-submenu > a').submenupicker();
   {% include dropdown-menu.html %}
 </div>
 
+<h4>With button-group</h3>
 <div class="btn-group">
   <button class="btn btn-default" type="button">Dropdown</button>
   <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
@@ -51,7 +53,18 @@ $('.dropdown-submenu > a').submenupicker();
   {% include dropdown-menu.html %}
 </div>
 
+<h4>With button (right align)</h4>
+<div class="dropdown m-b">
+  <button class="btn btn-default" type="button" data-toggle="dropdown">
+    Dropdown
+    <span class="caret"></span>
+  </button>
+
+  {% include dropdown-menu-right.html %}
+</div>
+
 <h3>Dropup</h3>
+<h4>With button</h4>
 <div class="dropup m-b">
   <button class="btn btn-default" type="button" data-toggle="dropdown">
     Dropup
@@ -61,6 +74,7 @@ $('.dropdown-submenu > a').submenupicker();
   {% include dropdown-menu.html %}
 </div>
 
+<h4>With button-group</h4>
 <div class="btn-group dropup">
   <button class="btn btn-default" type="button">Dropup</button>
   <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
@@ -68,6 +82,16 @@ $('.dropdown-submenu > a').submenupicker();
   </button>
 
   {% include dropdown-menu.html %}
+</div>
+
+<h4>With button (right align)</h4>
+<div class="dropup m-b">
+  <button class="btn btn-default" type="button" data-toggle="dropdown">
+    Dropup
+    <span class="caret"></span>
+  </button>
+
+  {% include dropdown-menu-right.html %}
 </div>
 
 <h3>Navbar</h3>

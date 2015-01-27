@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-submenu",
-  "version": "1.2.10",
+  "version": "1.2.11",
   "description": "Bootstrap Sub-Menus",
   "keywords": [
     "bootstrap",
@@ -37,12 +37,12 @@
     "grunt-contrib-copy": "~0.7.0",
     "grunt-contrib-cssmin": "~0.11.0",
     "grunt-contrib-htmlmin": "~0.3.0",
-    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-jshint": "~0.11.0",
     "grunt-contrib-less": "~1.0.0",
     "grunt-contrib-symlink": "~0.3.0",
     "grunt-contrib-uglify": "~0.7.0",
     "grunt-jekyll": "~0.4.2",
-    "load-grunt-tasks": "~2.0.0",
+    "load-grunt-tasks": "~3.0.0",
     "octicons": "github/octicons"
   },
   "engines": {
