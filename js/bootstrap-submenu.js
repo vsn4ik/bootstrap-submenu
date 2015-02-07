@@ -14,6 +14,7 @@
     factory(jQuery);
   }
 })(function($) {
+  // Or ':not(.disabled):has(a)';
   var desc = ':not(.disabled, .divider, .dropdown-header)';
 
   function Submenupicker(element) {
