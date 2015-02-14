@@ -4,6 +4,6 @@ node_js:
   - "0.12"
 before_install:
   - gem install --no-document jekyll
-  - npm install grunt-cli
+  - npm install --global grunt-cli
 notifications:
   email: false
