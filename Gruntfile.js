@@ -14,7 +14,10 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     clean: {
-      dist: ['dist', '*-dist.zip'],
+      dist: [
+        'dist',
+        '*-dist.zip'
+      ],
       docs: [
         '<%= copy.octicons.dest %>',
         '<%= cssmin.docs.dest %>',
