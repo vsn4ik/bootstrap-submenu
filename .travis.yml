@@ -1,7 +1,6 @@
 sudo: false
 language: node_js
-node_js:
-  - "0.12"
+node_js: "0.12"
 before_install:
   - gem install --no-document jekyll
   - npm install --global grunt-cli
