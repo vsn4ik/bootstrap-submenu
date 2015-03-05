@@ -79,7 +79,8 @@ module.exports = function(grunt) {
         latedef: true,
         node: true,
         noempty: true,
-        strict: true
+        strict: true,
+        unused: true
       },
       core: {
         options: {
