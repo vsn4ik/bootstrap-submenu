@@ -80,7 +80,8 @@ module.exports = function(grunt) {
         node: true,
         noempty: true,
         strict: true,
-        unused: true
+        unused: true,
+        boss: true
       },
       core: {
         options: {
