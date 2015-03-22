@@ -18,11 +18,7 @@ module.exports = function(grunt) {
         'dist',
         '*-dist.zip'
       ],
-      docs: [
-        '<%= copy.octicons.dest %>',
-        '<%= cssmin.docs.dest %>',
-        '<%= uglify.docs.dest %>'
-      ]
+      docs: 'docs/vendor'
     },
     less: {
       core: {
@@ -41,11 +37,23 @@ module.exports = function(grunt) {
         src: 'js/*',
         dest: 'dist/'
       },
-      octicons: {
-        expand: true,
-        cwd: 'node_modules/octicons/octicons',
-        src: 'octicons.{css,eot,svg,ttf,woff}',
-        dest: 'docs/assets/css/octicons'
+      node_modules: {
+        files: [{
+          expand: true,
+          cwd: 'node_modules/bootstrap/dist',
+          src: '**',
+          dest: 'docs/vendor/bootstrap'
+        }, {
+          expand: true,
+          cwd: 'node_modules/jquery/dist',
+          src: '*.{js,map}',
+          dest: 'docs/vendor/jquery/js'
+        }, {
+          expand: true,
+          cwd: 'node_modules/octicons/octicons',
+          src: '*.{css,eot,svg,ttf,woff}',
+          dest: 'docs/vendor/octicons/css'
+        }]
       }
     },
     cssmin: {
@@ -53,23 +61,6 @@ module.exports = function(grunt) {
         expand: true,
         src: 'dist/css/*.css',
         ext: '.min.css'
-      },
-      docs: {
-        src: [
-          'docs/assets/css/src/pygments-manni.css',
-          'docs/assets/css/src/docs.css'
-        ],
-        dest: 'docs/assets/css/docs.min.css'
-      }
-    },
-    htmlmin: {
-      docs: {
-        options: {
-          collapseWhitespace: true,
-          removeComments: true
-        },
-        expand: true,
-        src: '_gh_pages/*.html'
       }
     },
     jshint: {
@@ -100,7 +91,7 @@ module.exports = function(grunt) {
         options: {
           jquery: true
         },
-        src: 'docs/assets/js/src/'
+        src: 'docs/assets/js/'
       }
     },
     uglify: {
@@ -108,10 +99,6 @@ module.exports = function(grunt) {
         expand: true,
         src: 'dist/js/*.js',
         ext: '.min.js'
-      },
-      docs: {
-        src: 'docs/assets/js/src/docs.js',
-        dest: 'docs/assets/js/docs.min.js'
       }
     },
     usebanner: {
@@ -127,10 +114,10 @@ module.exports = function(grunt) {
       dist: 'dist/*/*.{css,js}'
     },
     symlink: {
+      options: {
+        overwrite: true
+      },
       docs: {
-        options: {
-          overwrite: true
-        },
         src: 'dist',
         dest: 'docs/dist'
       }
@@ -174,7 +161,6 @@ module.exports = function(grunt) {
 
   grunt.registerTask('prep-release', [
     'jekyll',
-    'htmlmin',
     'compress'
   ]);
 };

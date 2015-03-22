@@ -12,32 +12,27 @@
 <title>{{ page.title }}</title>
 
 {% if site.github %}
-<link rel="stylesheet" href="{{ site.path.bootstrap }}/css/bootstrap.min.css">
-<link rel="stylesheet" href="{{ site.path.bootstrap }}/css/bootstrap-theme.min.css">
-<link rel="stylesheet" href="./dist/css/bootstrap-submenu.min.css">
+<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="dist/css/bootstrap-submenu.min.css">
 {% else %}
-<link rel="stylesheet" href="{{ site.path.bootstrap }}/css/bootstrap.css">
-<link rel="stylesheet" href="{{ site.path.bootstrap }}/css/bootstrap-theme.css">
-<link rel="stylesheet" href="./dist/css/bootstrap-submenu.css">
+<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap-theme.css">
+<link rel="stylesheet" href="dist/css/bootstrap-submenu.css">
 {% endif %}
 
-<link rel="stylesheet" href="./assets/css/octicons/octicons.css">
+<link rel="stylesheet" href="vendor/octicons/css/octicons.css">
+<link rel="stylesheet" href="assets/css/pygments-manni.css">
+<link rel="stylesheet" href="assets/css/docs.css">
 
 {% if site.github %}
-<link rel="stylesheet" href="./assets/css/docs.min.css">
+<script src="vendor/jquery/js/jquery.min.js" defer></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js" defer></script>
+<script src="dist/js/bootstrap-submenu.min.js" defer></script>
 {% else %}
-<link rel="stylesheet" href="./assets/css/src/pygments-manni.css">
-<link rel="stylesheet" href="./assets/css/src/docs.css">
+<script src="vendor/jquery/js/jquery.js" defer></script>
+<script src="vendor/bootstrap/js/bootstrap.js" defer></script>
+<script src="dist/js/bootstrap-submenu.js" defer></script>
 {% endif %}
 
-<script src="{{ site.path.jquery }}.min.js" defer></script>
-
-{% if site.github %}
-<script src="{{ site.path.bootstrap }}/js/bootstrap.min.js" defer></script>
-<script src="./dist/js/bootstrap-submenu.min.js" defer></script>
-<script src="./assets/js/docs.min.js" defer></script>
-{% else %}
-<script src="{{ site.path.bootstrap }}/js/bootstrap.js" defer></script>
-<script src="./dist/js/bootstrap-submenu.js" defer></script>
-<script src="./assets/js/src/docs.js" defer></script>
-{% endif %}
+<script src="assets/js/docs.js" defer></script>
