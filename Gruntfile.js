@@ -114,10 +114,10 @@ module.exports = function(grunt) {
       dist: 'dist/*/*.{css,js}'
     },
     symlink: {
-      options: {
-        overwrite: true
-      },
       docs: {
+        options: {
+          overwrite: true
+        },
         src: 'dist',
         dest: 'docs/dist'
       }
