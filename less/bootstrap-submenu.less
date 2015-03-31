@@ -8,7 +8,8 @@
 // Sub-Menus
 // --------------------------------------------------
 
-.dropdown-submenu > a:after {
+// CSS3 -> ::
+.dropdown-submenu > a::after {
   content: "";
   float: right;
   margin-right: @caret-margin;
@@ -49,7 +50,8 @@
       }
     }
 
-    > a:after {
+    // CSS3 -> ::
+    > a::after {
       margin-top: @line-height-computed / 2 - @caret-width-base;
 
       .make-caret(left, top, bottom);
@@ -75,7 +77,8 @@
       box-shadow: none;
     }
 
-    > a:after {
+    // CSS3 -> ::
+    > a::after {
       margin-top: (@line-height-computed - @caret-width-base) / 2;
 
       .make-caret(top, left, right);

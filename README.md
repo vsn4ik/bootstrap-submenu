@@ -9,7 +9,7 @@
 
 ## Quick start
 
-Six quick start options are available:
+Several quick start options are available:
 
 - [Download the latest release](https://github.com/vsn4ik/bootstrap-submenu/releases/download/v1.2.11/bootstrap-submenu-1.2.11-dist.zip "Download Bootstrap-submenu").
 - Clone the repo: `git clone https://github.com/vsn4ik/bootstrap-submenu.git`.
