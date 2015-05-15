@@ -1,5 +1,5 @@
 /*!
- * Bootstrap-submenu v1.2.11 (http://vsn4ik.github.io/bootstrap-submenu)
+ * Bootstrap-submenu v1.2.12 (http://vsn4ik.github.io/bootstrap-submenu)
  * Copyright 2015 Vasily A. (https://github.com/vsn4ik)
  * Licensed under MIT (https://github.com/vsn4ik/bootstrap-submenu/blob/master/LICENSE)
  */
@@ -20,6 +20,7 @@
     factory(jQuery);
   }
 })(function($) {
+  // Or ':not(.disabled):has(a)';
   var desc = ':not(.disabled, .divider, .dropdown-header)';
 
   function Submenupicker(element) {
@@ -39,13 +40,16 @@
 
   Submenupicker.prototype = {
     init: function() {
-      this.$element.on('click.bs.dropdown', this.click.bind(this));
-      this.$element.keydown(this.keydown.bind(this));
+      this.$element.on({
+        'click.bs.dropdown': this.click.bind(this),
+        keydown: this.keydown.bind(this)
+      });
+
       this.$menu.on('hide.bs.submenu', this.hide.bind(this));
-      this.$items.keydown(this.item_keydown.bind(this));
+      this.$items.on('keydown', this.item_keydown.bind(this));
 
       // Bootstrap fix
-      this.$menu.nextAll(desc + ':first:not(.dropdown-submenu)').children('a').keydown(this.next_keydown.bind(this));
+      this.$menu.nextAll(desc + ':first:not(.dropdown-submenu)').children('a').on('keydown', this.next_keydown.bind(this));
     },
     click: function(event) {
       event.stopPropagation();
@@ -92,7 +96,7 @@
           }
           else {
             this.$menus.trigger('hide.bs.submenu');
-            this.$drop.removeClass('open').children('a').focus();
+            this.$drop.removeClass('open').children('a').trigger('focus');
           }
         }
         else {
@@ -110,7 +114,7 @@
             return;
           }
 
-          $items.eq(index).focus();
+          $items.eq(index).trigger('focus');
         }
       }
     },
@@ -124,7 +128,7 @@
       event.stopPropagation();
 
       this.close();
-      this.$element.focus();
+      this.$element.trigger('focus');
     },
     next_keydown: function(event) {
       // 38: Arrow up
@@ -143,13 +147,13 @@
 
       var index = $items.index(event.target);
 
-      $items.eq(index - 1).focus();
+      $items.eq(index - 1).trigger('focus');
     }
   };
 
   // For AMD/Node/CommonJS used elements (optional)
   // http://learn.jquery.com/jquery-ui/environments/amd/
-  return ($.fn.submenupicker = function(elements) {
+  return $.fn.submenupicker = function(elements) {
     var $elements = this instanceof $ ? this : $(elements);
 
     return $elements.each(function() {
@@ -161,5 +165,5 @@
         $.data(this, 'bs.submenu', data);
       }
     });
-  });
+  };
 });
