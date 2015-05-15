@@ -79,7 +79,12 @@
 
     // CSS3 -> ::
     > a::after {
-      margin-top: (@line-height-computed - @caret-width-base) / 2;
+      float: none;
+      margin-left: 6px;
+      margin-right: 0;
+      margin-top: 0;
+      display: inline-block;
+      vertical-align: middle;
 
       .make-caret(top, left, right);
     }
