@@ -1,3 +1,5 @@
+// :after: friends with IE8. Use ::after in future.
+
 @import "../node_modules/bootstrap/less/variables.less";
 @import "mixins.less";
 
@@ -8,11 +10,8 @@
 // Sub-Menus
 // --------------------------------------------------
 
-// CSS3 -> ::
-.dropdown-submenu > a::after {
+.dropdown-submenu > a:after {
   content: "";
-  float: right;
-  margin-right: @caret-margin;
 }
 
 @media (min-width: @grid-float-breakpoint) {
@@ -50,9 +49,10 @@
       }
     }
 
-    // CSS3 -> ::
-    > a::after {
+    > a:after {
+      float: right;
       margin-top: @line-height-computed / 2 - @caret-width-base;
+      margin-right: @caret-margin;
 
       .make-caret(left, top, bottom);
 
@@ -77,9 +77,10 @@
       box-shadow: none;
     }
 
-    // CSS3 -> ::
-    > a::after {
-      margin-top: (@line-height-computed - @caret-width-base) / 2;
+    > a:after {
+      margin-left: 6px;
+      display: inline-block;
+      vertical-align: middle;
 
       .make-caret(top, left, right);
     }

@@ -1,6 +1,5 @@
 {
   "name": "bootstrap-submenu",
-  "version": "1.2.11",
   "description": "Bootstrap Sub-Menus",
   "keywords": [
     "bootstrap",
@@ -22,7 +21,6 @@
   ],
   "main": [
     "less/bootstrap-submenu.less",
-    "dist/css/bootstrap-submenu.css",
     "dist/js/bootstrap-submenu.js"
   ],
   "ignore": [

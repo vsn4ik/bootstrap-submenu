@@ -17,7 +17,7 @@ $(function() {
     }
   });
 
-  $('#scroll_top').click(function() {
+  $('#scroll_top').on('click', function() {
     this.disabled = true;
 
     // 'html' for Mozilla Firefox, 'body' for other browsers
@@ -31,7 +31,7 @@ $(function() {
   });
 
   // Dropdown fix
-  $('.dropdown > a[tabindex]').keydown(function(event) {
+  $('.dropdown > a[tabindex]').on('keydown', function(event) {
     // 13: Return
 
     if (event.keyCode == 13) {

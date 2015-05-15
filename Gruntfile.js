@@ -66,7 +66,6 @@ module.exports = function(grunt) {
     jshint: {
       options: {
         curly: true,
-        globalstrict: true,
         latedef: true,
         node: true,
         noempty: true,
@@ -85,6 +84,9 @@ module.exports = function(grunt) {
         src: 'js/'
       },
       grunt: {
+        options: {
+          globalstrict: true,
+        },
         src: 'Gruntfile.js'
       },
       docs: {
@@ -160,6 +162,7 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('prep-release', [
+    'default',
     'jekyll',
     'compress'
   ]);
