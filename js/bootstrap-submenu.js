@@ -1,6 +1,12 @@
-'use strict';
+/**
+ * 'Strict Mode' strictly in body of function
+ * $.inArray: friends with IE8. Use Array.prototype.indexOf in future.
+ * $.proxy: friends with IE8. Use Function.prototype.bind in future.
+ */
 
 (function(factory) {
+  'use strict';
+
   if (typeof define == 'function' && define.amd) {
     // AMD. Register as an anonymous module
     define(['jquery'], factory);
@@ -14,7 +20,9 @@
     factory(jQuery);
   }
 })(function($) {
-  // Or ':not(.disabled):has(a)';
+  'use strict';
+
+  // Or ':not(.disabled):has(a)' or ':not(.disabled):parent';
   var desc = ':not(.disabled, .divider, .dropdown-header)';
 
   function Submenupicker(element) {
@@ -35,15 +43,15 @@
   Submenupicker.prototype = {
     init: function() {
       this.$element.on({
-        'click.bs.dropdown': this.click.bind(this),
-        keydown: this.keydown.bind(this)
+        'click.bs.dropdown': $.proxy(this.click, this),
+        keydown: $.proxy(this.keydown, this)
       });
 
-      this.$menu.on('hide.bs.submenu', this.hide.bind(this));
-      this.$items.on('keydown', this.item_keydown.bind(this));
+      this.$menu.on('hide.bs.submenu', $.proxy(this.hide, this));
+      this.$items.on('keydown', $.proxy(this.item_keydown, this));
 
       // Bootstrap fix
-      this.$menu.nextAll(desc + ':first:not(.dropdown-submenu)').children('a').on('keydown', this.next_keydown.bind(this));
+      this.$menu.nextAll(desc + ':first:not(.dropdown-submenu)').children('a').on('keydown', $.proxy(this.next_keydown, this));
     },
     click: function(event) {
       event.stopPropagation();
@@ -74,14 +82,14 @@
       // 38: Arrow up, 40: Arrow down
 
       // Off vertical scrolling
-      if (/^(32|38|40)$/.test(event.keyCode)) {
+      if ($.inArray(event.keyCode, [32, 38, 40]) != -1) {
         event.preventDefault();
       }
 
-      if (/^(13|32)$/.test(event.keyCode)) {
+      if ($.inArray(event.keyCode, [13, 32]) != -1) {
         this.toggle();
       }
-      else if (/^(27|38|40)$/.test(event.keyCode)) {
+      else if ($.inArray(event.keyCode, [27, 38, 40]) != -1) {
         event.stopPropagation();
 
         if (event.keyCode == 27) {
