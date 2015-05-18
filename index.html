@@ -2,80 +2,77 @@
 <html lang="en">
 <head>
   <!-- Fix Mozilla Firefox warning. -->
-<!-- Jekyll don't add charset to "content-type" header -->
-<meta charset="utf-8">
+  <!-- Jekyll don't add charset to "content-type" header -->
+  <meta charset="utf-8">
 
-<meta name="viewport" content="width=device-width, user-scalable=no">
-<meta name="description" content="Bootstrap Sub-Menus.">
-<meta name="keywords" content="bootstrap dropdown jquery-plugin submenu">
-<meta name="author" content="Vasily A.">
-<meta name="robots" content="nofollow">
-<meta name="google" content="notranslate">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <meta name="description" content="Bootstrap Sub-Menus">
+  <meta name="keywords" content="bootstrap dropdown jquery-plugin submenu">
+  <meta name="author" content="Vasily A.">
+  <meta name="robots" content="nofollow">
+  <meta name="google" content="notranslate">
 
-<title>Bootstrap-submenu</title>
+  <title>Bootstrap-submenu</title>
 
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap-theme.css">
+  <link rel="stylesheet" href="vendor/octicons/css/octicons.css">
+  <link rel="stylesheet" href="vendor/highlight.js/css/zenburn.css">
 
-<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap-theme.min.css">
-<link rel="stylesheet" href="dist/css/bootstrap-submenu.min.css">
+  <link rel="stylesheet" href="dist/css/bootstrap-submenu.css">
+  <link rel="stylesheet" href="assets/css/docs.css">
 
+  <script src="vendor/jquery/js/jquery.js" defer></script>
+  <script src="vendor/bootstrap/js/bootstrap.js" defer></script>
+  <script src="https://highlightjs.org/static/highlight.pack.js" defer></script>
+  <script src="dist/js/bootstrap-submenu.js" defer></script>
 
-<link rel="stylesheet" href="vendor/octicons/css/octicons.css">
-<link rel="stylesheet" href="assets/css/pygments-manni.css">
-<link rel="stylesheet" href="assets/css/docs.css">
-
-
-<script src="vendor/jquery/js/jquery.min.js" defer></script>
-<script src="vendor/bootstrap/js/bootstrap.min.js" defer></script>
-<script src="dist/js/bootstrap-submenu.min.js" defer></script>
-
-
-<script src="assets/js/docs.js" defer></script>
-
+  <script src="assets/js/docs.js" defer></script>
 </head>
+
 <body>
   <div class="container">
     <div class="jumbotron">
-      <h1>Bootstrap-submenu</h1>
-      <p class="lead">Bootstrap Sub-Menus.</p>
+  <h1>Bootstrap-submenu</h1>
+  <p class="lead">Bootstrap Sub-Menus.</p>
 
-      <div class="btn-toolbar">
-        <a class="btn btn-primary m-b pull-left" href="https://github.com/vsn4ik/bootstrap-submenu/releases/download/v1.2.12/bootstrap-submenu-1.2.12-dist.zip" download>
-          <span class="octicon octicon-cloud-download"></span>
-          <span>Download</span>
-        </a>
+  <div class="btn-toolbar">
+    <a class="btn btn-primary m-b pull-left" href="https://github.com/vsn4ik/bootstrap-submenu/releases/download/v1.2.12/bootstrap-submenu-1.2.12-dist.zip" download>
+      <span class="octicon octicon-cloud-download"></span>
+      <span>Download</span>
+    </a>
 
-        <a id="gh-view-link" class="btn btn-default" href="https://github.com/vsn4ik/bootstrap-submenu">
-          <span class="octicon octicon-mark-github"></span>
-          <span>View on GitHub</span>
-        </a>
-      </div>
-    </div>
+    <a id="gh-view-link" class="btn btn-default" href="https://github.com/vsn4ik/bootstrap-submenu">
+      <span class="octicon octicon-mark-github"></span>
+      <span>View on GitHub</span>
+    </a>
+  </div>
+</div>
 
-    <h2>Installation</h2>
+    <h2 id="installation">Installation</h2>
 
-<!-- tab-size (CSS) not allowed Internet Explorer -->
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-<span class="nt">&lt;head&gt;</span>
-  <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;dist/css/bootstrap-submenu.min.css&quot;</span><span class="nt">&gt;</span>
+<pre><code class="hljs xml">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"&gt;
+  &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"&gt;
+  &lt;link rel="stylesheet" href="dist/css/bootstrap-submenu.min.css"&gt;
 
-  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;https://code.jquery.com/jquery-2.1.4.min.js&quot;</span> <span class="na">defer</span><span class="nt">&gt;&lt;/script&gt;</span>
-  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js&quot;</span> <span class="na">defer</span><span class="nt">&gt;&lt;/script&gt;</span>
-  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;dist/js/bootstrap-submenu.min.js&quot;</span> <span class="na">defer</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;/head&gt;</span>
-<span class="nt">&lt;body&gt;</span>
+  &lt;script src="https://code.jquery.com/jquery-2.1.4.min.js" defer&gt;&lt;/script&gt;
+  &lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/~3.3.4/js/bootstrap.min.js" defer&gt;&lt;/script&gt;
+  &lt;script src="dist/js/bootstrap-submenu.min.js" defer&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
   ...
-<span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span></code></pre></div>
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
 
 <p>Enable Bootstrap-submenu via JavaScript:</p>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.dropdown-submenu &gt; a&#39;</span><span class="p">).</span><span class="nx">submenupicker</span><span class="p">();</span></code></pre></div>
 
-<hr>
-<h2 id="examples">Examples</h2>
+<pre><code class="hljs javascript">$('.dropdown-submenu > a').submenupicker();</code></pre>
+
+    <hr>
+    <h2 id="html-examples">Examples</h2>
 
 <h3>Dropdown</h3>
 <h4>With button</h4>
@@ -101,7 +98,6 @@
 <li><a tabindex="0">Something else here</a></li>
 <li class="divider"></li>
 <li><a tabindex="0">Separated link</a></li>
-
 </ul>
 
 </div>
@@ -129,9 +125,7 @@
 <li><a tabindex="0">Something else here</a></li>
 <li class="divider"></li>
 <li><a tabindex="0">Separated link</a></li>
-
 </ul>
-
 </div>
 
 <h4>With button (right align)</h4>
@@ -157,9 +151,7 @@
 <li><a tabindex="0">Something else here</a></li>
 <li class="divider"></li>
 <li><a tabindex="0">Separated link</a></li>
-
 </ul>
-
 </div>
 
 <h3>Dropup</h3>
@@ -186,9 +178,7 @@
 <li><a tabindex="0">Something else here</a></li>
 <li class="divider"></li>
 <li><a tabindex="0">Separated link</a></li>
-
 </ul>
-
 </div>
 
 <h4>With button-group</h4>
@@ -214,9 +204,7 @@
 <li><a tabindex="0">Something else here</a></li>
 <li class="divider"></li>
 <li><a tabindex="0">Separated link</a></li>
-
 </ul>
-
 </div>
 
 <h4>With button (right align)</h4>
@@ -242,9 +230,7 @@
 <li><a tabindex="0">Something else here</a></li>
 <li class="divider"></li>
 <li><a tabindex="0">Separated link</a></li>
-
 </ul>
-
 </div>
 
 <h3>Navbar</h3>
@@ -452,18 +438,17 @@
   </li>
 </ul>
 
-
-    <div class="clearfix">
-      <button id="scroll_top" class="btn btn-primary pull-right" type="button" title="Return to top">
-        <span class="glyphicon glyphicon-chevron-up"></span>
-        <span>Top</span>
-      </button>
-    </div>
-
     <hr>
-    <footer>
-      <p>&copy; Vasily A., 2014&ndash;2015</p>
-    </footer>
+    <div class="clearfix">
+  <button id="scroll_top" class="btn btn-primary pull-right" type="button" title="Return to top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+    <span>Top</span>
+  </button>
+</div>
+
+<footer>
+  <p class="text-center text-muted">&copy; Vasily A., 2014&ndash;2015</p>
+</footer>
   </div>
 </body>
 </html>
