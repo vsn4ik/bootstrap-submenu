@@ -1,0 +1,16 @@
+<div class="jumbotron">
+  <h1><%= pkg.name.charAt(0).toUpperCase() + pkg.name.slice(1) %></h1>
+  <p class="lead"><%= pkg.description %>.</p>
+
+  <div class="btn-toolbar">
+    <a class="btn btn-primary m-b pull-left" href="https://github.com/<%= pkg.repository %>/releases/download/v<%= pkg.version %>/<%= pkg.name %>-<%= pkg.version %>-dist.zip" download>
+      <span class="octicon octicon-cloud-download"></span>
+      <span>Download</span>
+    </a>
+
+    <a id="gh-view-link" class="btn btn-default" href="https://github.com/<%= pkg.repository %>">
+      <span class="octicon octicon-mark-github"></span>
+      <span>View on GitHub</span>
+    </a>
+  </div>
+</div>

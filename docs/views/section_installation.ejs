@@ -1,0 +1,21 @@
+<h2 id="installation">Installation</h2>
+
+<pre><code class="hljs xml">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/<%= pkg.devDependencies.bootstrap.slice(1) %>/css/bootstrap.min.css"&gt;
+  &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/<%= pkg.devDependencies.bootstrap.slice(1) %>/css/bootstrap-theme.min.css"&gt;
+  &lt;link rel="stylesheet" href="dist/css/bootstrap-submenu.min.css"&gt;
+
+  &lt;script src="https://code.jquery.com/jquery-<%= pkg.devDependencies.jquery.slice(1) %>.min.js" defer&gt;&lt;/script&gt;
+  &lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/<%= pkg.devDependencies.bootstrap.split(1) %>/js/bootstrap.min.js" defer&gt;&lt;/script&gt;
+  &lt;script src="dist/js/bootstrap-submenu.min.js" defer&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  ...
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<p>Enable Bootstrap-submenu via JavaScript:</p>
+
+<pre><code class="hljs javascript">$('.dropdown-submenu > a').submenupicker();</code></pre>

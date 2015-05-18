@@ -10,9 +10,9 @@
  * $.proxy: friends with IE8. Use Function.prototype.bind in future.
  */
 
-(function(factory) {
-  'use strict';
+'use strict';
 
+(function(factory) {
   if (typeof define == 'function' && define.amd) {
     // AMD. Register as an anonymous module
     define(['jquery'], factory);
@@ -26,8 +26,6 @@
     factory(jQuery);
   }
 })(function($) {
-  'use strict';
-
   // Or ':not(.disabled):has(a)' or ':not(.disabled):parent';
   var desc = ':not(.disabled, .divider, .dropdown-header)';
 

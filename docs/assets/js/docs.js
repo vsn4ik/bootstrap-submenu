@@ -45,4 +45,6 @@ $(function() {
   });
 
   $('.dropdown-submenu > a').submenupicker();
+
+  hljs.initHighlighting();
 });

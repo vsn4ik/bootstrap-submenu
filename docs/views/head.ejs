@@ -1,0 +1,29 @@
+<head>
+  <!-- Fix Mozilla Firefox warning. -->
+  <!-- Jekyll don't add charset to "content-type" header -->
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <meta name="description" content="<%= pkg.description %>">
+  <meta name="keywords" content="<%= pkg.keywords.join(' ') %>">
+  <meta name="author" content="<%= pkg.author.name %>">
+  <meta name="robots" content="nofollow">
+  <meta name="google" content="notranslate">
+
+  <title><%= pkg.name.charAt(0).toUpperCase() + pkg.name.slice(1) %></title>
+
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap-theme.css">
+  <link rel="stylesheet" href="vendor/octicons/css/octicons.css">
+  <link rel="stylesheet" href="vendor/highlight.js/css/zenburn.css">
+
+  <link rel="stylesheet" href="dist/css/bootstrap-submenu.css">
+  <link rel="stylesheet" href="assets/css/docs.css">
+
+  <script src="vendor/jquery/js/jquery.js" defer></script>
+  <script src="vendor/bootstrap/js/bootstrap.js" defer></script>
+  <script src="https://highlightjs.org/static/highlight.pack.js" defer></script>
+  <script src="dist/js/bootstrap-submenu.js" defer></script>
+
+  <script src="assets/js/docs.js" defer></script>
+</head>
