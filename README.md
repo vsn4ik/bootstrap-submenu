@@ -2,7 +2,7 @@
 
 [![Bower version](https://img.shields.io/bower/v/bootstrap-submenu.svg)](https://github.com/vsn4ik/bootstrap-submenu)
 [![npm version](https://img.shields.io/npm/v/bootstrap-submenu.svg)](https://www.npmjs.com/package/bootstrap-submenu)
-[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)][license]
+[![License](https://img.shields.io/npm/l/bootstrap-submenu.svg)][license]
 [![Build Status](https://travis-ci.org/vsn4ik/bootstrap-submenu.svg)](https://travis-ci.org/vsn4ik/bootstrap-submenu)
 [![devDependency Status](https://david-dm.org/vsn4ik/bootstrap-submenu/dev-status.svg)](https://david-dm.org/vsn4ik/bootstrap-submenu#info=devDependencies)
 
@@ -11,7 +11,7 @@
 
 Several quick start options are available:
 
-- [Download the latest release](https://github.com/vsn4ik/bootstrap-submenu/releases/download/v1.2.12/bootstrap-submenu-1.2.12-dist.zip "Download Bootstrap-submenu").
+- [Download the latest release](https://github.com/vsn4ik/bootstrap-submenu/releases/download/v1.2.13/bootstrap-submenu-1.2.13-dist.zip "Download Bootstrap-submenu").
 - Clone the repo: `git clone https://github.com/vsn4ik/bootstrap-submenu.git`.
 - Install with [Bower](http://bower.io): `bower install bootstrap-submenu`.
 - Install with [npm](https://www.npmjs.com): `npm install bootstrap-submenu`.
