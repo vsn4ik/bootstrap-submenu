@@ -14,10 +14,7 @@
     "url": "https://github.com/vsn4ik"
   },
   "repository": "vsn4ik/bootstrap-submenu",
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/vsn4ik/bootstrap-submenu/blob/master/LICENSE"
-  },
+  "license": "MIT",
   "files": [
     "dist",
     "js",

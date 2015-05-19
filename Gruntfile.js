@@ -123,7 +123,7 @@ module.exports = function(grunt) {
           '/*!',
           ' * <%= pkg.name.charAt(0).toUpperCase() + pkg.name.slice(1) %> v<%= pkg.version %> (<%= pkg.homepage %>)',
           ' * Copyright <%= year %> <%= pkg.author.name %> (<%= pkg.author.url %>)',
-          ' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)',
+          ' * Licensed under <%= pkg.license %> (https://github.com/<%= pkg.repository %>/blob/master/LICENSE)',
           ' */'
         ].join('\n') + '\n'
       },
