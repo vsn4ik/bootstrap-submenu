@@ -2,7 +2,7 @@
  * Bootstrap-submenu's Gruntfile
  * http://vsn4ik.github.io/bootstrap-submenu
  * Copyright 2014-2015 Vasily A. (https://github.com/vsn4ik)
- * Licensed under MIT (https://github.com/vsn4ik/bootstrap-submenu/blob/master/LICENSE)
+ * Licensed under the MIT license
  */
 
 'use strict';
@@ -123,7 +123,7 @@ module.exports = function(grunt) {
           '/*!',
           ' * <%= pkg.name.charAt(0).toUpperCase() + pkg.name.slice(1) %> v<%= pkg.version %> (<%= pkg.homepage %>)',
           ' * Copyright <%= year %> <%= pkg.author.name %> (<%= pkg.author.url %>)',
-          ' * Licensed under <%= pkg.license %> (https://github.com/<%= pkg.repository %>/blob/master/LICENSE)',
+          ' * Licensed under the <%= pkg.license %> license',
           ' */'
         ].join('\n') + '\n'
       },

@@ -39,7 +39,7 @@
     "grunt-ejs": "~0.3.0",
     "highlight.js": "~8.6.0",
     "jquery": "~2.1.4",
-    "load-grunt-tasks": "~3.1.0",
+    "load-grunt-tasks": "~3.2.0",
     "octicons": "github/octicons"
   },
   "engines": {
