@@ -5,7 +5,6 @@
  */
 
 /**
- * 'Strict Mode' strictly in body of function
  * $.inArray: friends with IE8. Use Array.prototype.indexOf in future.
  * $.proxy: friends with IE8. Use Function.prototype.bind in future.
  */
