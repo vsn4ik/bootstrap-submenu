@@ -25,6 +25,7 @@
   ],
   "ignore": [
     "docs",
+    ".gitattributes",
     ".gitignore",
     ".travis.yml",
     "Gruntfile.js",

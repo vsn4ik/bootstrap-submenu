@@ -49,6 +49,7 @@
     "main": "dist/js/bootstrap-submenu.js",
     "ignore": [
       "docs",
+      ".gitattributes",
       ".gitignore",
       ".travis.yml",
       "Gruntfile.js",
