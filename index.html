@@ -23,7 +23,7 @@
 
   <script src="vendor/jquery/js/jquery.js" defer></script>
   <script src="vendor/bootstrap/js/bootstrap.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/highlight.js/8.7/highlight.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/highlight.js/8.8.0/highlight.min.js" defer></script>
   <script src="dist/js/bootstrap-submenu.js" defer></script>
   <script src="assets/js/docs.js" defer></script>
 </head>
@@ -35,7 +35,7 @@
   <p class="lead">Bootstrap Sub-Menus.</p>
 
   <div class="btn-toolbar">
-    <a class="btn btn-primary m-b pull-left" href="https://github.com/vsn4ik/bootstrap-submenu/releases/download/v1.2.13/bootstrap-submenu-1.2.13-dist.zip" download>
+    <a class="btn btn-primary m-b pull-left" href="https://github.com/vsn4ik/bootstrap-submenu/releases/download/v2.0.0/bootstrap-submenu-2.0.0-dist.zip" download>
       <span class="octicon octicon-cloud-download"></span>
       <span>Download</span>
     </a>
@@ -67,7 +67,9 @@
 
 <p>Enable Bootstrap-submenu via JavaScript:</p>
 
-<pre><code class="hljs javascript">$('.dropdown-submenu > a').submenupicker();</code></pre>
+<pre><code class="hljs javascript">// For v2 [data-toggle="dropdown"] is required for [data-submenu].
+// For v2 .dropdown-submenu &gt; [data-toggle] is forbidden.
+$('[data-submenu]').submenupicker();</code></pre>
 
     <hr>
     <h2 id="html-examples">Examples</h2>
@@ -75,16 +77,14 @@
 <h3>Dropdown</h3>
 <h4>With button</h4>
 <div class="dropdown m-b">
-  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-    Dropdown
-    <span class="caret"></span>
+  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" data-submenu>
+    Dropdown <span class="caret"></span>
   </button>
 
-  <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
-<ul class="dropdown-menu" role="menu">
+  <ul class="dropdown-menu">
   <li><a tabindex="0">Action</a></li>
 <li class="dropdown-submenu">
-  <a tabindex="0" data-toggle="dropdown">Another action</a>
+  <a tabindex="0">Another action</a>
 
   <ul class="dropdown-menu">
     <li class="dropdown-header">Dropdown header</li>
@@ -103,15 +103,14 @@
 <h4>With button-group</h4>
 <div class="btn-group">
   <button class="btn btn-default" type="button">Dropdown</button>
-  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" data-submenu>
     <span class="caret"></span>
   </button>
 
-  <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
-<ul class="dropdown-menu" role="menu">
+  <ul class="dropdown-menu">
   <li><a tabindex="0">Action</a></li>
 <li class="dropdown-submenu">
-  <a tabindex="0" data-toggle="dropdown">Another action</a>
+  <a tabindex="0">Another action</a>
 
   <ul class="dropdown-menu">
     <li class="dropdown-header">Dropdown header</li>
@@ -128,16 +127,14 @@
 
 <h4>With button (right align)</h4>
 <div class="dropdown m-b">
-  <button class="btn btn-default" type="button" data-toggle="dropdown">
-    Dropdown
-    <span class="caret"></span>
+  <button class="btn btn-default" type="button" data-toggle="dropdown" data-submenu>
+    Dropdown <span class="caret"></span>
   </button>
 
-  <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
-<ul class="dropdown-menu dropdown-menu-right" role="menu">
+  <ul class="dropdown-menu dropdown-menu-right">
   <li><a tabindex="0">Action</a></li>
 <li class="dropdown-submenu">
-  <a tabindex="0" data-toggle="dropdown">Another action</a>
+  <a tabindex="0">Another action</a>
 
   <ul class="dropdown-menu">
     <li class="dropdown-header">Dropdown header</li>
@@ -155,16 +152,14 @@
 <h3>Dropup</h3>
 <h4>With button</h4>
 <div class="dropup m-b">
-  <button class="btn btn-default" type="button" data-toggle="dropdown">
-    Dropup
-    <span class="caret"></span>
+  <button class="btn btn-default" type="button" data-toggle="dropdown" data-submenu>
+    Dropup <span class="caret"></span>
   </button>
 
-  <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
-<ul class="dropdown-menu" role="menu">
+  <ul class="dropdown-menu">
   <li><a tabindex="0">Action</a></li>
 <li class="dropdown-submenu">
-  <a tabindex="0" data-toggle="dropdown">Another action</a>
+  <a tabindex="0">Another action</a>
 
   <ul class="dropdown-menu">
     <li class="dropdown-header">Dropdown header</li>
@@ -182,15 +177,14 @@
 <h4>With button-group</h4>
 <div class="btn-group dropup">
   <button class="btn btn-default" type="button">Dropup</button>
-  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" data-submenu>
     <span class="caret"></span>
   </button>
 
-  <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
-<ul class="dropdown-menu" role="menu">
+  <ul class="dropdown-menu">
   <li><a tabindex="0">Action</a></li>
 <li class="dropdown-submenu">
-  <a tabindex="0" data-toggle="dropdown">Another action</a>
+  <a tabindex="0">Another action</a>
 
   <ul class="dropdown-menu">
     <li class="dropdown-header">Dropdown header</li>
@@ -207,16 +201,14 @@
 
 <h4>With button (right align)</h4>
 <div class="dropup m-b">
-  <button class="btn btn-default" type="button" data-toggle="dropdown">
-    Dropup
-    <span class="caret"></span>
+  <button class="btn btn-default" type="button" data-toggle="dropdown" data-submenu>
+    Dropup <span class="caret"></span>
   </button>
 
-  <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
-<ul class="dropdown-menu dropdown-menu-right" role="menu">
+  <ul class="dropdown-menu dropdown-menu-right">
   <li><a tabindex="0">Action</a></li>
 <li class="dropdown-submenu">
-  <a tabindex="0" data-toggle="dropdown">Another action</a>
+  <a tabindex="0">Another action</a>
 
   <ul class="dropdown-menu">
     <li class="dropdown-header">Dropdown header</li>
@@ -247,17 +239,18 @@
   <div class="collapse navbar-collapse">
     <ul class="nav navbar-nav">
       <li class="dropdown">
-        <a tabindex="0" data-toggle="dropdown">Dropdown<span class="caret"></span></a>
+        <a tabindex="0" data-toggle="dropdown" data-submenu>
+          Dropdown<span class="caret"></span>
+        </a>
 
-        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
-        <ul class="dropdown-menu" role="menu">
+        <ul class="dropdown-menu">
           <li class="dropdown-submenu">
-            <a tabindex="0" data-toggle="dropdown">Action</a>
+            <a tabindex="0">Action</a>
 
             <ul class="dropdown-menu">
               <li><a tabindex="0">Sub action</a></li>
               <li class="dropdown-submenu">
-                <a tabindex="0" data-toggle="dropdown">Another sub action</a>
+                <a tabindex="0">Another sub action</a>
 
                 <ul class="dropdown-menu">
                   <li><a tabindex="0">Sub action</a></li>
@@ -267,7 +260,7 @@
               </li>
               <li><a tabindex="0">Something else here</a></li>
               <li class="dropdown-submenu">
-                <a tabindex="0" data-toggle="dropdown">Another action</a>
+                <a tabindex="0">Another action</a>
 
                 <ul class="dropdown-menu">
                   <li><a tabindex="0">Sub action</a></li>
@@ -279,7 +272,7 @@
           </li>
 
           <li class="dropdown-submenu">
-            <a tabindex="0" data-toggle="dropdown">Another action</a>
+            <a tabindex="0">Another action</a>
 
             <ul class="dropdown-menu">
               <li><a tabindex="0">Sub action</a></li>
@@ -293,17 +286,18 @@
         </ul>
       </li>
       <li class="dropdown">
-        <a tabindex="0" data-toggle="dropdown">Dropdown 2<span class="caret"></span></a>
+        <a tabindex="0" data-toggle="dropdown" data-submenu>
+          Dropdown 2<span class="caret"></span>
+        </a>
 
-        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
-        <ul class="dropdown-menu" role="menu">
+        <ul class="dropdown-menu">
           <li class="dropdown-submenu">
-            <a tabindex="0" data-toggle="dropdown">Action</a>
+            <a tabindex="0">Action</a>
 
             <ul class="dropdown-menu">
               <li><a tabindex="0">Sub action</a></li>
               <li class="dropdown-submenu">
-                <a tabindex="0" data-toggle="dropdown">Another sub action</a>
+                <a tabindex="0">Another sub action</a>
 
                 <ul class="dropdown-menu">
                   <li><a tabindex="0">Sub action</a></li>
@@ -316,7 +310,7 @@
           </li>
           <li><a tabindex="0">Another action</a></li>
           <li class="dropdown-submenu">
-            <a tabindex="0" data-toggle="dropdown">Something else here</a>
+            <a tabindex="0">Something else here</a>
 
             <ul class="dropdown-menu">
               <li><a tabindex="0">Sub action</a></li>
@@ -332,10 +326,11 @@
 
     <ul class="nav navbar-nav navbar-right">
       <li class="dropdown">
-        <a tabindex="0" data-toggle="dropdown">Dropdown 3<span class="caret"></span></a>
+        <a tabindex="0" data-toggle="dropdown">
+          Dropdown 3<span class="caret"></span>
+        </a>
 
-        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
-        <ul class="dropdown-menu" role="menu">
+        <ul class="dropdown-menu">
           <li><a tabindex="0">Action</a></li>
           <li><a tabindex="0">Another action</a></li>
           <li><a tabindex="0">Something else here</a></li>
@@ -351,17 +346,18 @@
 <ul class="nav nav-pills">
   <li class="active"><a tabindex="0">Regular link</a></li>
   <li class="dropdown">
-    <a tabindex="0" data-toggle="dropdown">Dropdown<span class="caret"></span></a>
+    <a tabindex="0" data-toggle="dropdown" data-submenu>
+      Dropdown<span class="caret"></span>
+    </a>
 
-    <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
-    <ul class="dropdown-menu" role="menu">
+    <ul class="dropdown-menu">
       <li class="dropdown-submenu">
-        <a tabindex="0" data-toggle="dropdown">Action</a>
+        <a tabindex="0">Action</a>
 
         <ul class="dropdown-menu">
           <li><a tabindex="0">Sub action</a></li>
           <li class="dropdown-submenu">
-            <a tabindex="0" data-toggle="dropdown">Another sub action</a>
+            <a tabindex="0">Another sub action</a>
 
             <ul class="dropdown-menu">
               <li><a tabindex="0">Sub action</a></li>
@@ -373,7 +369,7 @@
         </ul>
       </li>
       <li class="dropdown-submenu">
-        <a tabindex="0" data-toggle="dropdown">Another action</a>
+        <a tabindex="0">Another action</a>
 
         <ul class="dropdown-menu">
           <li><a tabindex="0">Sub action</a></li>
@@ -387,17 +383,18 @@
     </ul>
   </li>
   <li class="dropdown">
-    <a tabindex="0" data-toggle="dropdown">Dropdown 2<span class="caret"></span></a>
+    <a tabindex="0" data-toggle="dropdown" data-submenu>
+      Dropdown 2<span class="caret"></span>
+    </a>
 
-    <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
-    <ul class="dropdown-menu" role="menu">
+    <ul class="dropdown-menu">
       <li class="dropdown-submenu">
         <a tabindex="0" data-toggle="dropdown">Action</a>
 
         <ul class="dropdown-menu">
           <li><a tabindex="0">Sub action</a></li>
           <li class="dropdown-submenu">
-            <a tabindex="0" data-toggle="dropdown">Another sub action</a>
+            <a tabindex="0">Another sub action</a>
 
             <ul class="dropdown-menu">
               <li><a tabindex="0">Sub action</a></li>
@@ -410,7 +407,7 @@
       </li>
       <li><a tabindex="0">Another action</a></li>
       <li class="dropdown-submenu">
-        <a tabindex="0" data-toggle="dropdown">Something else here</a>
+        <a tabindex="0">Something else here</a>
 
         <ul class="dropdown-menu">
           <li><a tabindex="0">Sub action</a></li>
@@ -423,10 +420,11 @@
     </ul>
   </li>
   <li class="dropdown">
-    <a tabindex="0" data-toggle="dropdown">Dropdown 3<span class="caret"></span></a>
+    <a tabindex="0" data-toggle="dropdown">
+      Dropdown 3<span class="caret"></span>
+    </a>
 
-    <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
-    <ul class="dropdown-menu" role="menu">
+    <ul class="dropdown-menu">
       <li><a tabindex="0">Action</a></li>
       <li><a tabindex="0">Another action</a></li>
       <li><a tabindex="0">Something else here</a></li>
