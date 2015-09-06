@@ -65,7 +65,7 @@
         keydown: $.proxy(this, 'keydown')
       });
 
-      this.$main.on('hide.bs.submenu', $.proxy(this.hide, this));
+      this.$main.on('hide.bs.submenu', $.proxy(this, 'hide'));
     },
     click: function(event) {
       event.stopPropagation();
