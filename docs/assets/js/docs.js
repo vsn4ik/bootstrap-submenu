@@ -23,9 +23,9 @@ $(function() {
     // 'html' for Mozilla Firefox, 'body' for other browsers
     $('body, html').animate({
       scrollTop: 0
-    }, 800, function() {
+    }, 800, $.proxy(function() {
       this.disabled = false;
-    }.bind(this));
+    }, this));
 
     this.blur();
   });

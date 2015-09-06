@@ -19,50 +19,58 @@
     factory(jQuery);
   }
 })(function($) {
-  // Or ':not(.disabled):has(a)' or ':not(.disabled):parent';
-  var desc = ':not(.disabled, .divider, .dropdown-header)';
-
-  function Submenupicker(element) {
+  function Item(element) {
     this.$element = $(element);
-    this.$main = this.$element.closest('.dropdown, .dropup, .btn-group');
-    this.$menu = this.$element.parent();
-    this.$drop = this.$menu.parent().parent();
-    this.$menus = this.$menu.siblings('.dropdown-submenu');
-
-    var $children = this.$menu.find('> .dropdown-menu > ' + desc);
-
-    this.$submenus = $children.filter('.dropdown-submenu');
-    this.$items = $children.not('.dropdown-submenu');
+    this.$menu = this.$element.closest('.dropdown-menu');
+    this.$main = this.$menu.parent();
+    this.$items = this.$menu.children('.dropdown-submenu');
 
     this.init();
   }
 
-  Submenupicker.prototype = {
+  Item.prototype = {
+    init: function() {
+      this.$element.on('keydown', $.proxy(this, 'keydown'));
+    },
+    close: function() {
+      this.$main.removeClass('open');
+      this.$items.trigger('hide.bs.submenu');
+    },
+    keydown: function(event) {
+      // 27: Esc
+
+      if (event.keyCode == 27) {
+        event.stopPropagation();
+
+        this.close();
+        this.$main.children('a, button').trigger('focus');
+      }
+    }
+  };
+
+  function SubmenuItem(element) {
+    this.$element = $(element);
+    this.$main = this.$element.parent();
+    this.$menu = this.$main.children('.dropdown-menu');
+    this.$subs = this.$main.siblings('.dropdown-submenu');
+    this.$items = this.$menu.children('.dropdown-submenu');
+
+    this.init();
+  }
+
+  $.extend(SubmenuItem.prototype, Item.prototype, {
     init: function() {
       this.$element.on({
-        'click.bs.dropdown': $.proxy(this.click, this),
-        keydown: $.proxy(this.keydown, this)
+        click: $.proxy(this, 'click'),
+        keydown: $.proxy(this, 'keydown')
       });
 
-      this.$menu.on('hide.bs.submenu', $.proxy(this.hide, this));
-      this.$items.on('keydown', $.proxy(this.item_keydown, this));
-
-      // Bootstrap fix
-      this.$menu.nextAll(desc + ':first:not(.dropdown-submenu)').children('a').on('keydown', $.proxy(this.next_keydown, this));
+      this.$main.on('hide.bs.submenu', $.proxy(this.hide, this));
     },
     click: function(event) {
       event.stopPropagation();
 
       this.toggle();
-    },
-    toggle: function() {
-      if (this.$menu.hasClass('open')) {
-        this.close();
-      }
-      else {
-        this.$menu.addClass('open');
-        this.$menus.trigger('hide.bs.submenu');
-      }
     },
     hide: function(event) {
       // Stop event bubbling
@@ -70,83 +78,83 @@
 
       this.close();
     },
-    close: function() {
-      this.$menu.removeClass('open');
-      this.$submenus.trigger('hide.bs.submenu');
+    open: function() {
+      this.$main.addClass('open');
+      this.$subs.trigger('hide.bs.submenu');
+    },
+    toggle: function() {
+      if (this.$main.hasClass('open')) {
+        this.close();
+      }
+      else {
+        this.open();
+      }
     },
     keydown: function(event) {
-      // 13: Return, 27: Esc, 32: Spacebar
-      // 38: Arrow up, 40: Arrow down
+      // 13: Return, 32: Spacebar
 
-      // Off vertical scrolling
-      if ($.inArray(event.keyCode, [32, 38, 40]) != -1) {
+      if (event.keyCode == 32) {
+        // Off vertical scrolling
         event.preventDefault();
       }
 
       if ($.inArray(event.keyCode, [13, 32]) != -1) {
         this.toggle();
       }
-      else if ($.inArray(event.keyCode, [27, 38, 40]) != -1) {
-        event.stopPropagation();
+    }
+  });
 
-        if (event.keyCode == 27) {
-          if (this.$menu.hasClass('open')) {
-            this.close();
-          }
-          else {
-            this.$menus.trigger('hide.bs.submenu');
-            this.$drop.removeClass('open').children('a').trigger('focus');
-          }
-        }
-        else {
-          var $items = this.$main.find('li:not(.disabled):visible > a');
+  function Submenupicker(element) {
+    this.$element = $(element);
+    this.$main = this.$element.parent();
+    this.$menu = this.$main.children('.dropdown-menu');
+    this.$items = this.$menu.children('.dropdown-submenu');
 
-          var index = $items.index(event.target);
+    this.init();
+  }
 
-          if (event.keyCode == 38 && index !== 0) {
-            index--;
-          }
-          else if (event.keyCode == 40 && index !== $items.length - 1) {
-            index++;
-          }
-          else {
-            return;
-          }
+  Submenupicker.prototype = {
+    init: function() {
+      this.$menu.off('keydown.bs.dropdown.data-api');
+      this.$menu.on('keydown', $.proxy(this, 'item_keydown'));
 
-          $items.eq(index).trigger('focus');
-        }
-      }
+      this.$menu.find('li > a').each(function() {
+        new Item(this);
+      });
+
+      this.$menu.find('.dropdown-submenu > a').each(function() {
+        new SubmenuItem(this);
+      });
+
+      this.$main.on('hidden.bs.dropdown', $.proxy(this, 'hidden'));
+    },
+    hidden: function() {
+      this.$items.trigger('hide.bs.submenu');
     },
     item_keydown: function(event) {
-      // 27: Esc
+      // 38: Arrow up, 40: Arrow down
 
-      if (event.keyCode != 27) {
-        return;
+      if ($.inArray(event.keyCode, [38, 40]) != -1) {
+        // Off vertical scrolling
+        event.preventDefault();
+
+        event.stopPropagation();
+
+        var $items = this.$menu.find('li:not(.disabled):visible > a');
+        var index = $items.index(event.target);
+
+        if (event.keyCode == 38 && index !== 0) {
+          index--;
+        }
+        else if (event.keyCode == 40 && index !== $items.length - 1) {
+          index++;
+        }
+        else {
+          return;
+        }
+
+        $items.eq(index).trigger('focus');
       }
-
-      event.stopPropagation();
-
-      this.close();
-      this.$element.trigger('focus');
-    },
-    next_keydown: function(event) {
-      // 38: Arrow up
-
-      if (event.keyCode != 38) {
-        return;
-      }
-
-      // Off vertical scrolling
-      event.preventDefault();
-
-      event.stopPropagation();
-
-      // Use this.$drop instead this.$main (optimally)
-      var $items = this.$drop.find('li:not(.disabled):visible > a');
-
-      var index = $items.index(event.target);
-
-      $items.eq(index - 1).trigger('focus');
     }
   };
 
