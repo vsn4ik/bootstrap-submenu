@@ -18,4 +18,6 @@
 
 <p>Enable Bootstrap-submenu via JavaScript:</p>
 
-<pre><code class="hljs javascript">$('.dropdown-submenu > a').submenupicker();</code></pre>
+<pre><code class="hljs javascript">// For v2 [data-toggle="dropdown"] is required for [data-submenu].
+// For v2 .dropdown-submenu &gt; [data-toggle] is forbidden.
+$('[data-submenu]').submenupicker();</code></pre>

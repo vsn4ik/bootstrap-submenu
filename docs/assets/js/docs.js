@@ -44,7 +44,8 @@ $(function() {
     event.stopPropagation();
   });
 
-  $('.dropdown-submenu > a').submenupicker();
+  //$('.dropdown-submenu > a').submenupicker();
+  $('[data-submenu]').submenupicker();
 
   hljs.initHighlighting();
 });
