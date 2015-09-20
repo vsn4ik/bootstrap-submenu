@@ -1,3 +1,5 @@
+// jscs:disable requireCamelCaseOrUpperCaseIdentifiers
+
 'use strict';
 
 $(function() {
