@@ -1,5 +1,5 @@
 /*!
- * Bootstrap-submenu v2.0.0 (http://vsn4ik.github.io/bootstrap-submenu)
+ * Bootstrap-submenu v2.0.1 (http://vsn4ik.github.io/bootstrap-submenu)
  * Copyright 2015 Vasily A. (https://github.com/vsn4ik)
  * Licensed under the MIT license
  */
@@ -122,7 +122,7 @@
   Submenupicker.prototype = {
     init: function() {
       this.$menu.off('keydown.bs.dropdown.data-api');
-      this.$menu.on('keydown', $.proxy(this, 'item_keydown'));
+      this.$menu.on('keydown', $.proxy(this, 'itemKeydown'));
 
       this.$menu.find('li > a').each(function() {
         new Item(this);
@@ -137,7 +137,7 @@
     hidden: function() {
       this.$items.trigger('hide.bs.submenu');
     },
-    item_keydown: function(event) {
+    itemKeydown: function(event) {
       // 38: Arrow up, 40: Arrow down
 
       if ($.inArray(event.keyCode, [38, 40]) != -1) {
