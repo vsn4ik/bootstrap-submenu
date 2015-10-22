@@ -25,9 +25,8 @@ module.exports = function(grunt) {
       core: {
         options: {
           sourceMap: true,
-          outputSourceFiles: true,
           sourceMapURL: '<%= pkg.name %>.css.map',
-          sourceMapFilename: '<%= less.core.dest %>.map'
+          outputSourceFiles: true
         },
         src: 'less/<%= pkg.name %>.less',
         dest: 'dist/css/<%= pkg.name %>.css'
