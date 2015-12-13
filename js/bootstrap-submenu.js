@@ -68,6 +68,9 @@
       this.$main.on('hide.bs.submenu', $.proxy(this, 'hide'));
     },
     click: function(event) {
+      // Fix a[href="#"]. For community
+      event.preventDefault();
+
       event.stopPropagation();
 
       this.toggle();
