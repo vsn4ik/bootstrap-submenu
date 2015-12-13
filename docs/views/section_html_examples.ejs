@@ -161,14 +161,38 @@
 
     <ul class="nav navbar-nav navbar-right">
       <li class="dropdown">
-        <a tabindex="0" data-toggle="dropdown">
+        <a tabindex="0" data-toggle="dropdown" data-submenu>
           Dropdown 3<span class="caret"></span>
         </a>
 
         <ul class="dropdown-menu">
-          <li><a tabindex="0">Action</a></li>
+          <li class="dropdown-submenu">
+            <a tabindex="0">Action</a>
+
+            <ul class="dropdown-menu">
+              <li><a tabindex="0">Sub action</a></li>
+              <li class="dropdown-submenu">
+                <a tabindex="0">Another sub action</a>
+
+                <ul class="dropdown-menu">
+                  <li><a tabindex="0">Sub action</a></li>
+                  <li><a tabindex="0">Another sub action</a></li>
+                  <li><a tabindex="0">Something else here</a></li>
+                </ul>
+              </li>
+              <li><a tabindex="0">Something else here</a></li>
+            </ul>
+          </li>
           <li><a tabindex="0">Another action</a></li>
-          <li><a tabindex="0">Something else here</a></li>
+          <li class="dropdown-submenu">
+            <a tabindex="0">Something else here</a>
+
+            <ul class="dropdown-menu">
+              <li><a tabindex="0">Sub action</a></li>
+              <li><a tabindex="0">Another sub action</a></li>
+              <li><a tabindex="0">Something else here</a></li>
+            </ul>
+          </li>
           <li class="divider"></li>
           <li><a tabindex="0">Separated link</a></li>
         </ul>
