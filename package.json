@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-submenu",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Bootstrap Sub-Menus",
   "keywords": [
     "bootstrap",
@@ -44,7 +44,7 @@
     "highlight.js": "~9.0.0",
     "jquery": "~2.1.4",
     "load-grunt-tasks": "~3.3.0",
-    "octicons": "~3.1.0"
+    "octicons": "~3.3.0"
   },
   "spm": {
     "main": "dist/js/bootstrap-submenu.js",
