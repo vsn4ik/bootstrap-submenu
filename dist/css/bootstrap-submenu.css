@@ -1,5 +1,5 @@
 /*!
- * Bootstrap-submenu v2.0.1 (http://vsn4ik.github.io/bootstrap-submenu)
+ * Bootstrap-submenu v2.0.2 (http://vsn4ik.github.io/bootstrap-submenu)
  * Copyright 2015 Vasily A. (https://github.com/vsn4ik)
  * Licensed under the MIT license
  */
@@ -26,14 +26,17 @@
     border-top-left-radius: 4px;
     border-bottom-left-radius: 0;
   }
-  .dropdown-menu-right .dropdown-submenu .dropdown-menu {
+  .dropdown-menu-right .dropdown-submenu .dropdown-menu,
+  .navbar-right .dropdown-submenu .dropdown-menu {
     left: auto;
     right: 100%;
     border-top-left-radius: 4px;
     border-top-right-radius: 0;
   }
   .dropup .dropdown-menu-right .dropdown-submenu .dropdown-menu,
-  .navbar-fixed-bottom .dropdown-menu-right .dropdown-submenu .dropdown-menu {
+  .dropup .navbar-right .dropdown-submenu .dropdown-menu,
+  .navbar-fixed-bottom .dropdown-menu-right .dropdown-submenu .dropdown-menu,
+  .navbar-fixed-bottom .navbar-right .dropdown-submenu .dropdown-menu {
     border-radius: 4px 4px 0;
   }
   .dropdown-submenu > a:after {
@@ -44,7 +47,8 @@
     border-top: 4px solid transparent;
     border-bottom: 4px solid transparent;
   }
-  .dropdown-menu-right .dropdown-submenu > a:after {
+  .dropdown-menu-right .dropdown-submenu > a:after,
+  .navbar-right .dropdown-submenu > a:after {
     float: left;
     border-left: none;
     margin-left: -10px;

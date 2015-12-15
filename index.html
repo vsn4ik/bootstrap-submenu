@@ -23,7 +23,7 @@
 
   <script src="vendor/jquery/js/jquery.js" defer></script>
   <script src="vendor/bootstrap/js/bootstrap.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/highlight.js/8.9.1/highlight.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/highlight.js/9.0.0/highlight.min.js" defer></script>
   <script src="dist/js/bootstrap-submenu.js" defer></script>
   <script src="assets/js/docs.js" defer></script>
 </head>
@@ -35,7 +35,7 @@
   <p class="lead">Bootstrap Sub-Menus.</p>
 
   <div class="btn-toolbar">
-    <a class="btn btn-primary m-b pull-left" href="https://github.com/vsn4ik/bootstrap-submenu/releases/download/v2.0.1/bootstrap-submenu-2.0.1-dist.zip" download>
+    <a class="btn btn-primary m-b pull-left" href="https://github.com/vsn4ik/bootstrap-submenu/releases/download/v2.0.2/bootstrap-submenu-2.0.2-dist.zip" download>
       <span class="octicon octicon-cloud-download"></span>
       <span>Download</span>
     </a>
@@ -52,12 +52,12 @@
 <pre><code class="hljs xml">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
-  &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"&gt;
-  &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"&gt;
+  &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"&gt;
+  &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"&gt;
   &lt;link rel="stylesheet" href="dist/css/bootstrap-submenu.min.css"&gt;
 
   &lt;script src="https://code.jquery.com/jquery-2.1.4.min.js" defer&gt;&lt;/script&gt;
-  &lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" defer&gt;&lt;/script&gt;
+  &lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" defer&gt;&lt;/script&gt;
   &lt;script src="dist/js/bootstrap-submenu.min.js" defer&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
@@ -326,14 +326,38 @@ $('[data-submenu]').submenupicker();</code></pre>
 
     <ul class="nav navbar-nav navbar-right">
       <li class="dropdown">
-        <a tabindex="0" data-toggle="dropdown">
+        <a tabindex="0" data-toggle="dropdown" data-submenu>
           Dropdown 3<span class="caret"></span>
         </a>
 
         <ul class="dropdown-menu">
-          <li><a tabindex="0">Action</a></li>
+          <li class="dropdown-submenu">
+            <a tabindex="0">Action</a>
+
+            <ul class="dropdown-menu">
+              <li><a tabindex="0">Sub action</a></li>
+              <li class="dropdown-submenu">
+                <a tabindex="0">Another sub action</a>
+
+                <ul class="dropdown-menu">
+                  <li><a tabindex="0">Sub action</a></li>
+                  <li><a tabindex="0">Another sub action</a></li>
+                  <li><a tabindex="0">Something else here</a></li>
+                </ul>
+              </li>
+              <li><a tabindex="0">Something else here</a></li>
+            </ul>
+          </li>
           <li><a tabindex="0">Another action</a></li>
-          <li><a tabindex="0">Something else here</a></li>
+          <li class="dropdown-submenu">
+            <a tabindex="0">Something else here</a>
+
+            <ul class="dropdown-menu">
+              <li><a tabindex="0">Sub action</a></li>
+              <li><a tabindex="0">Another sub action</a></li>
+              <li><a tabindex="0">Something else here</a></li>
+            </ul>
+          </li>
           <li class="divider"></li>
           <li><a tabindex="0">Separated link</a></li>
         </ul>

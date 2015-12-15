@@ -1,5 +1,5 @@
 /*!
- * Bootstrap-submenu v2.0.1 (http://vsn4ik.github.io/bootstrap-submenu)
+ * Bootstrap-submenu v2.0.2 (http://vsn4ik.github.io/bootstrap-submenu)
  * Copyright 2015 Vasily A. (https://github.com/vsn4ik)
  * Licensed under the MIT license
  */
@@ -74,6 +74,9 @@
       this.$main.on('hide.bs.submenu', $.proxy(this, 'hide'));
     },
     click: function(event) {
+      // Fix a[href="#"]. For community
+      event.preventDefault();
+
       event.stopPropagation();
 
       this.toggle();
