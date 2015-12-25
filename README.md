@@ -1,4 +1,4 @@
-# [Bootstrap-submenu](http://vsn4ik.github.io/bootstrap-submenu)
+# [Bootstrap-submenu](https://vsn4ik.github.io/bootstrap-submenu/)
 
 [![Bower version](https://img.shields.io/bower/v/bootstrap-submenu.svg)](https://github.com/vsn4ik/bootstrap-submenu)
 [![npm version](https://img.shields.io/npm/v/bootstrap-submenu.svg)](https://www.npmjs.com/package/bootstrap-submenu)
@@ -35,7 +35,7 @@ bootstrap-submenu/
 
 ## Examples
 
-For some working examples, visit our [examples](http://vsn4ik.github.io/bootstrap-submenu/#examples) section.
+For some working examples, visit our [examples](https://vsn4ik.github.io/bootstrap-submenu/#html-examples) section.
 
 
 ## Min Requirements

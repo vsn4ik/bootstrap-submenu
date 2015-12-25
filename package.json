@@ -8,7 +8,7 @@
     "jquery-plugin",
     "submenu"
   ],
-  "homepage": "http://vsn4ik.github.io/bootstrap-submenu",
+  "homepage": "https://vsn4ik.github.io/bootstrap-submenu/",
   "author": {
     "name": "Vasily A.",
     "url": "https://github.com/vsn4ik"
@@ -25,9 +25,6 @@
   "scripts": {
     "test": "grunt"
   },
-  "engines": {
-    "node": "=>0.10.0"
-  },
   "devDependencies": {
     "bootstrap": "~3.3.6",
     "grunt": "~0.4.5",
@@ -43,7 +40,7 @@
     "grunt-jscs": "~2.5.0",
     "highlight.js": "~9.0.0",
     "jquery": "~2.1.4",
-    "load-grunt-tasks": "~3.3.0",
+    "load-grunt-tasks": "~3.4.0",
     "octicons": "~3.3.0"
   },
   "spm": {
