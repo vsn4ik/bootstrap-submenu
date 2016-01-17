@@ -11,6 +11,7 @@
 
 Several quick start options are available:
 
+* Use [cdnjs](https://cdnjs.com/libraries/bootstrap-submenu), reference files with `<script>` and `<link>` tag.
 * [Download the latest release](https://github.com/vsn4ik/bootstrap-submenu/archive/v2.0.3.zip "Download Bootstrap-submenu").
 * Clone the repo: `git clone https://github.com/vsn4ik/bootstrap-submenu.git`.
 * Install with [Bower](http://bower.io): `bower install bootstrap-submenu`.
