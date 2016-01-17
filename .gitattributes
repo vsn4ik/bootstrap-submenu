@@ -1,4 +1,4 @@
-# Export-ignore files for composer (with --prefer-dist)
+# Export-ignore files (GitHub download link, composer [--prefer-dist])
 # Dont add bower.json, otherwise it is not loaded in the Bower package
 docs          export-ignore
 .*            export-ignore
