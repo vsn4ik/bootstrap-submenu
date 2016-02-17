@@ -23,7 +23,7 @@
   ],
   "main": "dist/js/bootstrap-submenu.js",
   "scripts": {
-    "test" : "grunt"
+    "test": "grunt"
   },
   "devDependencies": {
     "bootstrap": "~3.3.6",
