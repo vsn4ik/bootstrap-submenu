@@ -50,7 +50,6 @@
       ".*",
       "Gruntfile.js",
       "README.md",
-      "_config.yml",
       "bower.json",
       "composer.json"
     ]
