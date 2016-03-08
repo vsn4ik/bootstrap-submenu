@@ -73,8 +73,7 @@ module.exports = function(grunt) {
     cssmin: {
       core: {
         options: {
-          compatibility: 'ie8',
-          sourceMap: true
+          compatibility: 'ie8'
         },
         expand: true,
         src: 'dist/css/*.css',

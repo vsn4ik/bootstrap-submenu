@@ -25,8 +25,7 @@ bootstrap-submenu/
 ├── css/
 │   ├── bootstrap-submenu.css
 │   ├── bootstrap-submenu.css.map
-│   ├── bootstrap-submenu.min.css
-│   └── bootstrap-submenu.min.css.map
+│   └── bootstrap-submenu.min.css
 └── js/
     ├── bootstrap-submenu.js
     └── bootstrap-submenu.min.js

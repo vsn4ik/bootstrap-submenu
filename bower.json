@@ -7,7 +7,7 @@
     "jquery-plugin",
     "submenu"
   ],
-  "homepage": "http://vsn4ik.github.io/bootstrap-submenu",
+  "homepage": "https://vsn4ik.github.io/bootstrap-submenu/",
   "authors": [
     {
       "name": "Vasily A.",
@@ -28,7 +28,6 @@
     "/.*",
     "Gruntfile.js",
     "README.md",
-    "_config.yml",
     "composer.json",
     "package.json"
   ],
