@@ -9,6 +9,9 @@ node_js:
 before_script:
   - npm install --global grunt-cli
 
+cache:
+  directories:
+    - node_modules
 branches:
   only:
     - master

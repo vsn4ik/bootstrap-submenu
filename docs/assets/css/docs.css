@@ -26,3 +26,16 @@ a {
 pre {
   padding: 0;
 }
+
+/* Убираем обводку при клике */
+.dropdown-menu .disabled a {
+  outline: none;
+}
+
+.dropdown-divider {
+  padding: 9px 0;
+}
+
+.dropdown-divider .divider {
+  margin: auto;
+}

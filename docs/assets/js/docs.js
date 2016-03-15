@@ -42,7 +42,7 @@ $(function() {
   });
 
   // Предотвращаем закрытие при клике на неактивный элемент списка
-  $('.dropdown-menu > .disabled, .dropdown-header').on('click.bs.dropdown.data-api', function(event) {
+  $('.dropdown-menu .disabled, .dropdown-header, .dropdown-divider').on('click', function(event) {
     event.stopPropagation();
   });
 
