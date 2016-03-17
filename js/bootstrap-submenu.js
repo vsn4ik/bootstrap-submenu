@@ -161,9 +161,11 @@
     }
   };
 
+  var old = $.fn.submenupicker;
+
   // For AMD/Node/CommonJS used elements (optional)
   // http://learn.jquery.com/jquery-ui/environments/amd/
-  return $.fn.submenupicker = function(elements) {
+  $.fn.submenupicker = function(elements) {
     var $elements = this instanceof $ ? this : $(elements);
 
     return $elements.each(function() {
@@ -176,4 +178,12 @@
       }
     });
   };
+
+  $.fn.submenupicker.Constructor = Submenupicker;
+  $.fn.submenupicker.noConflict = function() {
+    $.fn.submenupicker = old;
+    return this;
+  };
+
+  return $.fn.submenupicker;
 });
