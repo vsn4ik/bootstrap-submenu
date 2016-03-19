@@ -1,5 +1,5 @@
 /*!
- * Bootstrap-submenu v2.0.3 (https://vsn4ik.github.io/bootstrap-submenu/)
+ * Bootstrap-submenu v2.0.4 (https://vsn4ik.github.io/bootstrap-submenu/)
  * Copyright 2014-2016 Vasily A. (https://github.com/vsn4ik)
  * Licensed under the MIT license
  */
