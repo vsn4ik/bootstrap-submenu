@@ -42,16 +42,5 @@
     "jquery": "~2.2.2",
     "load-grunt-tasks": "~3.4.1",
     "octicons": "~3.5.0"
-  },
-  "spm": {
-    "main": "dist/js/bootstrap-submenu.js",
-    "ignore": [
-      "docs",
-      ".*",
-      "Gruntfile.js",
-      "README.md",
-      "bower.json",
-      "composer.json"
-    ]
   }
 }
