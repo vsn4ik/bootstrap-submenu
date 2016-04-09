@@ -40,6 +40,20 @@ pre {
   margin: auto;
 }
 
+/* Без враппера происходит подергивание */
+.scroll-top-wrapper {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  opacity: 0.7;
+
+  transition: opacity 0.15s ease-in-out;
+}
+
+.scroll-top-wrapper:hover {
+  opacity: 1;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
