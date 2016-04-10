@@ -42,8 +42,5 @@
     "jquery": "~2.2.3",
     "load-grunt-tasks": "~3.5.0",
     "octicons": "~3.5.0"
-  },
-  "peerDependencies": {
-    "grunt": "~0.4.5"
   }
 }

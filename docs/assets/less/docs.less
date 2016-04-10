@@ -1,0 +1,74 @@
+// :<pseudo-attr>: friends with IE8. Use ::<pseudo-attr> in future.
+
+@import "bootstrap/less/mixins.less";
+
+body {
+  padding-top: 20px;
+}
+
+footer {
+  padding-bottom: 10px;
+}
+
+a {
+  cursor: pointer;
+}
+
+.m-b {
+  margin-bottom: 15px;
+}
+
+.input-group-addon,
+.input-group-btn {
+  width: auto;
+}
+
+.input-group-addon {
+  background-color: white;
+}
+
+pre {
+  padding: 0;
+}
+
+.dropdown-menu {
+  // Убирать outline у .disabled теперь не требуется
+  .disabled,
+  .dropdown-header,
+  .divider {
+    // Элемент перестанет реагировать на hover, click и другие события мыши.
+    // Он станет «прозрачным» для взаимодействия, а hover и click
+    // будут передаваться элементу, лежащему под ним.
+    pointer-events: none;
+  }
+}
+
+/* Без враппера происходит подергивание */
+.scroll-top-wrapper {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  opacity: 0.7;
+
+  transition: opacity 0.15s ease-in-out;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+::-webkit-scrollbar {
+  .square(10px);
+
+  &-track {
+    background-color: rgba(113, 112, 107, 0.1);
+  }
+
+  &-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+
+    &:hover {
+      background-color: gray;
+    }
+  }
+}

@@ -1,72 +1,51 @@
 body {
   padding-top: 20px;
 }
-
 footer {
   padding-bottom: 10px;
 }
-
 a {
   cursor: pointer;
 }
-
 .m-b {
   margin-bottom: 15px;
 }
-
 .input-group-addon,
 .input-group-btn {
   width: auto;
 }
-
 .input-group-addon {
   background-color: white;
 }
-
 pre {
   padding: 0;
 }
-
-/* Убираем обводку при клике */
-.dropdown-menu .disabled a {
-  outline: none;
+.dropdown-menu .disabled,
+.dropdown-menu .dropdown-header,
+.dropdown-menu .divider {
+  pointer-events: none;
 }
-
-.dropdown-divider {
-  padding: 9px 0;
-}
-
-.dropdown-divider .divider {
-  margin: auto;
-}
-
 /* Без враппера происходит подергивание */
 .scroll-top-wrapper {
   position: fixed;
   right: 20px;
   bottom: 20px;
   opacity: 0.7;
-
   transition: opacity 0.15s ease-in-out;
 }
-
 .scroll-top-wrapper:hover {
   opacity: 1;
 }
-
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
-
 ::-webkit-scrollbar-track {
   background-color: rgba(113, 112, 107, 0.1);
 }
-
 ::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.2);
 }
-
 ::-webkit-scrollbar-thumb:hover {
   background-color: gray;
 }

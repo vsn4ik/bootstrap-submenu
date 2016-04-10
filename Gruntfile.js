@@ -22,6 +22,9 @@ module.exports = function(grunt) {
       docs: '_gh_pages/*'
     },
     less: {
+      options: {
+        paths: ['node_modules']
+      },
       core: {
         options: {
           sourceMap: true,
@@ -30,6 +33,10 @@ module.exports = function(grunt) {
         },
         src: 'less/<%= pkg.name %>.less',
         dest: 'dist/css/<%= pkg.name %>.css'
+      },
+      docs: {
+        src: 'docs/assets/less/docs.less',
+        dest: 'docs/assets/css/docs.css'
       }
     },
     copy: {
@@ -177,7 +184,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', [
     'clean',
-    'less',
+    'less:core',
     'cssmin',
     'jshint',
     'jscs',
@@ -189,6 +196,7 @@ module.exports = function(grunt) {
   grunt.registerTask('prep-release', [
     'default',
     'ejs',
+    'less:docs',
     'copy:assets',
     'compress'
   ]);

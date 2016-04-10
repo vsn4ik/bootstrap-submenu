@@ -62,9 +62,11 @@ $(function() {
     }
   });
 
-  // Предотвращаем закрытие при клике на неактивный элемент списка
-  $('.dropdown-menu .disabled, .dropdown-header, .dropdown-divider').on('click', function(event) {
-    event.stopPropagation();
+  // Для отмены закрытия при клике на неактивный элемент либо padding
+  $('.dropdown-menu').on('click', function(event) {
+    if (this === event.target) {
+      event.stopPropagation();
+    }
   });
 
   $('[data-submenu]').submenupicker();
