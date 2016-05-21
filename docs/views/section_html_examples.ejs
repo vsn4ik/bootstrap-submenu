@@ -1,61 +1,103 @@
 <h2 id="html-examples">Examples</h2>
 
 <h3>Dropdown</h3>
-<h4>With button</h4>
-<div class="dropdown m-b">
-  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" data-submenu>
-    Dropdown <span class="caret"></span>
-  </button>
 
-  <%- include dropdown-menu.html %>
+<h4>With button</h4>
+<div class="row">
+  <div class="col-sm-4 col-sm-offset-2 m-b">
+    <div class="dropdown">
+      <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" data-submenu>
+        Dropdown <span class="caret"></span>
+      </button>
+
+      <%- include dropdown-menu.html %>
+    </div>
+  </div>
+
+  <div class="col-sm-4 m-b">
+    <div class="dropdown pull-right">
+      <button class="btn btn-default" type="button" data-toggle="dropdown" data-submenu>
+        Dropdown <span class="caret"></span>
+      </button>
+
+      <%- include dropdown-menu-right.html -%>
+    </div>
+  </div>
 </div>
 
 <h4>With button-group</h4>
-<div class="btn-group">
-  <button class="btn btn-default" type="button">Dropdown</button>
-  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" data-submenu>
-    <span class="caret"></span>
-  </button>
+<div class="row">
+  <div class="col-sm-4 col-sm-offset-2 m-b">
+    <div class="btn-group">
+      <button class="btn btn-default" type="button">Dropdown</button>
+      <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" data-submenu>
+        <span class="caret"></span>
+      </button>
 
-  <%- include dropdown-menu.html -%>
-</div>
+      <%- include dropdown-menu.html -%>
+    </div>
+  </div>
 
-<h4>With button (right align)</h4>
-<div class="dropdown m-b">
-  <button class="btn btn-default" type="button" data-toggle="dropdown" data-submenu>
-    Dropdown <span class="caret"></span>
-  </button>
+  <div class="col-sm-4 m-b">
+    <div class="btn-group pull-right">
+      <button class="btn btn-default" type="button">Dropdown</button>
+      <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" data-submenu>
+        <span class="caret"></span>
+      </button>
 
-  <%- include dropdown-menu-right.html -%>
+      <%- include dropdown-menu-right.html -%>
+    </div>
+  </div>
 </div>
 
 <h3>Dropup</h3>
-<h4>With button</h4>
-<div class="dropup m-b">
-  <button class="btn btn-default" type="button" data-toggle="dropdown" data-submenu>
-    Dropup <span class="caret"></span>
-  </button>
 
-  <%- include dropdown-menu.html -%>
+<h4>With button</h4>
+<div class="row">
+  <div class="col-sm-4 col-sm-offset-2 m-b">
+    <div class="dropup">
+      <button class="btn btn-default" type="button" data-toggle="dropdown" data-submenu>
+        Dropup <span class="caret"></span>
+      </button>
+
+      <%- include dropdown-menu.html -%>
+    </div>
+  </div>
+
+  <div class="col-sm-4 m-b">
+    <div class="dropup pull-right">
+      <button class="btn btn-default" type="button" data-toggle="dropdown" data-submenu>
+        Dropup <span class="caret"></span>
+      </button>
+
+      <%- include dropdown-menu-right.html -%>
+    </div>
+  </div>
 </div>
 
 <h4>With button-group</h4>
-<div class="btn-group dropup">
-  <button class="btn btn-default" type="button">Dropup</button>
-  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" data-submenu>
-    <span class="caret"></span>
-  </button>
+<div class="row">
+  <div class="col-sm-4 col-sm-offset-2 m-b">
+    <div class="btn-group dropup">
+      <button class="btn btn-default" type="button">Dropup</button>
+      <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" data-submenu>
+        <span class="caret"></span>
+      </button>
 
-  <%- include dropdown-menu.html -%>
-</div>
+      <%- include dropdown-menu.html -%>
+    </div>
+  </div>
 
-<h4>With button (right align)</h4>
-<div class="dropup m-b">
-  <button class="btn btn-default" type="button" data-toggle="dropdown" data-submenu>
-    Dropup <span class="caret"></span>
-  </button>
+  <div class="col-sm-4 m-b">
+    <div class="btn-group dropup pull-right">
+      <button class="btn btn-default" type="button">Dropup</button>
+      <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" data-submenu>
+        <span class="caret"></span>
+      </button>
 
-  <%- include dropdown-menu-right.html -%>
+      <%- include dropdown-menu-right.html -%>
+    </div>
+  </div>
 </div>
 
 <h3>Navbar</h3>
