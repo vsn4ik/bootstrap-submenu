@@ -4,11 +4,6 @@ sudo: false
 language: node_js
 node_js:
   - "6"
-
-# NOTE: gulp-cli don't needed for run gulp locally on CI
-before_script:
-  - npm install --global grunt-cli
-
 cache:
   directories:
     - node_modules

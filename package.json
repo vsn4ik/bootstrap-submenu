@@ -38,8 +38,8 @@
     "grunt-contrib-uglify": "~1.0.0",
     "grunt-ejs": "~0.3.0",
     "grunt-jscs": "~2.5.0",
-    "highlight.js": "~9.4.0",
-    "jquery": "~3.0.0",
+    "highlight.js": "~9.5.0",
+    "jquery": "~3.1.0",
     "load-grunt-tasks": "~3.5.0",
     "octicons": "~4.2.0"
   }
