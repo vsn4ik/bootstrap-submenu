@@ -4,7 +4,7 @@
 [![npm version](https://img.shields.io/npm/v/bootstrap-submenu.svg)](https://www.npmjs.com/package/bootstrap-submenu)
 [![License](https://img.shields.io/npm/l/bootstrap-submenu.svg)][license]
 [![Build Status](https://travis-ci.org/vsn4ik/bootstrap-submenu.svg)](https://travis-ci.org/vsn4ik/bootstrap-submenu)
-[![devDependency Status](https://david-dm.org/vsn4ik/bootstrap-submenu/dev-status.svg)](https://david-dm.org/vsn4ik/bootstrap-submenu#info=devDependencies)
+[![devDependency Status](https://david-dm.org/vsn4ik/bootstrap-submenu/dev-status.svg)](https://david-dm.org/vsn4ik/bootstrap-submenu?type=dev)
 
 
 ## Quick start

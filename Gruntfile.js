@@ -71,7 +71,7 @@ module.exports = function(grunt) {
           dest: '_gh_pages/vendor/jquery/js'
         }, {
           expand: true,
-          cwd: 'node_modules/octicons/octicons',
+          cwd: 'node_modules/octicons/build/font',
           src: '*.{css,eot,svg,ttf,woff}',
           dest: '_gh_pages/vendor/octicons/css'
         }]
