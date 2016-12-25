@@ -1,6 +1,7 @@
 # [Bootstrap-submenu](https://vsn4ik.github.io/bootstrap-submenu/)
 
 [![Bower version](https://img.shields.io/bower/v/bootstrap-submenu.svg)](https://github.com/vsn4ik/bootstrap-submenu)
+[![CDNJS version](https://img.shields.io/cdnjs/v/bootstrap-submenu.svg)](https://cdnjs.com/libraries/bootstrap-submenu)
 [![npm version](https://img.shields.io/npm/v/bootstrap-submenu.svg)](https://www.npmjs.com/package/bootstrap-submenu)
 [![License](https://img.shields.io/npm/l/bootstrap-submenu.svg)][license]
 [![Build Status](https://travis-ci.org/vsn4ik/bootstrap-submenu.svg)](https://travis-ci.org/vsn4ik/bootstrap-submenu)
