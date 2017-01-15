@@ -11,11 +11,17 @@ $(function() {
         return;
       }
 
-      var $group = $('<div class="input-group"><span class="input-group-btn"></span></div>');
+      var html = '' +
+        '<div class="input-group">' +
+          '<div class="input-group-btn"></div>' +
+          '<div class="input-group-addon">' +
+            '<span>' + data.stargazers_count + '</span>' +
+            '&nbsp;' +
+            '<span class="fa fa-star"></span>' +
+          '</div>' +
+        '</div>';
 
-      $group.append('<span class="input-group-addon">' + data.stargazers_count + '&nbsp;<span class="octicon octicon-star"></span></span>');
-
-      $('#gh-view-link').wrap($group);
+      $('#gh-view-link').wrap(html);
     }
   });
 
@@ -46,7 +52,7 @@ $(function() {
     // 'html' for Mozilla Firefox, 'body' for other browsers
     $(containers).animate({
       scrollTop: 0
-    }, 800, $.proxy(function() {
+    }, 500, $.proxy(function() {
       window.onscroll = updateScrollBtnCls;
     }, this));
   });

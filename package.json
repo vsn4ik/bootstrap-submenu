@@ -17,7 +17,7 @@
   "license": "MIT",
   "files": [
     "dist",
-    "js/**/*.js",
+    "js/*.js",
     "less",
     "LICENSE"
   ],
@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "bootstrap": "~3.3.7",
+    "font-awesome": "~4.7.0",
     "grunt": "~1.0.1",
     "grunt-banner": "~0.6.0",
     "grunt-contrib-clean": "~1.0.0",
@@ -40,7 +41,6 @@
     "grunt-jscs": "~2.5.0",
     "highlight.js": "~9.9.0",
     "jquery": "~3.1.1",
-    "load-grunt-tasks": "~3.5.2",
-    "octicons": "~5.0.1"
+    "load-grunt-tasks": "~3.5.2"
   }
 }
