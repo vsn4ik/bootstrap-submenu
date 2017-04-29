@@ -67,7 +67,7 @@ module.exports = function(grunt) {
         }, {
           expand: true,
           cwd: 'node_modules/jquery/dist',
-          src: '*.{js,map}',
+          src: 'jquery.js',
           dest: '_gh_pages/vendor/jquery/js'
         }, {
           expand: true,
