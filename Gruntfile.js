@@ -131,9 +131,6 @@ module.exports = function(grunt) {
       }
     },
     uglify: {
-      options: {
-        report: 'none'
-      },
       core: {
         expand: true,
         src: 'dist/js/*.js',
