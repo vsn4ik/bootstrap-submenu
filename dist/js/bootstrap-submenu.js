@@ -88,7 +88,9 @@
       this.close();
     },
     open: function() {
+      this.$main.trigger('show.bs.submenu');
       this.$main.addClass('open');
+      this.$main.trigger('shown.bs.submenu');
       this.$subs.trigger('hide.bs.submenu');
     },
     toggle: function() {
