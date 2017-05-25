@@ -96,12 +96,8 @@
     keydown: function(event) {
       // 13: Return, 32: Spacebar
 
-      if (event.keyCode == 32) {
-        // Off vertical scrolling
-        event.preventDefault();
-      }
-
       if ($.inArray(event.keyCode, [13, 32]) != -1) {
+        event.preventDefault();
         this.toggle();
       }
     }
