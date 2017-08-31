@@ -2,12 +2,12 @@
 
 'use strict';
 
-$(function() {
+document.addEventListener('DOMContentLoaded', function() {
   $.ajax({
     url: 'https://api.github.com/repos/vsn4ik/bootstrap-submenu',
     success: function(data) {
       // XSS check
-      if (typeof data.stargazers_count != 'number') {
+      if (typeof data.stargazers_count !== 'number') {
         return;
       }
 
@@ -63,7 +63,7 @@ $(function() {
   $('.dropdown > a[tabindex]').on('keydown', function(event) {
     // 13: Return
 
-    if (event.keyCode == 13) {
+    if (event.keyCode === 13) {
       $(this).dropdown('toggle');
     }
   });

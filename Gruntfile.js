@@ -1,7 +1,7 @@
 /*!
  * Bootstrap-submenu's Gruntfile
  * http://vsn4ik.github.io/bootstrap-submenu
- * Copyright 2014-2015 Vasily A. (https://github.com/vsn4ik)
+ * Copyright 2014-2017 Vasily A. (https://github.com/vsn4ik)
  * Licensed under the MIT license
  */
 
