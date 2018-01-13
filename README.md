@@ -44,14 +44,14 @@ For some working examples, visit our [examples](https://vsn4ik.github.io/bootstr
 
 ## Creators
 
-**Vasily A.**
+**Vasilii A.**
 
 * <https://github.com/vsn4ik>
 
 
 ## Copyright and license
 
-Copyright Vasily A., 2014&ndash;2017.
+Copyright Vasilii A., 2014&ndash;2018.
 
 Licensed under [the MIT License][license].
 

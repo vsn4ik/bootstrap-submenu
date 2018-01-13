@@ -1,6 +1,6 @@
 /*!
  * Bootstrap-submenu v2.0.4 (https://vsn4ik.github.io/bootstrap-submenu/)
- * Copyright 2014-2017 Vasily A. (https://github.com/vsn4ik)
+ * Copyright 2014-2018 Vasilii A. (https://github.com/vsn4ik)
  * Licensed under the MIT license
  */
 
@@ -12,15 +12,13 @@
 'use strict';
 
 (function(factory) {
-  if (typeof define == 'function' && define.amd) {
+  if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module
     define(['jquery'], factory);
-  }
-  else if (typeof exports == 'object') {
+  } else if (typeof exports === 'object') {
     // Node/CommonJS
     module.exports = factory(require('jquery'));
-  }
-  else {
+  } else {
     // Browser globals
     factory(jQuery);
   }

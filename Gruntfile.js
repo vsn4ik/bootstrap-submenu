@@ -1,7 +1,7 @@
 /*!
  * Bootstrap-submenu's Gruntfile
  * http://vsn4ik.github.io/bootstrap-submenu
- * Copyright 2014-2017 Vasily A. (https://github.com/vsn4ik)
+ * Copyright 2014-2018 Vasilii A. (https://github.com/vsn4ik)
  * Licensed under the MIT license
  */
 
@@ -190,11 +190,13 @@ module.exports = function(grunt) {
     'usebanner'
   ]);
 
-  grunt.registerTask('prep-release', [
-    'default',
+  grunt.registerTask('docs', [
     'ejs',
     'less:docs',
-    'copy:assets',
+    'copy:assets'
+  ]);
+
+  grunt.registerTask('release-zip', [
     'compress'
   ]);
 };
