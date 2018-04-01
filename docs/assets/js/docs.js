@@ -1,5 +1,3 @@
-// jscs:disable requireCamelCaseOrUpperCaseIdentifiers
-
 'use strict';
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -13,11 +11,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
       var html = '' +
         '<div class="input-group">' +
-          '<div class="input-group-btn"></div>' +
-          '<div class="input-group-addon">' +
-            '<span>' + data.stargazers_count + '</span>' +
-            '&nbsp;' +
-            '<span class="fa fa-star"></span>' +
+          '<div class="input-group-prepend"></div>' +
+          '<div class="input-group-append">' +
+            '<span class="input-group-text bg-white">' +
+              data.stargazers_count +
+              '&nbsp;' +
+              '<span class="fas fa-star"></span>' +
+            '</span>' +
           '</div>' +
         '</div>';
 
@@ -34,38 +34,43 @@ document.addEventListener('DOMContentLoaded', function() {
     document.documentElement
   ];
 
-  var $scrollBtn = $('#scroll-top');
+  var scrollButtonNode = document.querySelector('#scroll-top');
 
-  function updateScrollBtnCls() {
+  function updateScrollButtonVisibility() {
     var scrollTop = containers.reduce(function(result, element) {
       return result + element.scrollTop;
     }, 0);
 
-    $scrollBtn.toggleClass('hidden', scrollTop < 100);
+    scrollButtonNode.classList.toggle('hidden', scrollTop < 100);
   }
 
-  $scrollBtn.on('click', function() {
+  scrollButtonNode.addEventListener('click', function() {
     window.onscroll = null;
 
-    $(this).addClass('hidden');
+    scrollButtonNode.classList.add('hidden');
 
     // 'html' for Mozilla Firefox, 'body' for other browsers
     $(containers).animate({
       scrollTop: 0
     }, 500, $.proxy(function() {
-      window.onscroll = updateScrollBtnCls;
+      window.onscroll = updateScrollButtonVisibility;
     }, this));
   });
 
-  window.onscroll = updateScrollBtnCls;
+  window.onscroll = updateScrollButtonVisibility;
 
-  // Dropdown fix
-  $('.dropdown > a[tabindex]').on('keydown', function(event) {
-    // 13: Return
+  // NOTE: Dropdown fix
+  $('a[tabindex][data-toggle="dropdown"]').on('keydown', function(event) {
+    // 13: Return, 32: Spacebar
 
-    if (event.keyCode === 13) {
-      $(this).dropdown('toggle');
+    if (![13, 32].includes(event.keyCode)) {
+      return;
     }
+
+    // NOTE: Off vertical scrolling
+    event.preventDefault();
+
+    $(this).dropdown('toggle');
   });
 
   // Для отмены закрытия при клике на неактивный элемент либо padding
@@ -77,6 +82,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
   $('[data-submenu]').submenupicker();
 
-  updateScrollBtnCls();
-  hljs.initHighlighting();
+  updateScrollButtonVisibility();
 });

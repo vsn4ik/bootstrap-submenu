@@ -1,0 +1,28 @@
+# Dependencies
+# $ gem install rouge
+# $ rougify style base16.solarized > assets/css/highlighter.css
+highlighter: rouge
+
+# Custom variables
+repository: "https://github.com/vsn4ik/bootstrap-submenu"
+version: 3.0.0
+name: "Bootstrap-submenu"
+description: "Bootstrap Sub-Menus"
+keywords: "bootstrap dropdown jquery-plugin submenu"
+
+author:
+  name: "Vasilii A."
+
+cdn:
+  bootstrap:
+    css: "https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.css"
+    js:  "https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.js"
+
+  jquery:
+    js: "https://code.jquery.com/jquery-3.3.1.js"
+
+  popper:
+    js: "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.js"
+
+  fa:
+    css: "https://use.fontawesome.com/releases/v5.0.9/css/all.css"

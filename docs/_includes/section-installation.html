@@ -1,0 +1,27 @@
+<div class="border border-secondary rounded bg-light p-2 mb-2">
+{% highlight html %}
+<!DOCTYPE html>
+<html>
+<head>
+  …
+  <link rel="stylesheet" href="dist/css/bootstrap-submenu.css">
+
+  …
+  <script src="dist/js/bootstrap-submenu.js" defer></script>
+</head>
+<body>
+  …
+</body>
+</html>
+{% endhighlight %}
+</div>
+
+<p>Enable Bootstrap-submenu via JavaScript:</p>
+
+<div class="border border-secondary rounded bg-light p-2 mb-2">
+{% highlight js %}
+// For v2 [data-toggle="dropdown"] is required for [data-submenu].
+// For v2 .dropdown-submenu > [data-toggle="dropdown"] is forbidden.
+$('[data-submenu]').submenupicker();
+{%- endhighlight %}
+</div>

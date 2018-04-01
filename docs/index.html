@@ -1,23 +1,34 @@
+---
+---
+
 <!DOCTYPE html>
 <html lang="en">
-<%- include views/head -%>
+
+<head>
+  {% include head.html %}
+</head>
 
 <body>
-  <div class="container">
-    <%- include views/header -%>
+  <div class="container py-3">
+    {% include header.html %}
 
-    <%- include views/section_installation -%>
-
-    <hr>
-    <%- include views/section_html_examples -%>
+    <h2 id="installation">Installation</h2>
+    {% include section-installation.html %}
 
     <hr>
-    <%- include views/footer -%>
+    <h2 id="html-examples">Examples</h2>
+    {% include section-example-dropdown.html %}
+    {% include section-example-dropup.html %}
+    {% include section-example-navbar.html %}
+    {% include section-example-pills.html %}
+
+    <hr>
+    {% include footer.html %}
   </div>
 
   <div class="scroll-top-wrapper">
     <button id="scroll-top" class="btn btn-primary btn-sm hidden" type="button">
-      <span class="fa fa-caret-up fa-2x"></span>
+      <span class="fas fa-caret-up fa-2x"></span>
     </button>
   </div>
 </body>

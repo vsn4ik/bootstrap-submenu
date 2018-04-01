@@ -2,5 +2,5 @@
 *-dist.zip
 
 # Folders to ignore
-_gh_pages
+docs/_site
 node_modules
