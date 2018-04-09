@@ -1,0 +1,46 @@
+<div class="dropdown {{ include.placement }} dropdown-submenu">
+  <button class="dropdown-item dropdown-toggle" type="button" data-toggle="dropdown">Action</button>
+
+  <div class="dropdown-menu">
+    <button class="dropdown-item" type="button">Sub action</button>
+
+    <div class="dropdown {{ include.placement }} dropdown-submenu">
+      <button class="dropdown-item dropdown-toggle" type="button">Another sub action</button>
+
+      <div class="dropdown-menu">
+        <button class="dropdown-item" type="button">Sub action</button>
+        <button class="dropdown-item" type="button">Another sub action</button>
+        <button class="dropdown-item" type="button">Something else here</button>
+      </div>
+    </div>
+
+    <button class="dropdown-item" type="button">Something else here</button>
+    <button class="dropdown-item" type="button" disabled>Disabled action</button>
+
+    <div class="dropdown {{ include.placement }} dropdown-submenu">
+      <button class="dropdown-item dropdown-toggle" type="button">Another action</button>
+
+      <div class="dropdown-menu">
+        <button class="dropdown-item" type="button">Sub action</button>
+        <button class="dropdown-item" type="button">Another sub action</button>
+        <button class="dropdown-item" type="button">Something else here</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dropdown-header">Dropdown header</div>
+
+<div class="dropdown {{ include.placement }} dropdown-submenu">
+  <button class="dropdown-item dropdown-toggle" type="button">Another action</button>
+
+  <div class="dropdown-menu">
+    <button class="dropdown-item" type="button">Sub action</button>
+    <button class="dropdown-item" type="button">Another sub action</button>
+    <button class="dropdown-item" type="button">Something else here</button>
+  </div>
+</div>
+
+<button class="dropdown-item" type="button">Something else here</button>
+<div class="dropdown-divider"></div>
+<button class="dropdown-item" type="button">Separated link</button>

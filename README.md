@@ -10,12 +10,10 @@
 
 Several quick start options are available:
 
-* [Download the latest release](https://github.com/vsn4ik/bootstrap-submenu/archive/v2.0.4.zip "Download Bootstrap-submenu").
-* Clone the repo: `git clone https://github.com/vsn4ik/bootstrap-submenu.git`.
-* Install with [npm](https://www.npmjs.com): `npm install bootstrap-submenu`.
-* Install with [yarn](https://yarnpkg.com): `yarn add bootstrap-submenu`.
-* Install with [Bower](https://bower.io): `bower install bootstrap-submenu` (deprecated on v2.0.5, removed on 2018'Q2).
-* Install with [Composer](https://getcomposer.org): `composer require vsn4ik/bootstrap-submenu "dev-master"` (deprecated on v.2.0.5, removed on 2018'Q2).
+* [Download the latest release](https://github.com/vsn4ik/bootstrap-submenu/archive/v3.0.0.zip "Download Bootstrap-submenu")
+* Clone the repo: `git clone https://github.com/vsn4ik/bootstrap-submenu.git`
+* Install with [npm](https://www.npmjs.com): `npm install bootstrap-submenu`
+* Install with [yarn](https://yarnpkg.com): `yarn add bootstrap-submenu`
 
 ### What's included
 
@@ -38,7 +36,7 @@ For some working examples, visit our [examples](https://vsn4ik.github.io/bootstr
 
 ## Min Requirements
 
-* Bootstrap 3.0.0
+* Bootstrap 4.1.0
 * jQuery 1.9.1
 
 
