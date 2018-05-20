@@ -22,7 +22,7 @@
   ],
   "main": "dist/js/bootstrap-submenu.js",
   "scripts": {
-    "test": "npm run css; npm run js",
+    "test": "npm run css; npm run js; bundlesize",
     "css": "npm run css-compile; npm run css-minify",
     "css-compile": "mkdir -p dist/css; cp -rf css/*.css dist/css/",
     "css-minify": "cleancss --level 1 --source-map --source-map-inline-sources --output dist/css/$npm_package_name.min.css dist/css/$npm_package_name.css",
@@ -32,10 +32,21 @@
     "release-zip": "cd dist/ && zip -r9 $npm_package_name-$npm_package_version-dist.zip * && mv $npm_package_name-$npm_package_version-dist.zip .."
   },
   "devDependencies": {
-    "@babel/cli": "7.0.0-beta.46",
-    "@babel/core": "7.0.0-beta.46",
-    "@babel/preset-env": "7.0.0-beta.46",
+    "@babel/cli": "7.0.0-beta.47",
+    "@babel/core": "7.0.0-beta.47",
+    "@babel/preset-env": "7.0.0-beta.47",
+    "bundlesize": "0.17.0",
     "clean-css-cli": "4.1.11",
-    "uglify-js": "3.3.23"
-  }
+    "uglify-js": "3.3.25"
+  },
+  "bundlesize": [
+    {
+      "path": "./dist/css/bootstrap-submenu.css",
+      "maxSize": "1 kB"
+    },
+    {
+      "path": "./dist/js/bootstrap-submenu.js",
+      "maxSize": "2 kB"
+    }
+  ]
 }
