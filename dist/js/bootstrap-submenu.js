@@ -27,23 +27,9 @@
       $(this.element).off('keydown.bs.dropdown.data-api');
       this.menuElement.addEventListener('keydown', this.itemKeydown.bind(this));
       var dropdownItemNodeList = this.menuElement.querySelectorAll('.dropdown-item');
-
-      for (var _iterator = dropdownItemNodeList, _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray ? _iterator : _iterator[Symbol.iterator]();;) {
-        var _ref;
-
-        if (_isArray) {
-          if (_i >= _iterator.length) break;
-          _ref = _iterator[_i++];
-        } else {
-          _i = _iterator.next();
-          if (_i.done) break;
-          _ref = _i.value;
-        }
-
-        var element = _ref;
-        element.addEventListener('keydown', this.handleKeydownDropdownItem.bind(this));
-      }
-
+      Array.from(dropdownItemNodeList).forEach(function (element) {
+        element.addEventListener('keydown', _this.handleKeydownDropdownItem.bind(_this));
+      });
       $(this.menuElement).on('keydown', '.dropdown-submenu > .dropdown-item', this.handleKeydownSubmenuDropdownItem.bind(this));
       $(this.menuElement).on('click', '.dropdown-submenu > .dropdown-item', this.handleClickSubmenuDropdownItem.bind(this));
       $(this.element).on('hidden.bs.dropdown', function () {
@@ -87,9 +73,7 @@
       event.preventDefault();
       event.stopPropagation();
       var itemNodeList = this.element.querySelectorAll('.show > .dropdown-item:not(:disabled):not(.disabled), .show > .dropdown > .dropdown-item');
-      var index = Array.from(itemNodeList).findIndex(function (element) {
-        return element === event.target;
-      });
+      var index = Array.from(itemNodeList).indexOf(event.target);
 
       if (event.keyCode === 38 && index !== 0) {
         index--;
@@ -113,22 +97,9 @@
 
     _proto.close = function close(menuElement) {
       var menuNodeList = menuElement.querySelectorAll('.dropdown-menu.show');
-
-      for (var _iterator2 = menuNodeList, _isArray2 = Array.isArray(_iterator2), _i2 = 0, _iterator2 = _isArray2 ? _iterator2 : _iterator2[Symbol.iterator]();;) {
-        var _ref2;
-
-        if (_isArray2) {
-          if (_i2 >= _iterator2.length) break;
-          _ref2 = _iterator2[_i2++];
-        } else {
-          _i2 = _iterator2.next();
-          if (_i2.done) break;
-          _ref2 = _i2.value;
-        }
-
-        var element = _ref2;
+      Array.from(menuNodeList).forEach(function (element) {
         element.classList.remove('show');
-      }
+      });
     };
 
     return DropdownSubmenu;

@@ -25,4 +25,4 @@ cdn:
     js: "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.js"
 
   fa:
-    css: "https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+    css: "https://use.fontawesome.com/releases/v5.1.0/css/all.css"
