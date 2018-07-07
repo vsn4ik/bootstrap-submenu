@@ -10,7 +10,7 @@
 
 Several quick start options are available:
 
-* [Download the latest release](https://github.com/vsn4ik/bootstrap-submenu/archive/v3.0.0.zip "Download Bootstrap-submenu")
+* [Download the latest release](https://github.com/vsn4ik/bootstrap-submenu/archive/v3.0.1.zip "Download Bootstrap-submenu")
 * Clone the repo: `git clone https://github.com/vsn4ik/bootstrap-submenu.git`
 * Install with [npm](https://www.npmjs.com): `npm install bootstrap-submenu`
 * Install with [yarn](https://yarnpkg.com): `yarn add bootstrap-submenu`
