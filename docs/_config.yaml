@@ -15,8 +15,8 @@ author:
 
 cdn:
   bootstrap:
-    css: "https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.css"
-    js:  "https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.js"
+    css: "https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.css"
+    js:  "https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.js"
 
   jquery:
     js: "https://code.jquery.com/jquery-3.3.1.js"
