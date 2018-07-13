@@ -2,6 +2,10 @@ a:not([href]) {
   cursor: pointer;
 }
 
+body {
+  scroll-behavior: smooth;
+}
+
 .highlight,
 .highlight pre {
   margin-bottom: 0;
@@ -14,8 +18,7 @@ a:not([href]) {
   pointer-events: none;
 }
 
-/* Без враппера происходит подёргивание */
-.scroll-top-wrapper {
+.scroll-top {
   position: fixed;
   right: 20px;
   bottom: 20px;
@@ -23,6 +26,6 @@ a:not([href]) {
   transition: opacity 0.15s ease-in-out;
 }
 
-.scroll-top-wrapper:hover {
+.scroll-top:hover {
   opacity: 1;
 }

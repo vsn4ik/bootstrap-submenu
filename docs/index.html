@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <div class="container py-3">
+  <div class="container py-3" id="container">
     {% include header.html %}
 
     <h2 id="installation">Installation</h2>
@@ -26,10 +26,8 @@
     {% include footer.html %}
   </div>
 
-  <div class="scroll-top-wrapper">
-    <button id="scroll-top" class="btn btn-primary btn-sm hidden" type="button">
-      <span class="fas fa-caret-up fa-2x"></span>
-    </button>
-  </div>
+  <a class="js-scroll-top scroll-top btn btn-primary btn-sm hidden" href="#container">
+    <span class="fas fa-caret-up fa-2x"></span>
+  </a>
 </body>
 </html>
