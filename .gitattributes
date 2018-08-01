@@ -3,3 +3,9 @@ docs          export-ignore
 .*            export-ignore
 README.md     export-ignore
 package.json  export-ignore
+
+# Don't diff or textually merge source maps
+*.map   binary
+
+/docs/ linguist-documentation
+/dist/ linguist-generated
