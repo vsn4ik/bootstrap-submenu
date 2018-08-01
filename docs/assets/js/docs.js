@@ -1,11 +1,13 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', function() {
-  $.ajax({
-    url: 'https://api.github.com/repos/vsn4ik/bootstrap-submenu',
-    success: function(data) {
-      // XSS check
-      if (typeof data.stargazers_count !== 'number') {
+  fetch('https://api.github.com/repos/vsn4ik/bootstrap-submenu')
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(response) {
+      // NOTE: XSS check
+      if (typeof response.stargazers_count !== 'number') {
         return;
       }
 
@@ -14,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
           '<div class="input-group-prepend"></div>' +
           '<div class="input-group-append">' +
             '<span class="input-group-text bg-white">' +
-              data.stargazers_count +
+              response.stargazers_count +
               '&nbsp;' +
               '<span class="fas fa-star"></span>' +
             '</span>' +
@@ -22,12 +24,15 @@ document.addEventListener('DOMContentLoaded', function() {
         '</div>';
 
       $('#gh-view-link').wrap(html);
-    }
-  });
+    });
 
-  window.onscroll = function() {
+  function handleScroll() {
     document.querySelector('.js-scroll-top').hidden = window.pageYOffset < 100;
-  };
+  }
+
+  window.onscroll = handleScroll;
+
+  handleScroll();
 
   // NOTE: Dropdown fix
   $('a[tabindex][data-toggle="dropdown"]').on('keydown', function(event) {

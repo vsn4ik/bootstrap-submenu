@@ -15,8 +15,8 @@ author:
 
 cdn:
   bootstrap:
-    css: "https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.css"
-    js:  "https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.js"
+    css: "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.css"
+    js:  "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.js"
 
   jquery:
     js: "https://code.jquery.com/jquery-3.3.1.js"
@@ -25,4 +25,4 @@ cdn:
     js: "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.js"
 
   fa:
-    css: "https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+    css: "https://use.fontawesome.com/releases/v5.2.0/css/all.css"

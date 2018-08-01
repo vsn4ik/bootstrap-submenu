@@ -1,6 +1,4 @@
-# Files to ignore
+/node_modules/
+/docs/_site/
+/docs/.jekyll-metadata
 *-dist.zip
-
-# Folders to ignore
-docs/_site
-node_modules
