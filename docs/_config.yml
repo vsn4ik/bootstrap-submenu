@@ -22,7 +22,7 @@ cdn:
     js: "https://code.jquery.com/jquery-3.3.1.js"
 
   popper:
-    js: "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.js"
+    js: "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.js"
 
   fa:
-    css: "https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    css: "https://use.fontawesome.com/releases/v5.3.1/css/all.css"
