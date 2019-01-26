@@ -32,9 +32,9 @@
     "release-zip": "cd dist/ && zip -r9 $npm_package_name-$npm_package_version-dist.zip * && mv $npm_package_name-$npm_package_version-dist.zip .."
   },
   "devDependencies": {
-    "@babel/cli": "7.1.5",
-    "@babel/core": "7.1.6",
-    "@babel/preset-env": "7.1.6",
+    "@babel/cli": "7.2.3",
+    "@babel/core": "7.2.2",
+    "@babel/preset-env": "7.3.1",
     "clean-css-cli": "4.2.1",
     "uglify-js": "3.4.9"
   }
