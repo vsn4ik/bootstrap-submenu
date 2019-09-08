@@ -6,7 +6,7 @@ module.exports = {
         loose: true,
         modules: false,
         exclude: [
-          'transform-typeof-symbol'
+          '@babel/plugin-transform-typeof-symbol'
         ]
       }
     ]
