@@ -1,5 +1,6 @@
-name: Run tests
-on: [push, pull_request]
+name: CI
+
+on: [push]
 
 jobs:
   run:
@@ -13,9 +14,9 @@ jobs:
           fetch-depth: 3
 
       - name: Setup Node.js
-        uses: actions/setup-node@master
+        uses: actions/setup-node@v1
         with:
-          version: 12
+          node-version: 12
 
       - run: node --version
       - run: npm --version
