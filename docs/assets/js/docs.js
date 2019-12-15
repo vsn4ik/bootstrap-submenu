@@ -1,6 +1,6 @@
 'use strict';
 
-document.addEventListener('DOMContentLoaded', function() {
+var exec = function() {
   fetch('https://api.github.com/repos/vsn4ik/bootstrap-submenu')
     .then(function(response) {
       return response.json();
@@ -56,4 +56,10 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   $('[data-submenu]').submenupicker();
-});
+};
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', exec);
+} else {
+  exec();
+}

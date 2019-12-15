@@ -2,7 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/bootstrap-submenu.svg)](https://www.npmjs.com/package/bootstrap-submenu)
 [![License](https://img.shields.io/npm/l/bootstrap-submenu.svg)][license]
-![Build Status](https://action-badges.now.sh/vsn4ik/bootstrap-submenu)
+[![Build Status](https://github.com/vsn4ik/bootstrap-submenu/workflows/Test/badge.svg)](https://github.com/vsn4ik/bootstrap-submenu/actions?workflow=Test)
 [![devDependency Status](https://david-dm.org/vsn4ik/bootstrap-submenu/dev-status.svg)](https://david-dm.org/vsn4ik/bootstrap-submenu?type=dev)
 
 

@@ -1,4 +1,4 @@
 /node_modules/
 /docs/_site/
 /docs/.jekyll-metadata
-*-dist.zip
+/*-dist.zip

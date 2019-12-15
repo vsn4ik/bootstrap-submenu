@@ -1,4 +1,4 @@
-name: CI
+name: Test
 
 on: [push]
 
@@ -9,9 +9,7 @@ jobs:
 
     steps:
       - name: Clone repository
-        uses: actions/checkout@master
-        with:
-          fetch-depth: 3
+        uses: actions/checkout@v2
 
       - name: Setup Node.js
         uses: actions/setup-node@v1

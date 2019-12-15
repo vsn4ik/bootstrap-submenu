@@ -2,7 +2,7 @@ a:not([href]) {
   cursor: pointer;
 }
 
-body {
+html {
   scroll-behavior: smooth;
 }
 
