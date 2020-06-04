@@ -10,9 +10,7 @@
     factory(jQuery);
   }
 })(function ($) {
-  var DropdownSubmenu =
-  /*#__PURE__*/
-  function () {
+  var DropdownSubmenu = /*#__PURE__*/function () {
     function DropdownSubmenu(element) {
       this.element = element.parentElement;
       this.menuElement = this.element.querySelector('.dropdown-menu');
