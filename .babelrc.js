@@ -1,7 +1,7 @@
-module.exports = {
+export default {
   presets: [
     [
-      '@babel/env',
+      '@babel/preset-env',
       {
         loose: true,
         modules: false,
@@ -14,4 +14,4 @@ module.exports = {
   plugins: [
     '@babel/proposal-object-rest-spread'
   ]
-};
+}

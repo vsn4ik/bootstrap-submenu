@@ -21,6 +21,7 @@
     "js"
   ],
   "main": "dist/js/bootstrap-submenu.js",
+  "type": "module",
   "scripts": {
     "test": "npm run css; npm run js",
     "css": "npm run css-compile; npm run css-minify",
