@@ -37,6 +37,6 @@
     "@babel/core": "^7.10.2",
     "@babel/preset-env": "^7.10.2",
     "clean-css-cli": "^4.3.0",
-    "terser": "^4.7.0"
+    "terser": "^5.3.8"
   }
 }
