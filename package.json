@@ -37,6 +37,6 @@
     "@babel/core": "7.12.3",
     "@babel/preset-env": "7.12.1",
     "csso-cli": "3.0.0",
-    "terser": "5.3.8"
+    "terser": "5.4.0"
   }
 }
