@@ -6,6 +6,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.gap-2 {
+  gap: 0.5rem;
+}
+
 .highlight,
 .highlight pre {
   margin-bottom: 0;
