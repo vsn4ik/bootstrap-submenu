@@ -1,33 +1,931 @@
----
----
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  {% include head.html %}
+  <meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<meta name="description" content="Bootstrap Sub-Menus">
+<meta name="keywords" content="bootstrap dropdown jquery-plugin submenu">
+<meta name="author" content="Vasilii A.">
+<meta name="robots" content="nofollow">
+<meta name="google" content="notranslate">
+
+<title>Bootstrap-submenu</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.css">
+<link rel="stylesheet" href="dist/css/bootstrap-submenu.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@10.5.0/styles/default.min.css">
+<link rel="stylesheet" href="assets/css/docs.css">
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.js" defer></script>
+<script src="https://unpkg.com/@highlightjs/cdn-assets@10.5.0/highlight.js" defer></script>
+<script src="dist/js/bootstrap-submenu.js" defer></script>
+<script src="assets/js/docs.js" defer></script>
+
 </head>
 
 <body>
   <div class="container py-3" id="container">
-    {% include header.html %}
+    <div class="jumbotron">
+  <h1>Bootstrap-submenu</h1>
+  <p class="lead">Bootstrap Sub-Menus.</p>
+
+  <div class="btn-toolbar gap-2">
+    <a class="btn btn-primary d-flex align-items-center" href="https://github.com/vsn4ik/bootstrap-submenu/archive/v3.0.1.zip" download>
+      <svg class="mr-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+      </svg>
+
+      Download
+    </a>
+
+    <a id="gh-view-link" class="btn btn-secondary d-flex align-items-center" href="https://github.com/vsn4ik/bootstrap-submenu">
+      <svg class="mr-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+      </svg>
+
+      View on GitHub
+    </a>
+  </div>
+</div>
+
 
     <h2 id="installation">Installation</h2>
-    {% include section-installation.html %}
+    <pre><code class="border border-secondary rounded language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  …
+  &lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/bootstrap-submenu@3.0.1/dist/css/bootstrap-submenu.css&#34;&gt;
+
+  …
+  &lt;script src=&#34;https://unpkg.com/bootstrap-submenu@3.0.1/dist/js/bootstrap-submenu.js&#34; defer&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  …
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    
+    <p>Enable Bootstrap-submenu via JavaScript:</p>
+    <pre><code class="border border-secondary rounded language-js">// For v2 [data-toggle=&#34;dropdown&#34;] is required for [data-submenu].
+// For v2 .dropdown-submenu &gt; [data-toggle=&#34;dropdown&#34;] is forbidden.
+$(&#39;[data-submenu]&#39;).submenupicker();
+</code></pre>
 
     <hr>
     <h2 id="html-examples">Examples</h2>
-    {% include section-example-dropdown.html %}
-    {% include section-example-dropup.html %}
-    {% include section-example-navbar.html %}
-    {% include section-example-pills.html %}
+    <h3>Dropdown</h3>
+
+<h4>With button</h4>
+<div class="row">
+  <div class="col-sm-4 col-sm-offset-2 mb-3">
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" data-submenu>
+        Dropdown
+      </button>
+
+      <div class="dropdown-menu">
+        <div class="dropdown dropright dropdown-submenu">
+  <button class="dropdown-item dropdown-toggle" type="button" data-toggle="dropdown">Action</button>
+
+  <div class="dropdown-menu">
+    <button class="dropdown-item" type="button">Sub action</button>
+
+    <div class="dropdown dropright dropdown-submenu">
+      <button class="dropdown-item dropdown-toggle" type="button">Another sub action</button>
+
+      <div class="dropdown-menu">
+        <button class="dropdown-item" type="button">Sub action</button>
+        <button class="dropdown-item" type="button">Another sub action</button>
+        <button class="dropdown-item" type="button">Something else here</button>
+      </div>
+    </div>
+
+    <button class="dropdown-item" type="button">Something else here</button>
+    <button class="dropdown-item" type="button" disabled>Disabled action</button>
+
+    <div class="dropdown dropright dropdown-submenu">
+      <button class="dropdown-item dropdown-toggle" type="button">Another action</button>
+
+      <div class="dropdown-menu">
+        <button class="dropdown-item" type="button">Sub action</button>
+        <button class="dropdown-item" type="button">Another sub action</button>
+        <button class="dropdown-item" type="button">Something else here</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dropdown-header">Dropdown header</div>
+
+<div class="dropdown dropright dropdown-submenu">
+  <button class="dropdown-item dropdown-toggle" type="button">Another action</button>
+
+  <div class="dropdown-menu">
+    <button class="dropdown-item" type="button">Sub action</button>
+    <button class="dropdown-item" type="button">Another sub action</button>
+    <button class="dropdown-item" type="button">Something else here</button>
+  </div>
+</div>
+
+<button class="dropdown-item" type="button">Something else here</button>
+<div class="dropdown-divider"></div>
+<button class="dropdown-item" type="button">Separated link</button>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-4 mb-3">
+    <div class="dropdown pull-right">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" data-submenu>
+        Dropdown
+      </button>
+
+      <div class="dropdown-menu dropdown-menu-right">
+        <div class="dropdown dropleft dropdown-submenu">
+  <button class="dropdown-item dropdown-toggle" type="button" data-toggle="dropdown">Action</button>
+
+  <div class="dropdown-menu">
+    <button class="dropdown-item" type="button">Sub action</button>
+
+    <div class="dropdown dropleft dropdown-submenu">
+      <button class="dropdown-item dropdown-toggle" type="button">Another sub action</button>
+
+      <div class="dropdown-menu">
+        <button class="dropdown-item" type="button">Sub action</button>
+        <button class="dropdown-item" type="button">Another sub action</button>
+        <button class="dropdown-item" type="button">Something else here</button>
+      </div>
+    </div>
+
+    <button class="dropdown-item" type="button">Something else here</button>
+    <button class="dropdown-item" type="button" disabled>Disabled action</button>
+
+    <div class="dropdown dropleft dropdown-submenu">
+      <button class="dropdown-item dropdown-toggle" type="button">Another action</button>
+
+      <div class="dropdown-menu">
+        <button class="dropdown-item" type="button">Sub action</button>
+        <button class="dropdown-item" type="button">Another sub action</button>
+        <button class="dropdown-item" type="button">Something else here</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dropdown-header">Dropdown header</div>
+
+<div class="dropdown dropleft dropdown-submenu">
+  <button class="dropdown-item dropdown-toggle" type="button">Another action</button>
+
+  <div class="dropdown-menu">
+    <button class="dropdown-item" type="button">Sub action</button>
+    <button class="dropdown-item" type="button">Another sub action</button>
+    <button class="dropdown-item" type="button">Something else here</button>
+  </div>
+</div>
+
+<button class="dropdown-item" type="button">Something else here</button>
+<div class="dropdown-divider"></div>
+<button class="dropdown-item" type="button">Separated link</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<h4>With button-group</h4>
+<div class="row">
+  <div class="col-sm-4 col-sm-offset-2 mb-3">
+    <div class="btn-group">
+      <button class="btn btn-secondary" type="button">Split dropdown</button>
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" data-submenu></button>
+
+      <div class="dropdown-menu">
+        <div class="dropdown dropright dropdown-submenu">
+  <button class="dropdown-item dropdown-toggle" type="button" data-toggle="dropdown">Action</button>
+
+  <div class="dropdown-menu">
+    <button class="dropdown-item" type="button">Sub action</button>
+
+    <div class="dropdown dropright dropdown-submenu">
+      <button class="dropdown-item dropdown-toggle" type="button">Another sub action</button>
+
+      <div class="dropdown-menu">
+        <button class="dropdown-item" type="button">Sub action</button>
+        <button class="dropdown-item" type="button">Another sub action</button>
+        <button class="dropdown-item" type="button">Something else here</button>
+      </div>
+    </div>
+
+    <button class="dropdown-item" type="button">Something else here</button>
+    <button class="dropdown-item" type="button" disabled>Disabled action</button>
+
+    <div class="dropdown dropright dropdown-submenu">
+      <button class="dropdown-item dropdown-toggle" type="button">Another action</button>
+
+      <div class="dropdown-menu">
+        <button class="dropdown-item" type="button">Sub action</button>
+        <button class="dropdown-item" type="button">Another sub action</button>
+        <button class="dropdown-item" type="button">Something else here</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dropdown-header">Dropdown header</div>
+
+<div class="dropdown dropright dropdown-submenu">
+  <button class="dropdown-item dropdown-toggle" type="button">Another action</button>
+
+  <div class="dropdown-menu">
+    <button class="dropdown-item" type="button">Sub action</button>
+    <button class="dropdown-item" type="button">Another sub action</button>
+    <button class="dropdown-item" type="button">Something else here</button>
+  </div>
+</div>
+
+<button class="dropdown-item" type="button">Something else here</button>
+<div class="dropdown-divider"></div>
+<button class="dropdown-item" type="button">Separated link</button>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-4 mb-3">
+    <div class="btn-group pull-right">
+      <button class="btn btn-secondary" type="button">Split dropdown</button>
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" data-submenu></button>
+
+      <div class="dropdown-menu dropdown-menu-right">
+        <div class="dropdown dropleft dropdown-submenu">
+  <button class="dropdown-item dropdown-toggle" type="button" data-toggle="dropdown">Action</button>
+
+  <div class="dropdown-menu">
+    <button class="dropdown-item" type="button">Sub action</button>
+
+    <div class="dropdown dropleft dropdown-submenu">
+      <button class="dropdown-item dropdown-toggle" type="button">Another sub action</button>
+
+      <div class="dropdown-menu">
+        <button class="dropdown-item" type="button">Sub action</button>
+        <button class="dropdown-item" type="button">Another sub action</button>
+        <button class="dropdown-item" type="button">Something else here</button>
+      </div>
+    </div>
+
+    <button class="dropdown-item" type="button">Something else here</button>
+    <button class="dropdown-item" type="button" disabled>Disabled action</button>
+
+    <div class="dropdown dropleft dropdown-submenu">
+      <button class="dropdown-item dropdown-toggle" type="button">Another action</button>
+
+      <div class="dropdown-menu">
+        <button class="dropdown-item" type="button">Sub action</button>
+        <button class="dropdown-item" type="button">Another sub action</button>
+        <button class="dropdown-item" type="button">Something else here</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dropdown-header">Dropdown header</div>
+
+<div class="dropdown dropleft dropdown-submenu">
+  <button class="dropdown-item dropdown-toggle" type="button">Another action</button>
+
+  <div class="dropdown-menu">
+    <button class="dropdown-item" type="button">Sub action</button>
+    <button class="dropdown-item" type="button">Another sub action</button>
+    <button class="dropdown-item" type="button">Something else here</button>
+  </div>
+</div>
+
+<button class="dropdown-item" type="button">Something else here</button>
+<div class="dropdown-divider"></div>
+<button class="dropdown-item" type="button">Separated link</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+    <h3>Dropup</h3>
+
+<h4>With button</h4>
+<div class="row">
+  <div class="col-sm-4 col-sm-offset-2 mb-3">
+    <div class="dropup">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" data-submenu>
+        Dropup
+      </button>
+
+      <div class="dropdown-menu">
+        <div class="dropdown dropright dropdown-submenu">
+  <button class="dropdown-item dropdown-toggle" type="button" data-toggle="dropdown">Action</button>
+
+  <div class="dropdown-menu">
+    <button class="dropdown-item" type="button">Sub action</button>
+
+    <div class="dropdown dropright dropdown-submenu">
+      <button class="dropdown-item dropdown-toggle" type="button">Another sub action</button>
+
+      <div class="dropdown-menu">
+        <button class="dropdown-item" type="button">Sub action</button>
+        <button class="dropdown-item" type="button">Another sub action</button>
+        <button class="dropdown-item" type="button">Something else here</button>
+      </div>
+    </div>
+
+    <button class="dropdown-item" type="button">Something else here</button>
+    <button class="dropdown-item" type="button" disabled>Disabled action</button>
+
+    <div class="dropdown dropright dropdown-submenu">
+      <button class="dropdown-item dropdown-toggle" type="button">Another action</button>
+
+      <div class="dropdown-menu">
+        <button class="dropdown-item" type="button">Sub action</button>
+        <button class="dropdown-item" type="button">Another sub action</button>
+        <button class="dropdown-item" type="button">Something else here</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dropdown-header">Dropdown header</div>
+
+<div class="dropdown dropright dropdown-submenu">
+  <button class="dropdown-item dropdown-toggle" type="button">Another action</button>
+
+  <div class="dropdown-menu">
+    <button class="dropdown-item" type="button">Sub action</button>
+    <button class="dropdown-item" type="button">Another sub action</button>
+    <button class="dropdown-item" type="button">Something else here</button>
+  </div>
+</div>
+
+<button class="dropdown-item" type="button">Something else here</button>
+<div class="dropdown-divider"></div>
+<button class="dropdown-item" type="button">Separated link</button>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-4 mb-3">
+    <div class="dropup pull-right">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" data-submenu>
+        Dropup
+      </button>
+
+      <div class="dropdown-menu dropdown-menu-right">
+        <div class="dropdown dropleft dropdown-submenu">
+  <button class="dropdown-item dropdown-toggle" type="button" data-toggle="dropdown">Action</button>
+
+  <div class="dropdown-menu">
+    <button class="dropdown-item" type="button">Sub action</button>
+
+    <div class="dropdown dropleft dropdown-submenu">
+      <button class="dropdown-item dropdown-toggle" type="button">Another sub action</button>
+
+      <div class="dropdown-menu">
+        <button class="dropdown-item" type="button">Sub action</button>
+        <button class="dropdown-item" type="button">Another sub action</button>
+        <button class="dropdown-item" type="button">Something else here</button>
+      </div>
+    </div>
+
+    <button class="dropdown-item" type="button">Something else here</button>
+    <button class="dropdown-item" type="button" disabled>Disabled action</button>
+
+    <div class="dropdown dropleft dropdown-submenu">
+      <button class="dropdown-item dropdown-toggle" type="button">Another action</button>
+
+      <div class="dropdown-menu">
+        <button class="dropdown-item" type="button">Sub action</button>
+        <button class="dropdown-item" type="button">Another sub action</button>
+        <button class="dropdown-item" type="button">Something else here</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dropdown-header">Dropdown header</div>
+
+<div class="dropdown dropleft dropdown-submenu">
+  <button class="dropdown-item dropdown-toggle" type="button">Another action</button>
+
+  <div class="dropdown-menu">
+    <button class="dropdown-item" type="button">Sub action</button>
+    <button class="dropdown-item" type="button">Another sub action</button>
+    <button class="dropdown-item" type="button">Something else here</button>
+  </div>
+</div>
+
+<button class="dropdown-item" type="button">Something else here</button>
+<div class="dropdown-divider"></div>
+<button class="dropdown-item" type="button">Separated link</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<h4>With button-group</h4>
+<div class="row">
+  <div class="col-sm-4 col-sm-offset-2 mb-3">
+    <div class="btn-group dropup">
+      <button class="btn btn-secondary" type="button">Split dropup</button>
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" data-submenu></button>
+
+      <div class="dropdown-menu">
+        <div class="dropdown dropright dropdown-submenu">
+  <button class="dropdown-item dropdown-toggle" type="button" data-toggle="dropdown">Action</button>
+
+  <div class="dropdown-menu">
+    <button class="dropdown-item" type="button">Sub action</button>
+
+    <div class="dropdown dropright dropdown-submenu">
+      <button class="dropdown-item dropdown-toggle" type="button">Another sub action</button>
+
+      <div class="dropdown-menu">
+        <button class="dropdown-item" type="button">Sub action</button>
+        <button class="dropdown-item" type="button">Another sub action</button>
+        <button class="dropdown-item" type="button">Something else here</button>
+      </div>
+    </div>
+
+    <button class="dropdown-item" type="button">Something else here</button>
+    <button class="dropdown-item" type="button" disabled>Disabled action</button>
+
+    <div class="dropdown dropright dropdown-submenu">
+      <button class="dropdown-item dropdown-toggle" type="button">Another action</button>
+
+      <div class="dropdown-menu">
+        <button class="dropdown-item" type="button">Sub action</button>
+        <button class="dropdown-item" type="button">Another sub action</button>
+        <button class="dropdown-item" type="button">Something else here</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dropdown-header">Dropdown header</div>
+
+<div class="dropdown dropright dropdown-submenu">
+  <button class="dropdown-item dropdown-toggle" type="button">Another action</button>
+
+  <div class="dropdown-menu">
+    <button class="dropdown-item" type="button">Sub action</button>
+    <button class="dropdown-item" type="button">Another sub action</button>
+    <button class="dropdown-item" type="button">Something else here</button>
+  </div>
+</div>
+
+<button class="dropdown-item" type="button">Something else here</button>
+<div class="dropdown-divider"></div>
+<button class="dropdown-item" type="button">Separated link</button>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-4 mb-3">
+    <div class="btn-group dropup pull-right">
+      <button class="btn btn-secondary" type="button">Split dropup</button>
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" data-submenu></button>
+
+      <div class="dropdown-menu dropdown-menu-right">
+        <div class="dropdown dropleft dropdown-submenu">
+  <button class="dropdown-item dropdown-toggle" type="button" data-toggle="dropdown">Action</button>
+
+  <div class="dropdown-menu">
+    <button class="dropdown-item" type="button">Sub action</button>
+
+    <div class="dropdown dropleft dropdown-submenu">
+      <button class="dropdown-item dropdown-toggle" type="button">Another sub action</button>
+
+      <div class="dropdown-menu">
+        <button class="dropdown-item" type="button">Sub action</button>
+        <button class="dropdown-item" type="button">Another sub action</button>
+        <button class="dropdown-item" type="button">Something else here</button>
+      </div>
+    </div>
+
+    <button class="dropdown-item" type="button">Something else here</button>
+    <button class="dropdown-item" type="button" disabled>Disabled action</button>
+
+    <div class="dropdown dropleft dropdown-submenu">
+      <button class="dropdown-item dropdown-toggle" type="button">Another action</button>
+
+      <div class="dropdown-menu">
+        <button class="dropdown-item" type="button">Sub action</button>
+        <button class="dropdown-item" type="button">Another sub action</button>
+        <button class="dropdown-item" type="button">Something else here</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dropdown-header">Dropdown header</div>
+
+<div class="dropdown dropleft dropdown-submenu">
+  <button class="dropdown-item dropdown-toggle" type="button">Another action</button>
+
+  <div class="dropdown-menu">
+    <button class="dropdown-item" type="button">Sub action</button>
+    <button class="dropdown-item" type="button">Another sub action</button>
+    <button class="dropdown-item" type="button">Something else here</button>
+  </div>
+</div>
+
+<button class="dropdown-item" type="button">Something else here</button>
+<div class="dropdown-divider"></div>
+<button class="dropdown-item" type="button">Separated link</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+    <h3>Navbar</h3>
+
+<nav class="navbar navbar-light bg-light navbar-expand-sm mb-3">
+  <a class="navbar-brand">Navbar</a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" tabindex="0" data-toggle="dropdown" data-submenu>
+          Dropdown
+        </a>
+
+        <div class="dropdown-menu">
+          <div class="dropdown dropright dropdown-submenu">
+  <button class="dropdown-item dropdown-toggle" type="button" data-toggle="dropdown">Action</button>
+
+  <div class="dropdown-menu">
+    <button class="dropdown-item" type="button">Sub action</button>
+
+    <div class="dropdown dropright dropdown-submenu">
+      <button class="dropdown-item dropdown-toggle" type="button">Another sub action</button>
+
+      <div class="dropdown-menu">
+        <button class="dropdown-item" type="button">Sub action</button>
+        <button class="dropdown-item" type="button">Another sub action</button>
+        <button class="dropdown-item" type="button">Something else here</button>
+      </div>
+    </div>
+
+    <button class="dropdown-item" type="button">Something else here</button>
+    <button class="dropdown-item" type="button" disabled>Disabled action</button>
+
+    <div class="dropdown dropright dropdown-submenu">
+      <button class="dropdown-item dropdown-toggle" type="button">Another action</button>
+
+      <div class="dropdown-menu">
+        <button class="dropdown-item" type="button">Sub action</button>
+        <button class="dropdown-item" type="button">Another sub action</button>
+        <button class="dropdown-item" type="button">Something else here</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dropdown-header">Dropdown header</div>
+
+<div class="dropdown dropright dropdown-submenu">
+  <button class="dropdown-item dropdown-toggle" type="button">Another action</button>
+
+  <div class="dropdown-menu">
+    <button class="dropdown-item" type="button">Sub action</button>
+    <button class="dropdown-item" type="button">Another sub action</button>
+    <button class="dropdown-item" type="button">Something else here</button>
+  </div>
+</div>
+
+<button class="dropdown-item" type="button">Something else here</button>
+<div class="dropdown-divider"></div>
+<button class="dropdown-item" type="button">Separated link</button>
+
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" tabindex="0" data-toggle="dropdown" data-submenu>
+          Dropdown 2
+        </a>
+
+        <div class="dropdown-menu">
+          <div class="dropdown dropright dropdown-submenu">
+  <button class="dropdown-item dropdown-toggle" type="button" data-toggle="dropdown">Action</button>
+
+  <div class="dropdown-menu">
+    <button class="dropdown-item" type="button">Sub action</button>
+
+    <div class="dropdown dropright dropdown-submenu">
+      <button class="dropdown-item dropdown-toggle" type="button">Another sub action</button>
+
+      <div class="dropdown-menu">
+        <button class="dropdown-item" type="button">Sub action</button>
+        <button class="dropdown-item" type="button">Another sub action</button>
+        <button class="dropdown-item" type="button">Something else here</button>
+      </div>
+    </div>
+
+    <button class="dropdown-item" type="button">Something else here</button>
+    <button class="dropdown-item" type="button" disabled>Disabled action</button>
+
+    <div class="dropdown dropright dropdown-submenu">
+      <button class="dropdown-item dropdown-toggle" type="button">Another action</button>
+
+      <div class="dropdown-menu">
+        <button class="dropdown-item" type="button">Sub action</button>
+        <button class="dropdown-item" type="button">Another sub action</button>
+        <button class="dropdown-item" type="button">Something else here</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dropdown-header">Dropdown header</div>
+
+<div class="dropdown dropright dropdown-submenu">
+  <button class="dropdown-item dropdown-toggle" type="button">Another action</button>
+
+  <div class="dropdown-menu">
+    <button class="dropdown-item" type="button">Sub action</button>
+    <button class="dropdown-item" type="button">Another sub action</button>
+    <button class="dropdown-item" type="button">Something else here</button>
+  </div>
+</div>
+
+<button class="dropdown-item" type="button">Something else here</button>
+<div class="dropdown-divider"></div>
+<button class="dropdown-item" type="button">Separated link</button>
+
+        </div>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" tabindex="0" data-toggle="dropdown" data-submenu>
+          Dropdown 3
+        </a>
+
+        <div class="dropdown-menu dropdown-menu-right">
+          <div class="dropdown dropleft dropdown-submenu">
+  <button class="dropdown-item dropdown-toggle" type="button" data-toggle="dropdown">Action</button>
+
+  <div class="dropdown-menu">
+    <button class="dropdown-item" type="button">Sub action</button>
+
+    <div class="dropdown dropleft dropdown-submenu">
+      <button class="dropdown-item dropdown-toggle" type="button">Another sub action</button>
+
+      <div class="dropdown-menu">
+        <button class="dropdown-item" type="button">Sub action</button>
+        <button class="dropdown-item" type="button">Another sub action</button>
+        <button class="dropdown-item" type="button">Something else here</button>
+      </div>
+    </div>
+
+    <button class="dropdown-item" type="button">Something else here</button>
+    <button class="dropdown-item" type="button" disabled>Disabled action</button>
+
+    <div class="dropdown dropleft dropdown-submenu">
+      <button class="dropdown-item dropdown-toggle" type="button">Another action</button>
+
+      <div class="dropdown-menu">
+        <button class="dropdown-item" type="button">Sub action</button>
+        <button class="dropdown-item" type="button">Another sub action</button>
+        <button class="dropdown-item" type="button">Something else here</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dropdown-header">Dropdown header</div>
+
+<div class="dropdown dropleft dropdown-submenu">
+  <button class="dropdown-item dropdown-toggle" type="button">Another action</button>
+
+  <div class="dropdown-menu">
+    <button class="dropdown-item" type="button">Sub action</button>
+    <button class="dropdown-item" type="button">Another sub action</button>
+    <button class="dropdown-item" type="button">Something else here</button>
+  </div>
+</div>
+
+<button class="dropdown-item" type="button">Something else here</button>
+<div class="dropdown-divider"></div>
+<button class="dropdown-item" type="button">Separated link</button>
+
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+    <h3>Pills</h3>
+
+<ul class="nav nav-pills">
+  <li class="nav-item">
+    <a class="nav-link active" tabindex="0">Regular link</a>
+  </li>
+
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" tabindex="0" data-toggle="dropdown" data-submenu>
+      Dropdown
+    </a>
+
+    <div class="dropdown-menu">
+      <div class="dropdown dropright dropdown-submenu">
+  <button class="dropdown-item dropdown-toggle" type="button" data-toggle="dropdown">Action</button>
+
+  <div class="dropdown-menu">
+    <button class="dropdown-item" type="button">Sub action</button>
+
+    <div class="dropdown dropright dropdown-submenu">
+      <button class="dropdown-item dropdown-toggle" type="button">Another sub action</button>
+
+      <div class="dropdown-menu">
+        <button class="dropdown-item" type="button">Sub action</button>
+        <button class="dropdown-item" type="button">Another sub action</button>
+        <button class="dropdown-item" type="button">Something else here</button>
+      </div>
+    </div>
+
+    <button class="dropdown-item" type="button">Something else here</button>
+    <button class="dropdown-item" type="button" disabled>Disabled action</button>
+
+    <div class="dropdown dropright dropdown-submenu">
+      <button class="dropdown-item dropdown-toggle" type="button">Another action</button>
+
+      <div class="dropdown-menu">
+        <button class="dropdown-item" type="button">Sub action</button>
+        <button class="dropdown-item" type="button">Another sub action</button>
+        <button class="dropdown-item" type="button">Something else here</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dropdown-header">Dropdown header</div>
+
+<div class="dropdown dropright dropdown-submenu">
+  <button class="dropdown-item dropdown-toggle" type="button">Another action</button>
+
+  <div class="dropdown-menu">
+    <button class="dropdown-item" type="button">Sub action</button>
+    <button class="dropdown-item" type="button">Another sub action</button>
+    <button class="dropdown-item" type="button">Something else here</button>
+  </div>
+</div>
+
+<button class="dropdown-item" type="button">Something else here</button>
+<div class="dropdown-divider"></div>
+<button class="dropdown-item" type="button">Separated link</button>
+
+    </div>
+  </li>
+
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" tabindex="0" data-toggle="dropdown" data-submenu>
+      Dropdown 2
+    </a>
+
+    <div class="dropdown-menu">
+      <div class="dropdown dropright dropdown-submenu">
+  <button class="dropdown-item dropdown-toggle" type="button" data-toggle="dropdown">Action</button>
+
+  <div class="dropdown-menu">
+    <button class="dropdown-item" type="button">Sub action</button>
+
+    <div class="dropdown dropright dropdown-submenu">
+      <button class="dropdown-item dropdown-toggle" type="button">Another sub action</button>
+
+      <div class="dropdown-menu">
+        <button class="dropdown-item" type="button">Sub action</button>
+        <button class="dropdown-item" type="button">Another sub action</button>
+        <button class="dropdown-item" type="button">Something else here</button>
+      </div>
+    </div>
+
+    <button class="dropdown-item" type="button">Something else here</button>
+    <button class="dropdown-item" type="button" disabled>Disabled action</button>
+
+    <div class="dropdown dropright dropdown-submenu">
+      <button class="dropdown-item dropdown-toggle" type="button">Another action</button>
+
+      <div class="dropdown-menu">
+        <button class="dropdown-item" type="button">Sub action</button>
+        <button class="dropdown-item" type="button">Another sub action</button>
+        <button class="dropdown-item" type="button">Something else here</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dropdown-header">Dropdown header</div>
+
+<div class="dropdown dropright dropdown-submenu">
+  <button class="dropdown-item dropdown-toggle" type="button">Another action</button>
+
+  <div class="dropdown-menu">
+    <button class="dropdown-item" type="button">Sub action</button>
+    <button class="dropdown-item" type="button">Another sub action</button>
+    <button class="dropdown-item" type="button">Something else here</button>
+  </div>
+</div>
+
+<button class="dropdown-item" type="button">Something else here</button>
+<div class="dropdown-divider"></div>
+<button class="dropdown-item" type="button">Separated link</button>
+
+    </div>
+  </li>
+
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" tabindex="0" data-toggle="dropdown" data-submenu>
+      Dropdown 3
+    </a>
+
+    <div class="dropdown-menu">
+      <div class="dropdown dropright dropdown-submenu">
+  <button class="dropdown-item dropdown-toggle" type="button" data-toggle="dropdown">Action</button>
+
+  <div class="dropdown-menu">
+    <button class="dropdown-item" type="button">Sub action</button>
+
+    <div class="dropdown dropright dropdown-submenu">
+      <button class="dropdown-item dropdown-toggle" type="button">Another sub action</button>
+
+      <div class="dropdown-menu">
+        <button class="dropdown-item" type="button">Sub action</button>
+        <button class="dropdown-item" type="button">Another sub action</button>
+        <button class="dropdown-item" type="button">Something else here</button>
+      </div>
+    </div>
+
+    <button class="dropdown-item" type="button">Something else here</button>
+    <button class="dropdown-item" type="button" disabled>Disabled action</button>
+
+    <div class="dropdown dropright dropdown-submenu">
+      <button class="dropdown-item dropdown-toggle" type="button">Another action</button>
+
+      <div class="dropdown-menu">
+        <button class="dropdown-item" type="button">Sub action</button>
+        <button class="dropdown-item" type="button">Another sub action</button>
+        <button class="dropdown-item" type="button">Something else here</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dropdown-header">Dropdown header</div>
+
+<div class="dropdown dropright dropdown-submenu">
+  <button class="dropdown-item dropdown-toggle" type="button">Another action</button>
+
+  <div class="dropdown-menu">
+    <button class="dropdown-item" type="button">Sub action</button>
+    <button class="dropdown-item" type="button">Another sub action</button>
+    <button class="dropdown-item" type="button">Something else here</button>
+  </div>
+</div>
+
+<button class="dropdown-item" type="button">Something else here</button>
+<div class="dropdown-divider"></div>
+<button class="dropdown-item" type="button">Separated link</button>
+
+    </div>
+  </li>
+</ul>
+
 
     <hr>
-    {% include footer.html %}
+    <footer class="text-center text-muted">
+  &copy; Vasilii A., 2014&ndash;2018
+</footer>
+
   </div>
 
   <a class="js-scroll-top scroll-top btn btn-primary btn-sm hidden" href="#container" hidden>
-    <span class="fas fa-caret-up fa-2x"></span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+      <path d="M7.247 4.86l-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+    </svg>
   </a>
 </body>
 </html>

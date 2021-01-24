@@ -10,11 +10,6 @@ html {
   gap: 0.5rem;
 }
 
-.highlight,
-.highlight pre {
-  margin-bottom: 0;
-}
-
 .dropdown-item:disabled,
 .dropdown-item.disabled,
 .dropdown-header,

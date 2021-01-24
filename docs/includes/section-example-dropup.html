@@ -1,27 +1,27 @@
-<h3>Dropdown</h3>
+<h3>Dropup</h3>
 
 <h4>With button</h4>
 <div class="row">
   <div class="col-sm-4 col-sm-offset-2 mb-3">
-    <div class="dropdown">
+    <div class="dropup">
       <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" data-submenu>
-        Dropdown
+        Dropup
       </button>
 
       <div class="dropdown-menu">
-        {% include dropdown-menu-elements.html placement='dropright' %}
+        <%- include('includes/dropdown-menu-elements.html', { placement: 'dropright' }); %>
       </div>
     </div>
   </div>
 
   <div class="col-sm-4 mb-3">
-    <div class="dropdown pull-right">
+    <div class="dropup pull-right">
       <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" data-submenu>
-        Dropdown
+        Dropup
       </button>
 
       <div class="dropdown-menu dropdown-menu-right">
-        {% include dropdown-menu-elements.html placement='dropleft' %}
+        <%- include('includes/dropdown-menu-elements.html', { placement: 'dropleft' }); %>
       </div>
     </div>
   </div>
@@ -30,23 +30,23 @@
 <h4>With button-group</h4>
 <div class="row">
   <div class="col-sm-4 col-sm-offset-2 mb-3">
-    <div class="btn-group">
-      <button class="btn btn-secondary" type="button">Split dropdown</button>
+    <div class="btn-group dropup">
+      <button class="btn btn-secondary" type="button">Split dropup</button>
       <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" data-submenu></button>
 
       <div class="dropdown-menu">
-        {% include dropdown-menu-elements.html placement='dropright' %}
+        <%- include('includes/dropdown-menu-elements.html', { placement: 'dropright' }); %>
       </div>
     </div>
   </div>
 
   <div class="col-sm-4 mb-3">
-    <div class="btn-group pull-right">
-      <button class="btn btn-secondary" type="button">Split dropdown</button>
+    <div class="btn-group dropup pull-right">
+      <button class="btn btn-secondary" type="button">Split dropup</button>
       <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" data-submenu></button>
 
       <div class="dropdown-menu dropdown-menu-right">
-        {% include dropdown-menu-elements.html placement='dropleft' %}
+        <%- include('includes/dropdown-menu-elements.html', { placement: 'dropleft' }); %>
       </div>
     </div>
   </div>

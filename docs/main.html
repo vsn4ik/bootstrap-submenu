@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('includes/head.html'); %>
+</head>
+
+<body>
+  <div class="container py-3" id="container">
+    <%- include('includes/header.html'); %>
+
+    <h2 id="installation">Installation</h2>
+    <pre><code class="border border-secondary rounded language-html"><%= include('includes/section-html-init.html'); %></code></pre>
+    
+    <p>Enable Bootstrap-submenu via JavaScript:</p>
+    <pre><code class="border border-secondary rounded language-js"><%= include('includes/section-js-init.html'); %></code></pre>
+
+    <hr>
+    <h2 id="html-examples">Examples</h2>
+    <%- include('includes/section-example-dropdown.html'); %>
+    <%- include('includes/section-example-dropup.html'); %>
+    <%- include('includes/section-example-navbar.html'); %>
+    <%- include('includes/section-example-pills.html'); %>
+
+    <hr>
+    <%- include('includes/footer.html'); %>
+  </div>
+
+  <a class="js-scroll-top scroll-top btn btn-primary btn-sm hidden" href="#container" hidden>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+      <path d="M7.247 4.86l-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+    </svg>
+  </a>
+</body>
+</html>

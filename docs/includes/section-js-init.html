@@ -1,0 +1,3 @@
+// For v2 [data-toggle="dropdown"] is required for [data-submenu].
+// For v2 .dropdown-submenu > [data-toggle="dropdown"] is forbidden.
+$('[data-submenu]').submenupicker();

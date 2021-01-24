@@ -1,0 +1,10 @@
+{
+  "repository": "https://github.com/vsn4ik/bootstrap-submenu",
+  "version": "3.0.1",
+  "name": "Bootstrap-submenu",
+  "description": "Bootstrap Sub-Menus",
+  "keywords": "bootstrap dropdown jquery-plugin submenu",
+  "author": {
+    "name": "Vasilii A."
+  }
+}

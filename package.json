@@ -23,6 +23,7 @@
   "main": "dist/js/bootstrap-submenu.js",
   "type": "module",
   "scripts": {
+    "docs": "cd ./docs; ejs ./main.html --data-file ./config.json --output-file ./index.html",
     "test": "npm run css; npm run js",
     "css": "npm run css-compile; npm run css-minify",
     "css-compile": "mkdir -p dist/css; cp -rf css/*.css dist/css/",
@@ -37,6 +38,7 @@
     "@babel/core": "7.12.10",
     "@babel/preset-env": "7.12.11",
     "csso-cli": "3.0.0",
+    "ejs": "^3.1.5",
     "terser": "5.5.1"
   }
 }
