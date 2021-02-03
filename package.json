@@ -34,7 +34,7 @@
     "release-zip": "cd dist/ && zip -r9 $npm_package_name-$npm_package_version-dist.zip * && mv $npm_package_name-$npm_package_version-dist.zip .."
   },
   "devDependencies": {
-    "@babel/cli": "7.12.10",
+    "@babel/cli": "7.12.13",
     "@babel/core": "7.12.10",
     "@babel/preset-env": "7.12.11",
     "csso-cli": "3.0.0",
