@@ -9,15 +9,15 @@ jobs:
 
     steps:
       - name: Clone repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 'lts/hydrogen'
 
       - name: Install npm dependencies
-        run: npm install
+        run: npm ci
 
       - name: Run tests
         run: npm run test

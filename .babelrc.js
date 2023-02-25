@@ -4,14 +4,9 @@ export default {
       '@babel/preset-env',
       {
         loose: true,
-        modules: false,
-        exclude: [
-          '@babel/plugin-transform-typeof-symbol'
-        ]
+        modules: false
       }
     ]
   ],
-  plugins: [
-    '@babel/proposal-object-rest-spread'
-  ]
+  plugins: []
 }
