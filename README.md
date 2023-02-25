@@ -2,7 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/bootstrap-submenu.svg)](https://www.npmjs.com/package/bootstrap-submenu)
 [![License](https://img.shields.io/npm/l/bootstrap-submenu.svg)][license]
-[![Build Status](https://github.com/vsn4ik/bootstrap-submenu/workflows/Test/badge.svg)][https://github.com/vsn4ik/bootstrap-submenu/actions/workflows/test.yml]
+[![Build Status](https://github.com/vsn4ik/bootstrap-submenu/workflows/Test/badge.svg)](https://github.com/vsn4ik/bootstrap-submenu/actions/workflows/test.yml)
 
 
 ## Quick start
