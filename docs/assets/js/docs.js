@@ -57,7 +57,7 @@ var exec = function() {
   });
 
   $('[data-submenu]').submenupicker();
-  window.hljs.initHighlightingOnLoad();
+  window.hljs.highlightAll();
 };
 
 if (document.readyState === 'loading') {
