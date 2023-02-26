@@ -11,7 +11,7 @@ var exec = function() {
         return;
       }
 
-      document.querySelector('.js-stargazers-count').textContent = response.stargazers_count;
+      document.querySelector('.js-stargazers-count').style.setProperty('--stargazers', response.stargazers_count);
     });
 
   function handleScroll() {
