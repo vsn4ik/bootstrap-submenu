@@ -31,7 +31,8 @@
     "js": "npm run js-compile; npm run js-minify",
     "js-compile": "babel --out-dir dist/js/ js/*.js",
     "js-minify": "terser --compress --output dist/js/$npm_package_name.min.js dist/js/$npm_package_name.js",
-    "release-zip": "cd dist/ && zip -r9 $npm_package_name-$npm_package_version-dist.zip * && mv $npm_package_name-$npm_package_version-dist.zip .."
+    "release-zip": "cd dist/ && zip -r9 $npm_package_name-$npm_package_version-dist.zip * && mv $npm_package_name-$npm_package_version-dist.zip ..",
+    "serve": "serve --listen 5000 --no-clipboard ./docs/"
   },
   "devDependencies": {
     "@babel/cli": "7.21.0",
@@ -39,6 +40,7 @@
     "@babel/preset-env": "7.20.2",
     "csso-cli": "4.0.1",
     "ejs": "3.1.8",
+    "serve": "14.2.0",
     "terser": "5.16.5"
   }
 }
