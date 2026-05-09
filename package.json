@@ -40,7 +40,7 @@
     "@babel/preset-env": "7.20.2",
     "csso-cli": "4.0.1",
     "ejs": "3.1.10",
-    "serve": "14.2.0",
+    "serve": "14.2.6",
     "terser": "5.16.5"
   }
 }
