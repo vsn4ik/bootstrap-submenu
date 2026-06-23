@@ -35,9 +35,9 @@
     "serve": "serve --listen 5000 --no-clipboard ./docs/"
   },
   "devDependencies": {
-    "@babel/cli": "7.21.0",
-    "@babel/core": "7.21.0",
-    "@babel/preset-env": "7.20.2",
+    "@babel/cli": "8.0.1",
+    "@babel/core": "8.0.1",
+    "@babel/preset-env": "8.0.2",
     "csso-cli": "4.0.1",
     "ejs": "3.1.10",
     "serve": "14.2.0",
