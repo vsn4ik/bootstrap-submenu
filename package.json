@@ -35,12 +35,12 @@
     "serve": "serve --listen 5000 --no-clipboard ./docs/"
   },
   "devDependencies": {
-    "@babel/cli": "8.0.1",
+    "@babel/cli": "8.0.4",
     "@babel/core": "8.0.1",
     "@babel/preset-env": "8.0.2",
-    "csso-cli": "4.0.1",
-    "ejs": "3.1.10",
-    "serve": "14.2.0",
-    "terser": "5.16.5"
+    "csso-cli": "4.0.2",
+    "ejs": "6.0.1",
+    "serve": "14.2.6",
+    "terser": "5.50.0"
   }
 }
